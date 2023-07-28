@@ -3,8 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
     <h1>대문 페이지</h1>
-</body>
+    이름 : {{user}}
+    <form action="/" method="post">
+        다음이름 : <input type="text" name="user">
+    </form>
+    <form action="/" method="get">
+        <input type="submit" value="초기화">
+    </form>
+    </body>
 </html>
