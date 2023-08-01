@@ -1,10 +1,11 @@
 from flask import Flask, request, render_template, redirect, url_for, jsonify
 from flask_bootstrap import Bootstrap
+from werkzeug.utils import secure_filename
 import os
 
 app = Flask(__name__)
 
-UPLOAD_FOLDER = '~/pneumo_page/'
+UPLOAD_FOLDER = ''
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 @app.route('/')
@@ -20,12 +21,13 @@ def submit():
     return render_template('submit.html')
 
 @app.route('/upload', methods=['GET','POST'])
-def upload():
+def upload(username):
+    os.system("mkdir "+username)
     if request.method == 'POST':
         file = request.files['file']
         if file:
-            file.save(file.filename)
-            return '업로드 성공'
+            file.save(os.path.join(app.config['UPLOAD_FOLDER'], secure_filename(file.filename)))
+            return render_template('submit.html')
     return render_template('submit.html')
 
 
