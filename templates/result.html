@@ -17,17 +17,49 @@
                   </button>
                   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                      <a class="nav-link active" href="/about">about</a>
+                      <a class="nav-link " href="/about">about</a>
                       <a class="nav-link" href="/submit">submit</a>
-                      <a class="nav-link" href="#">result</a>
+                      <a class="nav-link active" id="nav-result" href="#">result</a>
                       <a class="nav-link" href="#">mypage</a>
                     </div>
                   </div>
                 </div>
             </nav>
         </div>
-        
-       
+        <div class="container inner">
+          <div class="row align-items-center" style="height: 80dvh;">
+            <div class="col justify-content-center">
+              <div class="intitle-1">Job List</div>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Job Name</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Input file</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for row in rows %}
+                  <tr>
+                    <th scope="row">{{row["id"]}}</th>
+                    <td>{{row["jobname"]}}</td>
+                    <td>{{row["date"]}}</td>
+                    <td>{{row["input"]}}</td>
+                    <td>{{row["type"]}}</td>
+                    <td>{{row["state"]}}</td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <script src="/static/js/common.js"></script>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
         <script src="{{ url_for('static', filename='node_modules/bootstrap/dist/js/bootstrap.min.js') }}"></script>
     </body>
 </html>

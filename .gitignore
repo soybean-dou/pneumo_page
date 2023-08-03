@@ -1,1 +1,4 @@
-/node_modules
+static/node_modules
+/user
+/htslib
+/__pycache__

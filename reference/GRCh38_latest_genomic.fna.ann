@@ -1,0 +1,1411 @@
+3298430636 705 11
+0 NC_000001.11 Homo sapiens chromosome 1, GRCh38.p14 Primary Assembly
+0 248956422 168
+0 NT_187361.1 Homo sapiens chromosome 1 unlocalized genomic scaffold, GRCh38.p14 Primary Assembly HSCHR1_CTG1_UNLOCALIZED
+248956422 175055 0
+0 NT_187362.1 Homo sapiens chromosome 1 unlocalized genomic scaffold, GRCh38.p14 Primary Assembly HSCHR1_CTG2_UNLOCALIZED
+249131477 32032 0
+0 NT_187363.1 Homo sapiens chromosome 1 unlocalized genomic scaffold, GRCh38.p14 Primary Assembly HSCHR1_CTG3_UNLOCALIZED
+249163509 127682 0
+0 NT_187364.1 Homo sapiens chromosome 1 unlocalized genomic scaffold, GRCh38.p14 Primary Assembly HSCHR1_CTG4_UNLOCALIZED
+249291191 66860 0
+0 NT_187365.1 Homo sapiens chromosome 1 unlocalized genomic scaffold, GRCh38.p14 Primary Assembly HSCHR1_CTG5_UNLOCALIZED
+249358051 40176 0
+0 NT_187366.1 Homo sapiens chromosome 1 unlocalized genomic scaffold, GRCh38.p14 Primary Assembly HSCHR1_CTG6_UNLOCALIZED
+249398227 42210 0
+0 NT_187367.1 Homo sapiens chromosome 1 unlocalized genomic scaffold, GRCh38.p14 Primary Assembly HSCHR1_CTG7_UNLOCALIZED
+249440437 176043 0
+0 NT_187368.1 Homo sapiens chromosome 1 unlocalized genomic scaffold, GRCh38.p14 Primary Assembly HSCHR1_CTG8_UNLOCALIZED
+249616480 40745 0
+0 NT_187369.1 Homo sapiens chromosome 1 unlocalized genomic scaffold, GRCh38.p14 Primary Assembly HSCHR1_CTG9_UNLOCALIZED
+249657225 41717 0
+0 NC_000002.12 Homo sapiens chromosome 2, GRCh38.p14 Primary Assembly
+249698942 242193529 35
+0 NT_187370.1 Homo sapiens chromosome 2 unlocalized genomic scaffold, GRCh38.p14 Primary Assembly HSCHR2_RANDOM_CTG1
+491892471 161471 0
+0 NT_187371.1 Homo sapiens chromosome 2 unlocalized genomic scaffold, GRCh38.p14 Primary Assembly HSCHR2_RANDOM_CTG2
+492053942 153799 0
+0 NC_000003.12 Homo sapiens chromosome 3, GRCh38.p14 Primary Assembly
+492207741 198295559 29
+0 NT_167215.1 Homo sapiens chromosome 3 unlocalized genomic scaffold, GRCh38.p14 Primary Assembly HSCHR3UN_CTG2
+690503300 155397 0
+0 NC_000004.12 Homo sapiens chromosome 4, GRCh38.p14 Primary Assembly
+690658697 190214555 18
+0 NT_113793.3 Homo sapiens chromosome 4 unlocalized genomic scaffold, GRCh38.p14 Primary Assembly HSCHR4_RANDOM_CTG4
+880873252 209709 0
+0 NC_000005.10 Homo sapiens chromosome 5, GRCh38.p14 Primary Assembly
+881082961 181538259 37
+0 NT_113948.1 Homo sapiens chromosome 5 unlocalized genomic scaffold, GRCh38.p14 Primary Assembly HSCHR5_RANDOM_CTG1
+1062621220 92689 0
+0 NC_000006.12 Homo sapiens chromosome 6, GRCh38.p14 Primary Assembly
+1062713909 170805979 16
+0 NC_000007.14 Homo sapiens chromosome 7, GRCh38.p14 Primary Assembly
+1233519888 159345973 21
+0 NC_000008.11 Homo sapiens chromosome 8, GRCh38.p14 Primary Assembly
+1392865861 145138636 12
+0 NC_000009.12 Homo sapiens chromosome 9, GRCh38.p14 Primary Assembly
+1538004497 138394717 46
+0 NT_187372.1 Homo sapiens chromosome 9 unlocalized genomic scaffold, GRCh38.p14 Primary Assembly HSCHR9_UNLOCALIZED_CTG1
+1676399214 40062 0
+0 NT_187373.1 Homo sapiens chromosome 9 unlocalized genomic scaffold, GRCh38.p14 Primary Assembly HSCHR9_UNLOCALIZED_CTG2
+1676439276 38054 0
+0 NT_187374.1 Homo sapiens chromosome 9 unlocalized genomic scaffold, GRCh38.p14 Primary Assembly HSCHR9_UNLOCALIZED_CTG3
+1676477330 176845 0
+0 NT_187375.1 Homo sapiens chromosome 9 unlocalized genomic scaffold, GRCh38.p14 Primary Assembly HSCHR9_UNLOCALIZED_CTG4
+1676654175 39050 0
+0 NC_000010.11 Homo sapiens chromosome 10, GRCh38.p14 Primary Assembly
+1676693225 133797422 80
+0 NC_000011.10 Homo sapiens chromosome 11, GRCh38.p14 Primary Assembly
+1810490647 135086622 17
+0 NC_000012.12 Homo sapiens chromosome 12, GRCh38.p14 Primary Assembly
+1945577269 133275309 30
+0 NC_000013.11 Homo sapiens chromosome 13, GRCh38.p14 Primary Assembly
+2078852578 114364328 23
+0 NC_000014.9 Homo sapiens chromosome 14, GRCh38.p14 Primary Assembly
+2193216906 107043718 25
+0 NT_113796.3 Homo sapiens chromosome 14 unlocalized genomic scaffold, GRCh38.p14 Primary Assembly HSCHR14_CTG1_UNLOCALIZED
+2300260624 201709 0
+0 NT_167219.1 Homo sapiens chromosome 14 unlocalized genomic scaffold, GRCh38.p14 Primary Assembly HSCHR14_CTG2_UNLOCALIZED
+2300462333 211173 0
+0 NT_187377.1 Homo sapiens chromosome 14 unlocalized genomic scaffold, GRCh38.p14 Primary Assembly HSCHR14_CTG3_UNLOCALIZED
+2300673506 194050 0
+0 NT_113888.1 Homo sapiens chromosome 14 unlocalized genomic scaffold, GRCh38.p14 Primary Assembly HSCHR14_CTG4_UNLOCALIZED
+2300867556 191469 0
+0 NT_187378.1 Homo sapiens chromosome 14 unlocalized genomic scaffold, GRCh38.p14 Primary Assembly HSCHR14_CTG5_UNLOCALIZED
+2301059025 38115 0
+0 NT_187379.1 Homo sapiens chromosome 14 unlocalized genomic scaffold, GRCh38.p14 Primary Assembly HSCHR14_CTG6_UNLOCALIZED
+2301097140 39555 0
+0 NT_187380.1 Homo sapiens chromosome 14 unlocalized genomic scaffold, GRCh38.p14 Primary Assembly HSCHR14_CTG7_UNLOCALIZED
+2301136695 172810 0
+0 NT_187381.1 Homo sapiens chromosome 14 unlocalized genomic scaffold, GRCh38.p14 Primary Assembly HSCHR14_CTG8_UNLOCALIZED
+2301309505 43739 0
+0 NC_000015.10 Homo sapiens chromosome 15, GRCh38.p14 Primary Assembly
+2301353244 101991189 19
+0 NT_187382.1 Homo sapiens chromosome 15 unlocalized genomic scaffold, GRCh38.p14 Primary Assembly HSCHR15_RANDOM_CTG1
+2403344433 448248 0
+0 NC_000016.10 Homo sapiens chromosome 16, GRCh38.p14 Primary Assembly
+2403792681 90338345 22
+0 NT_187383.1 Homo sapiens chromosome 16 unlocalized genomic scaffold, GRCh38.p14 Primary Assembly HSCHR16_RANDOM_CTG1
+2494131026 1872759 6
+0 NC_000017.11 Homo sapiens chromosome 17, GRCh38.p14 Primary Assembly
+2496003785 83257441 48
+0 NT_113930.2 Homo sapiens chromosome 17 unlocalized genomic scaffold, GRCh38.p14 Primary Assembly HSCHR17_RANDOM_CTG3
+2579261226 185591 0
+0 NT_187384.1 Homo sapiens chromosome 17 unlocalized genomic scaffold, GRCh38.p14 Primary Assembly HSCHR17_RANDOM_CTG4
+2579446817 280839 8
+0 NT_187385.1 Homo sapiens chromosome 17 unlocalized genomic scaffold, GRCh38.p14 Primary Assembly HSCHR17_RANDOM_CTG5
+2579727656 112551 6
+0 NC_000018.10 Homo sapiens chromosome 18, GRCh38.p14 Primary Assembly
+2579840207 80373285 61
+0 NC_000019.10 Homo sapiens chromosome 19, GRCh38.p14 Primary Assembly
+2660213492 58617616 9
+0 NC_000020.11 Homo sapiens chromosome 20, GRCh38.p14 Primary Assembly
+2718831108 64444167 90
+0 NC_000021.9 Homo sapiens chromosome 21, GRCh38.p14 Primary Assembly
+2783275275 46709983 52
+0 NC_000022.11 Homo sapiens chromosome 22, GRCh38.p14 Primary Assembly
+2829985258 50818468 49
+0 NT_187386.1 Homo sapiens chromosome 22 unlocalized genomic scaffold, GRCh38.p14 Primary Assembly HSCHR22_UNLOCALIZED_CTG1
+2880803726 150754 0
+0 NT_187387.1 Homo sapiens chromosome 22 unlocalized genomic scaffold, GRCh38.p14 Primary Assembly HSCHR22_UNLOCALIZED_CTG2
+2880954480 41543 0
+0 NT_187388.1 Homo sapiens chromosome 22 unlocalized genomic scaffold, GRCh38.p14 Primary Assembly HSCHR22_UNLOCALIZED_CTG3
+2880996023 179772 0
+0 NT_187390.1 Homo sapiens chromosome 22 unlocalized genomic scaffold, GRCh38.p14 Primary Assembly HSCHR22_UNLOCALIZED_CTG5
+2881175795 42811 0
+0 NT_187391.1 Homo sapiens chromosome 22 unlocalized genomic scaffold, GRCh38.p14 Primary Assembly HSCHR22_UNLOCALIZED_CTG6
+2881218606 181920 7
+0 NT_187392.1 Homo sapiens chromosome 22 unlocalized genomic scaffold, GRCh38.p14 Primary Assembly HSCHR22_UNLOCALIZED_CTG7
+2881400526 103838 1
+0 NT_187393.1 Homo sapiens chromosome 22 unlocalized genomic scaffold, GRCh38.p14 Primary Assembly HSCHR22_UNLOCALIZED_CTG8
+2881504364 99375 7
+0 NT_187394.1 Homo sapiens chromosome 22 unlocalized genomic scaffold, GRCh38.p14 Primary Assembly HSCHR22_UNLOCALIZED_CTG9
+2881603739 73985 3
+0 NC_000023.11 Homo sapiens chromosome X, GRCh38.p14 Primary Assembly
+2881677724 156040895 34
+0 NC_000024.10 Homo sapiens chromosome Y, GRCh38.p14 Primary Assembly
+3037718619 57227415 61
+0 NT_187395.1 Homo sapiens chromosome Y unlocalized genomic scaffold, GRCh38.p14 Primary Assembly HSCHRY_RANDOM_CTG1
+3094946034 37240 0
+0 NT_187396.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_100
+3094983274 2274 0
+0 NT_187397.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_101
+3094985548 2165 0
+0 NT_187398.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_102
+3094987713 1942 0
+0 NT_187399.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_103
+3094989655 1472 0
+0 NT_187400.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_104
+3094991127 21476 2
+0 NT_187401.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_105
+3095012603 4416 0
+0 NT_187402.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_106
+3095017019 1201 0
+0 NT_187403.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_107
+3095018220 1444 0
+0 NT_187404.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_108
+3095019664 2276 0
+0 NT_187405.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_109
+3095021940 998 0
+0 NT_187406.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_110
+3095022938 12399 1
+0 NT_187407.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_111
+3095035337 37690 1
+0 NT_187408.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_112
+3095073027 1179 0
+0 NT_187409.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_113
+3095074206 2646 0
+0 NT_187410.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_114
+3095076852 2489 0
+0 NT_187411.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_115
+3095079341 1029 0
+0 NT_187412.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_116
+3095080370 2145 0
+0 NT_187413.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_117
+3095082515 2321 0
+0 NT_187414.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_118
+3095084836 2140 0
+0 NT_187415.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_119
+3095086976 2043 0
+0 NT_187416.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_120
+3095089019 1445 0
+0 NT_187417.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_121
+3095090464 981 0
+0 NT_187418.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_122
+3095091445 1884 0
+0 NT_187419.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_123
+3095093329 1361 0
+0 NT_187420.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_124
+3095094690 392061 16
+0 NT_187421.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_125
+3095486751 1233 0
+0 NT_187422.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_126
+3095487984 1774 0
+0 NT_187423.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_127
+3095489758 3920 0
+0 NT_187424.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_128
+3095493678 92983 3
+0 NT_187425.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_129
+3095586661 112505 6
+0 NT_187426.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_130
+3095699166 4055 0
+0 NT_187427.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_131
+3095703221 2415 0
+0 NT_187428.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_132
+3095705636 2318 0
+0 NT_187429.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_133
+3095707954 2186 0
+0 NT_187430.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_134
+3095710140 1951 0
+0 NT_187431.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_135
+3095712091 1300 0
+0 NT_187432.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_136
+3095713391 22689 0
+0 NT_187433.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_137
+3095736080 138126 4
+0 NT_187434.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_138
+3095874206 5674 0
+0 NT_187435.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_139
+3095879880 8127 0
+0 NT_187436.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_140
+3095888007 6361 0
+0 NT_187437.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_141
+3095894368 5353 0
+0 NT_187438.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_142
+3095899721 3253 0
+0 NT_187439.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_143
+3095902974 1899 0
+0 NT_187440.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_144
+3095904873 2983 0
+0 NT_187441.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_145
+3095907856 2168 0
+0 NT_187442.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_146
+3095910024 993 0
+0 NT_187443.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_147
+3095911017 91309 6
+0 NT_187444.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_148
+3096002326 1202 0
+0 NT_187445.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_149
+3096003528 1599 0
+0 NT_187446.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_154
+3096005127 1400 0
+0 NT_187447.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_155
+3096006527 2969 0
+0 NT_187448.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_156
+3096009496 1553 0
+0 NT_187449.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_157
+3096011049 7046 0
+0 NT_187450.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_158
+3096018095 31033 0
+0 NT_187451.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_159
+3096049128 44474 4
+0 NT_187452.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_160
+3096093602 4685 0
+0 NT_187453.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_161
+3096098287 4513 0
+0 NT_187454.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_162
+3096102800 6504 0
+0 NT_187455.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_163
+3096109304 6158 0
+0 NT_187456.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_164
+3096115462 3041 0
+0 NT_187457.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_165
+3096118503 5796 0
+0 NT_187458.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_166
+3096124299 1652 0
+0 NT_187459.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_167
+3096125951 1040 0
+0 NT_187460.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_168
+3096126991 1368 0
+0 NT_187461.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_169
+3096128359 2699 0
+0 NT_187462.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_170
+3096131058 1048 0
+0 NT_187463.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_171
+3096132106 1428 0
+0 NT_187464.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_172
+3096133534 1428 0
+0 NT_187465.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_173
+3096134962 1026 0
+0 NT_187466.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_174
+3096135988 1121 0
+0 NT_187467.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_175
+3096137109 1803 0
+0 NT_187468.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_176
+3096138912 2855 0
+0 NT_187469.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_177
+3096141767 3530 0
+0 NT_187470.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_178
+3096145297 8320 0
+0 NT_187471.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_179
+3096153617 1048 0
+0 NT_187472.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_180
+3096154665 1045 0
+0 NT_187473.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_181
+3096155710 1298 0
+0 NT_187474.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_182
+3096157008 2387 0
+0 NT_187475.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_183
+3096159395 1537 0
+0 NT_187476.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_184
+3096160932 1143 0
+0 NT_187477.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_185
+3096162075 1880 0
+0 NT_187478.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_186
+3096163955 1216 0
+0 NT_187479.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_187
+3096165171 970 0
+0 NT_187480.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_188
+3096166141 1788 0
+0 NT_187481.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_189
+3096167929 1484 0
+0 NT_187482.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_190
+3096169413 1750 0
+0 NT_187483.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_191
+3096171163 1308 0
+0 NT_187484.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_192
+3096172471 1658 0
+0 NT_187485.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_193
+3096174129 971 0
+0 NT_187486.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_194
+3096175100 1930 0
+0 NT_187487.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_195
+3096177030 990 0
+0 NT_187488.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_196
+3096178020 4215 0
+0 NT_187489.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_197
+3096182235 1136 0
+0 NT_187490.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_198
+3096183371 2656 0
+0 NT_187491.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_199
+3096186027 1650 0
+0 NT_187492.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_200
+3096187677 1451 0
+0 NT_187493.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_201
+3096189128 2378 0
+0 NT_187494.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_202
+3096191506 2805 0
+0 NT_187495.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_203
+3096194311 7992 0
+0 NT_187496.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_204
+3096202303 7642 0
+0 NT_113901.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_CTG1
+3096209945 182896 0
+0 NT_167213.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_CTG10
+3096392841 179198 0
+0 NT_167214.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_CTG11
+3096572039 161802 0
+0 NT_167218.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_CTG16
+3096733841 179693 0
+0 NT_187497.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_CTG17
+3096913534 157432 6
+0 NT_167220.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_CTG19
+3097070966 15008 0
+0 NT_167208.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_CTG2
+3097085974 164239 0
+0 NT_187498.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_CTG20
+3097250213 210658 0
+0 NT_187499.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_CTG21
+3097460871 168472 0
+0 NT_187500.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_CTG22
+3097629343 41891 0
+0 NT_187501.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_CTG23
+3097671234 66486 0
+0 NT_187502.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_CTG24
+3097737720 198735 0
+0 NT_187503.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_CTG25
+3097936455 93321 0
+0 NT_187504.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_CTG26
+3098029776 158759 0
+0 NT_187505.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_CTG27
+3098188535 148850 0
+0 NT_187506.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_CTG28
+3098337385 150742 0
+0 NT_187508.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_CTG30
+3098488127 62944 0
+0 NT_187509.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_CTG33
+3098551071 40191 0
+0 NT_187510.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_CTG34
+3098591262 36723 0
+0 NT_187511.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_CTG35
+3098627985 79590 1
+0 NT_187512.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_CTG36
+3098707575 71251 3
+0 NT_167209.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_CTG4
+3098778826 137718 0
+0 NT_187513.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_CTG42
+3098916544 186739 0
+0 NT_167211.2 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_CTG6
+3099103283 176608 1
+0 NT_113889.1 Homo sapiens unplaced genomic scaffold, GRCh38.p14 Primary Assembly HSCHRUN_RANDOM_CTG9
+3099279891 161147 0
+0 NW_012132914.1 Homo sapiens chromosome 1 genomic patch of type FIX, GRCh38.p14 PATCHES HG1342_HG2282_PATCH
+3099441038 467143 0
+0 NW_015495298.1 Homo sapiens chromosome 1 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR1_5_CTG3
+3099908181 278659 0
+0 NW_025791756.1 Homo sapiens chromosome 1 genomic patch of type FIX, GRCh38.p14 PATCHES HG1343_HG173_HG459_PATCH
+3100186840 1572686 0
+0 NW_011332688.1 Homo sapiens chromosome 1 genomic patch of type FIX, GRCh38.p14 PATCHES HG2095_PATCH
+3101759526 305542 0
+0 NW_014040926.1 Homo sapiens chromosome 1 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR1_4_CTG3
+3102065068 349938 0
+0 NW_009646195.1 Homo sapiens chromosome 1 genomic patch of type FIX, GRCh38.p14 PATCHES HG2058_PATCH
+3102415006 166200 0
+0 NW_018654706.1 Homo sapiens chromosome 1 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR1_8_CTG3
+3102581206 166136 0
+0 NW_019805487.1 Homo sapiens chromosome 1 genomic patch of type FIX, GRCh38.p14 PATCHES HG460_PATCH
+3102747342 44955 0
+0 NW_009646194.1 Homo sapiens chromosome 1 genomic patch of type FIX, GRCh38.p14 PATCHES HG986_PATCH
+3102792297 186494 0
+0 NW_018654707.1 Homo sapiens chromosome 1 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR1_9_CTG3
+3102978791 140355 0
+0 NW_014040925.1 Homo sapiens chromosome 1 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR1_3_CTG3
+3103119146 141019 0
+0 NW_017852928.1 Homo sapiens chromosome 1 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR1_6_CTG3
+3103260165 551020 0
+0 NW_009646196.1 Homo sapiens chromosome 1 genomic patch of type FIX, GRCh38.p14 PATCHES HG2104_PATCH
+3103811185 122022 0
+0 NW_025791753.1 Homo sapiens chromosome 1 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR1_12_CTG3
+3103933207 516764 0
+0 NW_025791758.1 Homo sapiens chromosome 1 genomic patch of type FIX, GRCh38.p14 PATCHES HG2515_PATCH
+3104449971 211934 0
+0 NW_025791759.1 Homo sapiens chromosome 1 genomic patch of type FIX, GRCh38.p14 PATCHES HG2577_PATCH
+3104661905 250447 0
+0 NW_025791754.1 Homo sapiens chromosome 1 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR1_5_CTG31
+3104912352 847441 1
+0 NW_011332687.1 Homo sapiens chromosome 1 genomic patch of type FIX, GRCh38.p14 PATCHES HG1832_PATCH
+3105759793 460100 0
+0 NW_018654708.1 Homo sapiens chromosome 1 genomic patch of type FIX, GRCh38.p14 PATCHES HG2002_PATCH
+3106219893 330031 0
+0 NW_014040927.1 Homo sapiens chromosome 1 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR1_5_CTG32_1
+3106549924 212205 0
+0 NW_025791757.1 Homo sapiens chromosome 1 genomic patch of type FIX, GRCh38.p14 PATCHES HG2571_PATCH
+3106762129 210426 0
+0 NW_025791755.1 Homo sapiens chromosome 1 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR1_6_CTG31
+3106972555 335159 0
+0 NW_021159988.1 Homo sapiens chromosome 2 genomic patch of type FIX, GRCh38.p14 PATCHES HG1384_PATCH
+3107307714 84043 0
+0 NW_025791767.1 Homo sapiens chromosome 2 genomic patch of type FIX, GRCh38.p14 PATCHES HG2231_HG2496_PATCH
+3107391757 244725 0
+0 NW_025791768.1 Homo sapiens chromosome 2 genomic patch of type FIX, GRCh38.p14 PATCHES HG2140_PATCH
+3107636482 174385 0
+0 NW_025791766.1 Homo sapiens chromosome 2 genomic patch of type FIX, GRCh38.p14 PATCHES HG2052_PATCH
+3107810867 489404 0
+0 NW_025791763.1 Homo sapiens chromosome 2 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR2_6_CTG1
+3108300271 284971 0
+0 NW_012132915.1 Homo sapiens chromosome 2 genomic patch of type FIX, GRCh38.p14 PATCHES HG2290_PATCH
+3108585242 481245 0
+0 NW_025791760.1 Homo sapiens chromosome 2 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR2_10_CTG7_2
+3109066487 431782 0
+0 NW_025791765.1 Homo sapiens chromosome 2 genomic patch of type FIX, GRCh38.p14 PATCHES HG2275_PATCH
+3109498269 955087 0
+0 NW_018654709.1 Homo sapiens chromosome 2 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR2_7_CTG7_2
+3110453356 181658 0
+0 NW_025791762.1 Homo sapiens chromosome 2 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR2_12_CTG7_2
+3110635014 500581 0
+0 NW_025791761.1 Homo sapiens chromosome 2 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR2_11_CTG7_2
+3111135595 535251 0
+0 NW_025791764.1 Homo sapiens chromosome 2 genomic patch of type FIX, GRCh38.p14 PATCHES HG2494_PATCH
+3111670846 120381 0
+0 NW_015495299.1 Homo sapiens chromosome 2 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR2_6_CTG7_2
+3111791227 535088 0
+0 NW_018654710.1 Homo sapiens chromosome 2 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR2_8_CTG7_2
+3112326315 140361 0
+0 NW_011332690.1 Homo sapiens chromosome 2 genomic patch of type FIX, GRCh38.p14 PATCHES HG2232_PATCH
+3112466676 365499 0
+0 NW_021159987.1 Homo sapiens chromosome 2 genomic patch of type FIX, GRCh38.p14 PATCHES HG721_PATCH
+3112832175 145975 0
+0 NW_011332689.1 Homo sapiens chromosome 2 genomic patch of type FIX, GRCh38.p14 PATCHES HG2233_PATCH
+3112978150 208149 0
+0 NW_017363813.1 Homo sapiens chromosome 3 genomic patch of type FIX, GRCh38.p14 PATCHES HG2236_PATCH
+3113186299 411654 0
+0 NW_025791770.1 Homo sapiens chromosome 3 genomic patch of type FIX, GRCh38.p14 PATCHES HG2077_PATCH
+3113597953 301310 0
+0 NW_025791771.1 Homo sapiens chromosome 3 genomic patch of type FIX, GRCh38.p14 PATCHES HG2069_PATCH
+3113899263 475876 0
+0 NW_009646197.1 Homo sapiens chromosome 3 genomic patch of type FIX, GRCh38.p14 PATCHES HG2066_PATCH
+3114375139 451168 0
+0 NW_012132916.1 Homo sapiens chromosome 3 genomic patch of type FIX, GRCh38.p14 PATCHES HG2235_PATCH
+3114826307 373699 0
+0 NW_011332691.1 Homo sapiens chromosome 3 genomic patch of type FIX, GRCh38.p14 PATCHES HG126_PATCH
+3115200006 415308 0
+0 NW_021159989.1 Homo sapiens chromosome 3 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR3_5_CTG1
+3115615314 215443 0
+0 NW_018654711.1 Homo sapiens chromosome 3 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR3_4_CTG1
+3115830757 175849 0
+0 NW_012132917.1 Homo sapiens chromosome 3 genomic patch of type FIX, GRCh38.p14 PATCHES HG2237_PATCH
+3116006606 165718 0
+0 NW_009646198.1 Homo sapiens chromosome 3 genomic patch of type FIX, GRCh38.p14 PATCHES HG2022_PATCH
+3116172324 305979 5
+0 NW_019805491.1 Homo sapiens chromosome 3 genomic patch of type FIX, GRCh38.p14 PATCHES HG2133_PATCH
+3116478303 105527 0
+0 NW_019805492.1 Homo sapiens chromosome 3 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR3_6_CTG2_1
+3116583830 195063 0
+0 NW_019805490.1 Homo sapiens chromosome 3 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR3_9_CTG2_1
+3116778893 302885 0
+0 NW_019805489.1 Homo sapiens chromosome 3 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR3_8_CTG2_1
+3117081778 197752 0
+0 NW_019805488.1 Homo sapiens chromosome 3 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR3_7_CTG2_1
+3117279530 164041 0
+0 NW_025791769.1 Homo sapiens chromosome 3 genomic patch of type FIX, GRCh38.p14 PATCHES HG2264_PATCH
+3117443571 469342 0
+0 NW_021159990.1 Homo sapiens chromosome 4 genomic patch of type FIX, GRCh38.p14 PATCHES HG699_PATCH
+3117912913 235734 0
+0 NW_021159993.1 Homo sapiens chromosome 4 genomic patch of type FIX, GRCh38.p14 PATCHES HG1298_PATCH
+3118148647 176674 0
+0 NW_013171799.1 Homo sapiens chromosome 4 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR4_2_CTG4
+3118325321 90922 0
+0 NW_025791774.1 Homo sapiens chromosome 4 genomic patch of type FIX, GRCh38.p14 PATCHES HG287_PATCH
+3118416243 205691 0
+0 NW_021159992.1 Homo sapiens chromosome 4 genomic patch of type FIX, GRCh38.p14 PATCHES HG1299_PATCH
+3118621934 53476 0
+0 NW_021159994.1 Homo sapiens chromosome 4 genomic patch of type FIX, GRCh38.p14 PATCHES HG1296_PATCH
+3118675410 125549 0
+0 NW_021159991.1 Homo sapiens chromosome 4 genomic patch of type FIX, GRCh38.p14 PATCHES HG2525_PATCH
+3118800959 341066 0
+0 NW_021159995.1 Homo sapiens chromosome 4 genomic patch of type FIX, GRCh38.p14 PATCHES HG705_PATCH
+3119142025 276109 0
+0 NW_013171800.1 Homo sapiens chromosome 4 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR4_8_CTG12
+3119418134 163749 0
+0 NW_013171801.1 Homo sapiens chromosome 4 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR4_9_CTG12
+3119581883 236512 0
+0 NW_025791772.1 Homo sapiens chromosome 4 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR4_2_CTG8_1
+3119818395 308682 0
+0 NW_017363814.1 Homo sapiens chromosome 4 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR4_12_CTG12
+3120127077 420675 0
+0 NW_025791773.1 Homo sapiens chromosome 4 genomic patch of type FIX, GRCh38.p14 PATCHES HG2155_PATCH
+3120547752 113364 0
+0 NW_015495301.1 Homo sapiens chromosome 4 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR4_11_CTG12
+3120661116 205407 3
+0 NW_015495300.1 Homo sapiens chromosome 4 genomic patch of type FIX, GRCh38.p14 PATCHES HG2023_PATCH
+3120866523 230434 0
+0 NW_025791777.1 Homo sapiens chromosome 5 genomic patch of type FIX, GRCh38.p14 PATCHES HG2405_PATCH
+3121096957 2101585 1
+0 NW_018654712.1 Homo sapiens chromosome 5 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR5_9_CTG1
+3123198542 135987 0
+0 NW_025791776.1 Homo sapiens chromosome 5 genomic patch of type FIX, GRCh38.p14 PATCHES HG2476_PATCH
+3123334529 208405 0
+0 NW_009646199.1 Homo sapiens chromosome 5 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR5_7_CTG1
+3123542934 139087 0
+0 NW_016107297.1 Homo sapiens chromosome 5 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR5_8_CTG1
+3123682021 362221 0
+0 NW_025791779.1 Homo sapiens chromosome 5 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR5_10_CTG1
+3124044242 302485 0
+0 NW_021159996.1 Homo sapiens chromosome 5 genomic patch of type FIX, GRCh38.p14 PATCHES HG1395_PATCH
+3124346727 89956 0
+0 NW_025791778.1 Homo sapiens chromosome 5 genomic patch of type FIX, GRCh38.p14 PATCHES HG2308_PATCH
+3124436683 508332 0
+0 NW_016107298.1 Homo sapiens chromosome 5 genomic patch of type FIX, GRCh38.p14 PATCHES HG30_PATCH
+3124945015 673059 0
+0 NW_025791775.1 Homo sapiens chromosome 5 genomic patch of type FIX, GRCh38.p14 PATCHES HG1046_PATCH
+3125618074 34400 0
+0 NW_018654713.1 Homo sapiens chromosome 6 genomic patch of type FIX, GRCh38.p14 PATCHES HG2057_PATCH
+3125652474 242796 0
+0 NW_013171803.1 Homo sapiens chromosome 6 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR6_1_CTG10
+3125895270 82315 0
+0 NW_025791780.1 Homo sapiens chromosome 6 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR6_1_CTG1
+3125977585 383128 0
+0 NW_012132918.1 Homo sapiens chromosome 6 genomic patch of type FIX, GRCh38.p14 PATCHES HG1651_PATCH
+3126360713 320750 0
+0 NW_009646200.1 Homo sapiens chromosome 6 genomic patch of type FIX, GRCh38.p14 PATCHES HG2128_PATCH
+3126681463 268330 0
+0 NW_013171802.1 Homo sapiens chromosome 6 genomic patch of type FIX, GRCh38.p14 PATCHES HG2072_PATCH
+3126949793 245716 0
+0 NW_017363815.1 Homo sapiens chromosome 6 genomic patch of type FIX, GRCh38.p14 PATCHES HG2121_PATCH
+3127195509 139427 0
+0 NW_021159997.1 Homo sapiens chromosome 6 genomic patch of type FIX, GRCh38.p14 PATCHES HG563_PATCH
+3127334936 73265 0
+0 NW_021159998.1 Homo sapiens chromosome 7 genomic patch of type FIX, GRCh38.p14 PATCHES HG1309_PATCH
+3127408201 254759 0
+0 NW_019805493.1 Homo sapiens chromosome 7 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR7_3_CTG1
+3127662960 172555 0
+0 NW_025791781.1 Homo sapiens chromosome 7 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR7_4_CTG1
+3127835515 464417 0
+0 NW_017852929.1 Homo sapiens chromosome 7 genomic patch of type FIX, GRCh38.p14 PATCHES HG2088_PATCH
+3128299932 142129 0
+0 NW_017852930.1 Homo sapiens chromosome 7 genomic patch of type FIX, GRCh38.p14 PATCHES HG2266_PATCH
+3128442061 468267 0
+0 NW_018654714.1 Homo sapiens chromosome 7 genomic patch of type FIX, GRCh38.p14 PATCHES HG708_PATCH
+3128910328 589656 0
+0 NW_018654715.1 Homo sapiens chromosome 7 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR7_3_CTG4_4
+3129499984 680662 0
+0 NW_012132919.1 Homo sapiens chromosome 7 genomic patch of type FIX, GRCh38.p14 PATCHES HG2239_PATCH
+3130180646 179932 0
+0 NW_025791785.1 Homo sapiens chromosome 8 genomic patch of type FIX, GRCh38.p14 PATCHES HG2267_PATCH
+3130360578 429744 0
+0 NW_018654717.1 Homo sapiens chromosome 8 genomic patch of type FIX, GRCh38.p14 PATCHES HG76_PATCH
+3130790322 6367528 1
+0 NW_017852932.1 Homo sapiens chromosome 8 genomic patch of type FIX, GRCh38.p14 PATCHES HG2068_PATCH
+3137157850 265876 0
+0 NW_025791782.1 Homo sapiens chromosome 8 genomic patch of type FIX, GRCh38.p14 PATCHES HG2176_PATCH
+3137423726 150302 0
+0 NW_017852931.1 Homo sapiens chromosome 8 genomic patch of type FIX, GRCh38.p14 PATCHES HG2067_PATCH
+3137574028 156998 0
+0 NW_025791784.1 Homo sapiens chromosome 8 genomic patch of type FIX, GRCh38.p14 PATCHES HG2408_PATCH
+3137731026 106905 0
+0 NW_019805494.1 Homo sapiens chromosome 8 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR8_7_CTG7
+3137837931 103072 0
+0 NW_025791786.1 Homo sapiens chromosome 8 genomic patch of type FIX, GRCh38.p14 PATCHES HG2031_PATCH
+3137941003 207371 0
+0 NW_018654716.1 Homo sapiens chromosome 8 genomic patch of type FIX, GRCh38.p14 PATCHES HG2419_PATCH
+3138148374 165120 0
+0 NW_025791783.1 Homo sapiens chromosome 8 genomic patch of type FIX, GRCh38.p14 PATCHES HG1047_PATCH
+3138313494 39290 0
+0 NW_013171804.1 Homo sapiens chromosome 9 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR9_1_CTG6
+3138352784 163882 0
+0 NW_013171805.1 Homo sapiens chromosome 9 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR9_1_CTG7
+3138516666 134099 0
+0 NW_025791789.1 Homo sapiens chromosome 9 genomic patch of type FIX, GRCh38.p14 PATCHES HG1206_PATCH
+3138650765 569668 0
+0 NW_025791787.1 Homo sapiens chromosome 9 genomic patch of type FIX, GRCh38.p14 PATCHES HG2158_PATCH
+3139220433 340717 0
+0 NW_025791788.1 Homo sapiens chromosome 9 genomic patch of type FIX, GRCh38.p14 PATCHES HG1012_PATCH
+3139561150 482250 0
+0 NW_009646201.1 Homo sapiens chromosome 9 genomic patch of type FIX, GRCh38.p14 PATCHES HG2030_PATCH
+3140043400 330164 0
+0 NW_021159999.1 Homo sapiens chromosome 9 genomic patch of type FIX, GRCh38.p14 PATCHES HG613_PATCH
+3140373564 25408 0
+0 NW_021160000.1 Homo sapiens chromosome 10 genomic patch of type FIX, GRCh38.p14 PATCHES HG545_PATCH
+3140398972 454963 0
+0 NW_011332694.1 Homo sapiens chromosome 10 genomic patch of type FIX, GRCh38.p14 PATCHES HG2244_HG2245_PATCH
+3140853935 420164 0
+0 NW_021160001.1 Homo sapiens chromosome 10 genomic patch of type FIX, GRCh38.p14 PATCHES HG1277_PATCH
+3141274099 292944 0
+0 NW_013171806.1 Homo sapiens chromosome 10 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR10_1_CTG6
+3141567043 185507 0
+0 NW_009646202.1 Homo sapiens chromosome 10 genomic patch of type FIX, GRCh38.p14 PATCHES HG2191_PATCH
+3141752550 277797 0
+0 NW_013171807.1 Homo sapiens chromosome 10 genomic patch of type FIX, GRCh38.p14 PATCHES HG2334_PATCH
+3142030347 264545 0
+0 NW_025791790.1 Homo sapiens chromosome 10 genomic patch of type FIX, GRCh38.p14 PATCHES HG2576_PATCH
+3142294892 196262 0
+0 NW_011332693.1 Homo sapiens chromosome 10 genomic patch of type FIX, GRCh38.p14 PATCHES HG2242_HG2243_PATCH
+3142491154 85284 0
+0 NW_011332692.1 Homo sapiens chromosome 10 genomic patch of type FIX, GRCh38.p14 PATCHES HG2241_PATCH
+3142576438 14347 0
+0 NW_015148966.2 Homo sapiens chromosome 11 genomic patch of type FIX, GRCh38.p14 PATCHES HG107_HG2565_PATCH
+3142590785 204999 0
+0 NW_025791792.1 Homo sapiens chromosome 11 genomic patch of type FIX, GRCh38.p14 PATCHES HG152_PATCH
+3142795784 434831 0
+0 NW_021160004.1 Homo sapiens chromosome 11 genomic patch of type FIX, GRCh38.p14 PATCHES HG28_PATCH
+3143230615 270122 0
+0 NW_025791794.1 Homo sapiens chromosome 11 genomic patch of type FIX, GRCh38.p14 PATCHES HG2578_PATCH
+3143500737 122722 0
+0 NW_011332695.1 Homo sapiens chromosome 11 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR11_1_CTG1_2
+3143623459 203552 0
+0 NW_021160006.1 Homo sapiens chromosome 11 genomic patch of type FIX, GRCh38.p14 PATCHES HG2111_PATCH
+3143827011 170928 0
+0 NW_019805496.1 Homo sapiens chromosome 11 genomic patch of type FIX, GRCh38.p14 PATCHES HG2114_PATCH
+3143997939 279644 0
+0 NW_019805495.1 Homo sapiens chromosome 11 genomic patch of type FIX, GRCh38.p14 PATCHES HG2060_PATCH
+3144277583 305244 0
+0 NW_017363816.1 Homo sapiens chromosome 11 genomic patch of type FIX, GRCh38.p14 PATCHES HG1708_PATCH
+3144582827 140877 0
+0 NW_025791793.1 Homo sapiens chromosome 11 genomic patch of type FIX, GRCh38.p14 PATCHES HG2568_PATCH
+3144723704 344606 0
+0 NW_019805498.1 Homo sapiens chromosome 11 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR11_1_CTG3_1
+3145068310 181167 0
+0 NW_021160005.1 Homo sapiens chromosome 11 genomic patch of type FIX, GRCh38.p14 PATCHES HG2115_PATCH
+3145249477 217075 0
+0 NW_021160003.1 Homo sapiens chromosome 11 genomic patch of type FIX, GRCh38.p14 PATCHES HG1445_PATCH
+3145466552 165419 0
+0 NW_019805497.1 Homo sapiens chromosome 11 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR11_2_CTG8
+3145631971 301637 0
+0 NW_013171808.1 Homo sapiens chromosome 11 genomic patch of type FIX, GRCh38.p14 PATCHES HG2116_PATCH
+3145933608 181958 0
+0 NW_021160002.1 Homo sapiens chromosome 11 genomic patch of type FIX, GRCh38.p14 PATCHES HG1521_PATCH
+3146115566 45257 0
+0 NW_025791791.1 Homo sapiens chromosome 11 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR11_2_CTG3_1
+3146160823 261194 0
+0 NW_009646203.1 Homo sapiens chromosome 11 genomic patch of type FIX, GRCh38.p14 PATCHES HG2217_PATCH
+3146422017 108875 0
+0 NW_013171809.1 Homo sapiens chromosome 12 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR12_2_CTG1
+3146530892 109323 0
+0 NW_018654718.1 Homo sapiens chromosome 12 genomic patch of type FIX, GRCh38.p14 PATCHES HG1815_PATCH
+3146640215 1046838 0
+0 NW_021160008.1 Homo sapiens chromosome 12 genomic patch of type FIX, GRCh38.p14 PATCHES HG1398_PATCH
+3147687053 192531 0
+0 NW_011332696.1 Homo sapiens chromosome 12 genomic patch of type FIX, GRCh38.p14 PATCHES HG1362_PATCH
+3147879584 541038 0
+0 NW_009646204.1 Homo sapiens chromosome 12 genomic patch of type FIX, GRCh38.p14 PATCHES HG23_PATCH
+3148420622 211377 0
+0 NW_025791795.1 Homo sapiens chromosome 12 genomic patch of type FIX, GRCh38.p14 PATCHES HG2554_PATCH
+3148631999 104537 0
+0 NW_018654720.1 Homo sapiens chromosome 12 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR12_8_CTG2_1
+3148736536 174808 0
+0 NW_015148967.1 Homo sapiens chromosome 12 genomic patch of type FIX, GRCh38.p14 PATCHES HG2063_PATCH
+3148911344 315610 0
+0 NW_018654719.1 Homo sapiens chromosome 12 genomic patch of type FIX, GRCh38.p14 PATCHES HG2047_PATCH
+3149226954 64689 0
+0 NW_011332697.1 Homo sapiens chromosome 12 genomic patch of type FIX, GRCh38.p14 PATCHES HG2247_PATCH
+3149291643 86533 0
+0 NW_019805499.1 Homo sapiens chromosome 12 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR12_9_CTG2_1
+3149378176 154139 0
+0 NW_021160007.1 Homo sapiens chromosome 12 genomic patch of type FIX, GRCh38.p14 PATCHES HG2246_HG2248_HG2276_PATCH
+3149532315 297568 0
+0 NW_021160012.1 Homo sapiens chromosome 13 genomic patch of type FIX, GRCh38.p14 PATCHES HG2509_PATCH
+3149829883 409912 0
+0 NW_011332699.1 Homo sapiens chromosome 13 genomic patch of type FIX, GRCh38.p14 PATCHES HG2291_PATCH
+3150239795 356766 0
+0 NW_013171810.1 Homo sapiens chromosome 13 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR13_1_CTG7
+3150596561 168146 0
+0 NW_021160009.1 Homo sapiens chromosome 13 genomic patch of type FIX, GRCh38.p14 PATCHES HG1817_1_PATCH
+3150764707 7309 0
+0 NW_009646205.1 Homo sapiens chromosome 13 genomic patch of type FIX, GRCh38.p14 PATCHES HG2216_PATCH
+3150772016 35455 0
+0 NW_011332700.1 Homo sapiens chromosome 13 genomic patch of type FIX, GRCh38.p14 PATCHES HG2249_PATCH
+3150807471 148762 0
+0 NW_013171811.1 Homo sapiens chromosome 13 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR13_1_CTG8
+3150956233 123480 0
+0 NW_021160010.1 Homo sapiens chromosome 13 genomic patch of type FIX, GRCh38.p14 PATCHES HG1523_PATCH
+3151079713 158944 0
+0 NW_021160011.1 Homo sapiens chromosome 13 genomic patch of type FIX, GRCh38.p14 PATCHES HG1524_PATCH
+3151238657 65394 0
+0 NW_011332698.1 Homo sapiens chromosome 13 genomic patch of type FIX, GRCh38.p14 PATCHES HG2288_HG2289_PATCH
+3151304051 206320 0
+0 NW_021160013.1 Homo sapiens chromosome 14 genomic patch of type FIX, GRCh38.p14 PATCHES HG2510_PATCH
+3151510371 399183 0
+0 NW_025791796.1 Homo sapiens chromosome 14 genomic patch of type FIX, GRCh38.p14 PATCHES HG2526_HG2573_PATCH
+3151909554 722645 0
+0 NW_018654722.1 Homo sapiens chromosome 14 genomic patch of type FIX, GRCh38.p14 PATCHES HG1_PATCH
+3152632199 690932 0
+0 NW_021160014.1 Homo sapiens chromosome 14 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR14_9_CTG1
+3153323131 264228 0
+0 NW_018654721.1 Homo sapiens chromosome 14 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR14_8_CTG1
+3153587359 171798 0
+0 NW_011332701.1 Homo sapiens chromosome 15 genomic patch of type FIX, GRCh38.p14 PATCHES HG2139_PATCH
+3153759157 4998962 2
+0 NW_021160018.1 Homo sapiens chromosome 15 genomic patch of type FIX, GRCh38.p14 PATCHES HG2511_PATCH
+3158758119 396515 0
+0 NW_021160017.1 Homo sapiens chromosome 15 genomic patch of type FIX, GRCh38.p14 PATCHES HG2365_PATCH
+3159154634 5500449 0
+0 NW_012132920.1 Homo sapiens chromosome 15 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR15_6_CTG8
+3164655083 2365364 2
+0 NW_025791798.1 Homo sapiens chromosome 15 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR15_9_CTG8
+3167020447 204007 0
+0 NW_021160016.1 Homo sapiens chromosome 15 genomic patch of type FIX, GRCh38.p14 PATCHES HG2198_PATCH
+3167224454 369264 0
+0 NW_025791797.1 Homo sapiens chromosome 15 genomic patch of type FIX, GRCh38.p14 PATCHES HG2280_PATCH
+3167593718 1154574 0
+0 NW_021160015.1 Homo sapiens chromosome 15 genomic patch of type FIX, GRCh38.p14 PATCHES HG2499_PATCH
+3168748292 97763 0
+0 NW_025791799.1 Homo sapiens chromosome 16 genomic patch of type FIX, GRCh38.p14 PATCHES HG401_PATCH
+3168846055 87715 0
+0 NW_013171812.1 Homo sapiens chromosome 16 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR16_5_CTG1
+3168933770 59016 0
+0 NW_019805500.1 Homo sapiens chromosome 16 genomic patch of type FIX, GRCh38.p14 PATCHES HG2263_PATCH
+3168992786 480415 0
+0 NW_017852933.1 Homo sapiens chromosome 16 genomic patch of type FIX, GRCh38.p14 PATCHES HG926_PATCH
+3169473201 1927115 0
+0 NW_021160019.1 Homo sapiens chromosome 16 genomic patch of type FIX, GRCh38.p14 PATCHES HG2471_PATCH
+3171400316 270967 0
+0 NW_013171813.1 Homo sapiens chromosome 16 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR16_4_CTG3_1
+3171671283 267463 0
+0 NW_018654723.1 Homo sapiens chromosome 16 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR16_5_CTG3_1
+3171938746 78609 0
+0 NW_012132921.1 Homo sapiens chromosome 16 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR16_3_CTG3_1
+3172017355 169136 0
+0 NW_025791800.1 Homo sapiens chromosome 16 genomic patch of type FIX, GRCh38.p14 PATCHES HG405_PATCH
+3172186491 334997 0
+0 NW_017363817.1 Homo sapiens chromosome 17 genomic patch of type FIX, GRCh38.p14 PATCHES HG2285_HG106_HG2252_PATCH
+3172521488 281919 0
+0 NW_021160020.1 Homo sapiens chromosome 17 genomic patch of type FIX, GRCh38.p14 PATCHES HG2087_PATCH
+3172803407 137908 0
+0 NW_016107299.1 Homo sapiens chromosome 17 genomic patch of type FIX, GRCh38.p14 PATCHES HG2046_PATCH
+3172941315 154723 0
+0 NW_017363819.1 Homo sapiens chromosome 17 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR17_3_CTG1
+3173096038 276292 0
+0 NW_025791803.1 Homo sapiens chromosome 17 genomic patch of type FIX, GRCh38.p14 PATCHES HG2407_PATCH
+3173372330 538541 0
+0 NW_025791801.1 Homo sapiens chromosome 17 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR17_13_CTG4
+3173910871 372839 0
+0 NW_017363818.1 Homo sapiens chromosome 17 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR17_11_CTG4
+3174283710 246895 0
+0 NW_019805501.1 Homo sapiens chromosome 17 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR17_12_CTG4
+3174530605 116753 0
+0 NW_025791806.1 Homo sapiens chromosome 17 genomic patch of type FIX, GRCh38.p14 PATCHES HG2580_PATCH
+3174647358 172609 0
+0 NW_025791802.1 Homo sapiens chromosome 17 genomic patch of type FIX, GRCh38.p14 PATCHES HG2118_PATCH
+3174819967 234878 0
+0 NW_025791805.1 Homo sapiens chromosome 17 genomic patch of type FIX, GRCh38.p14 PATCHES HG1369_PATCH
+3175054845 187626 0
+0 NW_021160021.1 Homo sapiens chromosome 17 genomic patch of type FIX, GRCh38.p14 PATCHES HG1320_PATCH
+3175242471 56695 0
+0 NW_025791804.1 Homo sapiens chromosome 17 genomic patch of type FIX, GRCh38.p14 PATCHES HG2251_PATCH
+3175299166 144689 0
+0 NW_019805503.1 Homo sapiens chromosome 18 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR18_1_CTG1
+3175443855 163186 0
+0 NW_014040928.1 Homo sapiens chromosome 18 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR18_5_CTG1_1
+3175607041 205101 0
+0 NW_019805502.1 Homo sapiens chromosome 18 genomic patch of type FIX, GRCh38.p14 PATCHES HG2412_PATCH
+3175812142 230843 0
+0 NW_013171814.1 Homo sapiens chromosome 18 genomic patch of type FIX, GRCh38.p14 PATCHES HG2213_PATCH
+3176042985 407387 0
+0 NW_018654724.1 Homo sapiens chromosome 18 genomic patch of type FIX, GRCh38.p14 PATCHES HG2442_PATCH
+3176450372 93070 0
+0 NW_025791809.1 Homo sapiens chromosome 19 genomic patch of type FIX, GRCh38.p14 PATCHES HG2469_PATCH
+3176543442 226166 0
+0 NW_025791810.1 Homo sapiens chromosome 19 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR19_6_CTG2
+3176769608 89211 0
+0 NW_025791807.1 Homo sapiens chromosome 19 genomic patch of type FIX, GRCh38.p14 PATCHES HG2461_PATCH
+3176858819 333754 0
+0 NW_021160022.1 Homo sapiens chromosome 19 genomic patch of type FIX, GRCh38.p14 PATCHES HG109_PATCH
+3177192573 493165 0
+0 NW_014040929.1 Homo sapiens chromosome 19 genomic patch of type FIX, GRCh38.p14 PATCHES HG26_PATCH
+3177685738 405389 0
+0 NW_025791808.1 Homo sapiens chromosome 19 genomic patch of type FIX, GRCh38.p14 PATCHES HG2569_PATCH
+3178091127 137818 0
+0 NW_009646206.1 Homo sapiens chromosome 19 genomic patch of type FIX, GRCh38.p14 PATCHES HG2021_PATCH
+3178228945 370917 0
+0 NW_016107300.1 Homo sapiens chromosome 19 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR19KIR_0019-4656-A_CTG3_1
+3178599862 163926 0
+0 NW_016107301.1 Homo sapiens chromosome 19 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR19KIR_CA01-TA01_1_CTG3_1
+3178763788 170206 1
+0 NW_016107302.1 Homo sapiens chromosome 19 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR19KIR_CA01-TA01_2_CTG3_1
+3178933994 168131 0
+0 NW_016107303.1 Homo sapiens chromosome 19 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR19KIR_CA01-TB04_CTG3_1
+3179102125 293522 1
+0 NW_016107304.1 Homo sapiens chromosome 19 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR19KIR_CA01-TB01_CTG3_1
+3179395647 241058 0
+0 NW_016107305.1 Homo sapiens chromosome 19 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR19KIR_HG2394_CTG3_1
+3179636705 159285 1
+0 NW_016107306.1 Homo sapiens chromosome 19 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR19KIR_502960008-2_CTG3_1
+3179795990 178197 0
+0 NW_016107307.1 Homo sapiens chromosome 19 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR19KIR_502960008-1_CTG3_1
+3179974187 166713 0
+0 NW_016107308.1 Homo sapiens chromosome 19 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR19KIR_0010-5217-AB_CTG3_1
+3180140900 99845 0
+0 NW_016107309.1 Homo sapiens chromosome 19 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR19KIR_7191059-1_CTG3_1
+3180240745 161095 0
+0 NW_016107310.1 Homo sapiens chromosome 19 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR19KIR_0019-4656-B_CTG3_1
+3180401840 223118 0
+0 NW_016107311.1 Homo sapiens chromosome 19 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR19KIR_CA04_CTG3_1
+3180624958 100553 0
+0 NW_016107313.1 Homo sapiens chromosome 19 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR19KIR_7191059-2_CTG3_1
+3180725511 171263 0
+0 NW_016107314.1 Homo sapiens chromosome 19 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR19KIR_HG2396_CTG3_1
+3180896774 145691 5
+0 NW_016107312.1 Homo sapiens chromosome 19 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR19KIR_HG2393_CTG3_1
+3181042465 156965 6
+0 NW_025791811.1 Homo sapiens chromosome 20 genomic patch of type FIX, GRCh38.p14 PATCHES HG2225_PATCH
+3181199430 273725 0
+0 NW_025791812.1 Homo sapiens chromosome 20 genomic patch of type FIX, GRCh38.p14 PATCHES HG410_PATCH
+3181473155 355731 0
+0 NW_021160023.1 Homo sapiens chromosome 21 genomic patch of type FIX, GRCh38.p14 PATCHES HG2513_PATCH
+3181828886 519485 0
+0 NW_025791813.1 Homo sapiens chromosome 21 genomic patch of type FIX, GRCh38.p14 PATCHES HG2219_PATCH
+3182348371 336752 0
+0 NW_025791814.1 Homo sapiens chromosome 21 genomic patch of type FIX, GRCh38.p14 PATCHES HG2265_PATCH
+3182685123 1020778 0
+0 NW_025791815.1 Homo sapiens chromosome 21 genomic patch of type FIX, GRCh38.p14 PATCHES HG2521_PATCH
+3183705901 189707 0
+0 NW_021160026.1 Homo sapiens chromosome 22 genomic patch of type FIX, GRCh38.p14 PATCHES HG2512_PATCH
+3183895608 412368 0
+0 NW_021160024.1 Homo sapiens chromosome 22 genomic patch of type FIX, GRCh38.p14 PATCHES HG1485_PATCH
+3184307976 461303 0
+0 NW_009646207.1 Homo sapiens chromosome 22 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR22_4_CTG1
+3184769279 156562 0
+0 NW_014040930.1 Homo sapiens chromosome 22 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR22_6_CTG1
+3184925841 155930 0
+0 NW_014040931.1 Homo sapiens chromosome 22 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR22_7_CTG1
+3185081771 174749 0
+0 NW_009646208.1 Homo sapiens chromosome 22 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR22_5_CTG1
+3185256520 153027 0
+0 NW_015148968.1 Homo sapiens chromosome 22 genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHR22_8_CTG1
+3185409547 145162 0
+0 NW_021160025.1 Homo sapiens chromosome 22 genomic patch of type FIX, GRCh38.p14 PATCHES HG494_PATCH
+3185554709 12295 0
+0 NW_015148969.2 Homo sapiens chromosome 22 genomic patch of type FIX, GRCh38.p14 PATCHES HG1311_HG2539_PATCH
+3185567004 101040 0
+0 NW_017363820.1 Homo sapiens chromosome X genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHRX_3_CTG7
+3185668044 188004 0
+0 NW_021160031.1 Homo sapiens chromosome X genomic patch of type FIX, GRCh38.p14 PATCHES HG1466_PATCH
+3185856048 17435 0
+0 NW_025791820.1 Homo sapiens chromosome X genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHRX_3_CTG3
+3185873483 330493 0
+0 NW_021160028.1 Homo sapiens chromosome X genomic patch of type FIX, GRCh38.p14 PATCHES HG1506_PATCH
+3186203976 28824 0
+0 NW_025791816.1 Homo sapiens chromosome X genomic patch of type FIX, GRCh38.p14 PATCHES HG2527_PATCH
+3186232800 68810 0
+0 NW_021160029.1 Homo sapiens chromosome X genomic patch of type FIX, GRCh38.p14 PATCHES HG1507_PATCH
+3186301610 68192 0
+0 NW_025791817.1 Homo sapiens chromosome X genomic patch of type FIX, GRCh38.p14 PATCHES HG2541_PATCH
+3186369802 140567 0
+0 NW_021160027.1 Homo sapiens chromosome X genomic patch of type FIX, GRCh38.p14 PATCHES HG439_PATCH
+3186510369 403128 0
+0 NW_025791819.1 Homo sapiens chromosome X genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHRX_2_CTG14
+3186913497 294119 0
+0 NW_021160030.1 Homo sapiens chromosome X genomic patch of type FIX, GRCh38.p14 PATCHES HG1509_PATCH
+3187207616 14678 0
+0 NW_025791818.1 Homo sapiens chromosome X genomic patch of type NOVEL, GRCh38.p14 PATCHES HSCHRX_1_CTG14
+3187222294 619716 0
+0 NW_018654725.1 Homo sapiens chromosome Y genomic patch of type FIX, GRCh38.p14 PATCHES HG1531_PATCH
+3187842010 48370 0
+0 NW_025791821.1 Homo sapiens chromosome Y genomic patch of type FIX, GRCh38.p14 PATCHES HG1532_PATCH
+3187890380 865743 0
+0 NW_018654726.1 Homo sapiens chromosome Y genomic patch of type FIX, GRCh38.p14 PATCHES HG1535_PATCH
+3188756123 209722 0
+0 NW_009646209.1 Homo sapiens chromosome Y genomic patch of type FIX, GRCh38.p14 PATCHES HG2062_PATCH
+3188965845 101150 0
+0 NT_187515.1 Homo sapiens chromosome 1 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR1_1_CTG3
+3189066995 354444 1
+0 NT_187517.1 Homo sapiens chromosome 1 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR1_2_CTG3
+3189421439 256271 0
+0 NT_187514.1 Homo sapiens chromosome 1 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR1_1_CTG11
+3189677710 109528 0
+0 NT_187520.1 Homo sapiens chromosome 1 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR1_4_CTG31
+3189787238 185285 0
+0 NW_003315905.1 Homo sapiens chromosome 1 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR1_1_CTG31
+3189972523 182439 0
+0 NW_003315906.1 Homo sapiens chromosome 1 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR1_2_CTG31
+3190154962 110268 0
+0 NW_003315907.2 Homo sapiens chromosome 1 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR1_3_CTG31
+3190265230 366580 0
+0 NT_187521.1 Homo sapiens chromosome 1 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR1_4_CTG32_1
+3190631810 50258 0
+0 NT_187519.1 Homo sapiens chromosome 1 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR1_3_CTG32_1
+3190682068 911658 0
+0 NT_187516.1 Homo sapiens chromosome 1 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR1_1_CTG32_1
+3191593726 425601 0
+0 NT_187518.1 Homo sapiens chromosome 1 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR1_2_CTG32_1
+3192019327 165834 0
+0 NT_187525.1 Homo sapiens chromosome 2 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR2_2_CTG1
+3192185161 136240 0
+0 NT_187526.1 Homo sapiens chromosome 2 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR2_3_CTG1
+3192321401 70887 0
+0 NT_187529.1 Homo sapiens chromosome 2 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR2_4_CTG1
+3192392288 223625 0
+0 NT_187522.1 Homo sapiens chromosome 2 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR2_1_CTG1
+3192615913 120616 0
+0 NW_003315908.1 Homo sapiens chromosome 2 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR2_1_CTG5
+3192736529 143390 0
+0 NT_187524.1 Homo sapiens chromosome 2 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR2_1_CTG7
+3192879919 133041 0
+0 NT_187531.1 Homo sapiens chromosome 2 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR2_5_CTG7_2
+3193012960 138019 0
+0 NT_187530.1 Homo sapiens chromosome 2 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR2_4_CTG7_2
+3193150979 110395 0
+0 NT_187528.1 Homo sapiens chromosome 2 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR2_3_CTG7_2
+3193261374 110099 0
+0 NW_003571033.2 Homo sapiens chromosome 2 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR2_2_CTG7_2
+3193371473 96131 0
+0 NW_003315909.1 Homo sapiens chromosome 2 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR2_1_CTG7_2
+3193467604 123821 0
+0 NT_187527.1 Homo sapiens chromosome 2 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR2_3_CTG15
+3193591425 174166 0
+0 NT_187523.1 Homo sapiens chromosome 2 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR2_1_CTG15
+3193765591 161578 0
+0 NW_003871060.2 Homo sapiens chromosome 3 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR3_1_CTG1
+3193927169 173151 0
+0 NT_187535.1 Homo sapiens chromosome 3 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR3_3_CTG1
+3194100320 109187 0
+0 NT_187537.1 Homo sapiens chromosome 3 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR3_4_CTG2_1
+3194209507 224108 0
+0 NW_003315913.1 Homo sapiens chromosome 3 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR3_1_CTG2_1
+3194433615 180671 0
+0 NT_187533.1 Homo sapiens chromosome 3 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR3_2_CTG2_1
+3194614286 173649 0
+0 NT_187536.1 Homo sapiens chromosome 3 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR3_3_CTG2_1
+3194787935 248252 0
+0 NT_187538.1 Homo sapiens chromosome 3 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR3_5_CTG2_1
+3195036187 113034 0
+0 NT_187532.1 Homo sapiens chromosome 3 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR3_1_CTG3
+3195149221 205312 0
+0 NT_187534.1 Homo sapiens chromosome 3 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR3_2_CTG3
+3195354533 162429 0
+0 NT_187539.1 Homo sapiens chromosome 3 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR3_9_CTG3
+3195516962 184404 0
+0 NT_187540.1 Homo sapiens chromosome 4 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR4_1_CTG4
+3195701366 220246 0
+0 NW_003315915.1 Homo sapiens chromosome 4 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR4_1_CTG6
+3195921612 376187 0
+0 NT_187541.1 Homo sapiens chromosome 4 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR4_1_CTG8_1
+3196297799 111943 0
+0 NT_167250.2 Homo sapiens chromosome 4 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR4_1_CTG9
+3196409742 586476 0
+0 NT_187544.1 Homo sapiens chromosome 4 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR4_4_CTG12
+3196996218 158965 0
+0 NW_003315914.1 Homo sapiens chromosome 4 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR4_1_CTG12
+3197155183 164536 0
+0 NT_187542.1 Homo sapiens chromosome 4 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR4_2_CTG12
+3197319719 119912 0
+0 NT_187545.1 Homo sapiens chromosome 4 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR4_5_CTG12
+3197439631 205944 0
+0 NT_187543.1 Homo sapiens chromosome 4 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR4_3_CTG12
+3197645575 244096 0
+0 NT_187550.1 Homo sapiens chromosome 5 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR5_5_CTG1
+3197889671 126136 0
+0 NT_187548.1 Homo sapiens chromosome 5 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR5_4_CTG1
+3198015807 179043 0
+0 NT_187547.1 Homo sapiens chromosome 5 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR5_3_CTG1
+3198194850 195710 0
+0 NW_003315920.1 Homo sapiens chromosome 5 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR5_1_CTG1
+3198390560 82728 0
+0 NW_003571036.1 Homo sapiens chromosome 5 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR5_2_CTG1
+3198473288 226852 0
+0 NT_187551.1 Homo sapiens chromosome 5 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR5_6_CTG1
+3198700140 164558 0
+0 NW_003315917.2 Homo sapiens chromosome 5 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR5_2_CTG1_1
+3198864698 1612928 1
+0 NW_003315918.1 Homo sapiens chromosome 5 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR5_3_CTG1_1
+3200477626 101241 0
+0 NT_187549.1 Homo sapiens chromosome 5 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR5_4_CTG1_1
+3200578867 172708 0
+0 NW_003315919.1 Homo sapiens chromosome 5 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR5_1_CTG5
+3200751575 173459 0
+0 NT_187546.1 Homo sapiens chromosome 5 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR5_2_CTG5
+3200925034 131892 0
+0 NT_167244.2 Homo sapiens chromosome 6 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR6_MHC_APD_CTG1
+3201056926 4672374 28
+0 NT_187555.1 Homo sapiens chromosome 6 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR6_1_CTG7
+3205729300 175808 0
+0 NT_187554.1 Homo sapiens chromosome 6 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR6_1_CTG6
+3205905108 152148 0
+0 NW_003315921.1 Homo sapiens chromosome 6 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR6_1_CTG2
+3206057256 124736 0
+0 NT_187556.1 Homo sapiens chromosome 6 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR6_1_CTG8
+3206181992 870480 0
+0 NT_187557.1 Homo sapiens chromosome 6 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR6_1_CTG9
+3207052472 75005 0
+0 NW_004166862.2 Homo sapiens chromosome 6 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR6_1_CTG3
+3207127477 185823 0
+0 NT_187552.1 Homo sapiens chromosome 6 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR6_1_CTG4
+3207313300 197536 0
+0 NT_187553.1 Homo sapiens chromosome 6 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR6_1_CTG5
+3207510836 271782 0
+0 NT_187558.1 Homo sapiens chromosome 7 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR7_1_CTG1
+3207782618 157952 0
+0 NT_187561.1 Homo sapiens chromosome 7 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR7_2_CTG4_4
+3207940570 209586 0
+0 NT_187559.1 Homo sapiens chromosome 7 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR7_1_CTG4_4
+3208150156 158166 0
+0 NW_003315922.2 Homo sapiens chromosome 7 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR7_1_CTG6
+3208308322 119183 0
+0 NT_187562.1 Homo sapiens chromosome 7 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR7_2_CTG6
+3208427505 1111570 0
+0 NT_187564.1 Homo sapiens chromosome 7 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR7_3_CTG6
+3209539075 271455 0
+0 NT_187563.1 Homo sapiens chromosome 7 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR7_2_CTG7
+3209810530 126434 0
+0 NT_187560.1 Homo sapiens chromosome 7 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR7_1_CTG7
+3209936964 209988 0
+0 NT_187572.1 Homo sapiens chromosome 8 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR8_4_CTG1
+3210146952 145606 0
+0 NT_187568.1 Homo sapiens chromosome 8 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR8_2_CTG1
+3210292558 282736 0
+0 NT_187565.1 Homo sapiens chromosome 8 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR8_1_CTG1
+3210575294 292436 0
+0 NT_187576.1 Homo sapiens chromosome 8 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR8_8_CTG1
+3210867730 985506 0
+0 NT_187570.1 Homo sapiens chromosome 8 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR8_3_CTG1
+3211853236 300230 0
+0 NT_187577.1 Homo sapiens chromosome 8 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR8_9_CTG1
+3212153466 624492 0
+0 NT_187566.1 Homo sapiens chromosome 8 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR8_1_CTG6
+3212777958 141812 0
+0 NT_187567.1 Homo sapiens chromosome 8 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR8_1_CTG7
+3212919770 374415 0
+0 NT_187574.1 Homo sapiens chromosome 8 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR8_5_CTG7
+3213294185 133535 0
+0 NT_187575.1 Homo sapiens chromosome 8 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR8_6_CTG7
+3213427720 36640 0
+0 NT_187573.1 Homo sapiens chromosome 8 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR8_4_CTG7
+3213464360 158983 0
+0 NT_187571.1 Homo sapiens chromosome 8 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR8_3_CTG7
+3213623343 305841 0
+0 NT_187569.1 Homo sapiens chromosome 8 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR8_2_CTG7
+3213929184 132244 0
+0 NW_003315928.1 Homo sapiens chromosome 9 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR9_1_CTG1
+3214061428 162988 0
+0 NW_003315929.1 Homo sapiens chromosome 9 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR9_1_CTG2
+3214224416 71551 0
+0 NW_003315930.1 Homo sapiens chromosome 9 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR9_1_CTG3
+3214295967 171286 0
+0 NW_003315931.1 Homo sapiens chromosome 9 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR9_1_CTG4
+3214467253 60032 0
+0 NT_187578.1 Homo sapiens chromosome 9 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR9_1_CTG5
+3214527285 439082 0
+0 NW_003315934.1 Homo sapiens chromosome 10 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR10_1_CTG1
+3214966367 179254 0
+0 NT_187579.1 Homo sapiens chromosome 10 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR10_1_CTG3
+3215145621 181496 0
+0 NW_003315935.1 Homo sapiens chromosome 10 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR10_1_CTG2
+3215327117 309802 0
+0 NT_187586.1 Homo sapiens chromosome 11 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR11_1_CTG8
+3215636919 210133 0
+0 NT_187584.1 Homo sapiens chromosome 11 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR11_1_CTG6
+3215847052 177092 0
+0 NT_187585.1 Homo sapiens chromosome 11 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR11_1_CTG7
+3216024144 296895 24
+0 NT_187583.1 Homo sapiens chromosome 11 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR11_1_CTG5
+3216321039 204059 0
+0 NW_003315936.1 Homo sapiens chromosome 11 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR11_1_CTG1_1
+3216525098 154407 0
+0 NW_003871073.1 Homo sapiens chromosome 11 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HG142_HG150_NOVEL_TEST
+3216679505 200998 0
+0 NW_003871074.1 Homo sapiens chromosome 11 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HG151_NOVEL_TEST
+3216880503 191409 0
+0 NT_187582.1 Homo sapiens chromosome 11 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR11_1_CTG3
+3217071912 67707 0
+0 NT_187581.1 Homo sapiens chromosome 11 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR11_1_CTG2
+3217139619 186169 0
+0 NW_003571049.1 Homo sapiens chromosome 12 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR12_1_CTG1
+3217325788 167313 0
+0 NW_003571050.1 Homo sapiens chromosome 12 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR12_2_CTG2
+3217493101 408271 0
+0 NT_187588.1 Homo sapiens chromosome 12 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR12_5_CTG2
+3217901372 40090 0
+0 NW_003315938.1 Homo sapiens chromosome 12 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR12_1_CTG2
+3217941462 120804 0
+0 NT_187587.1 Homo sapiens chromosome 12 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR12_4_CTG2
+3218062266 238139 0
+0 NW_003315939.2 Homo sapiens chromosome 12 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR12_1_CTG2_1
+3218300405 169178 0
+0 NW_003315941.1 Homo sapiens chromosome 12 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR12_2_CTG2_1
+3218469583 138655 0
+0 NW_003315942.2 Homo sapiens chromosome 12 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR12_3_CTG2_1
+3218608238 152874 0
+0 NT_187590.1 Homo sapiens chromosome 12 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR12_6_CTG2_1
+3218761112 119498 0
+0 NW_003315940.1 Homo sapiens chromosome 12 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR12_4_CTG2_1
+3218880610 184319 0
+0 NT_187589.1 Homo sapiens chromosome 12 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR12_5_CTG2_1
+3219064929 76061 0
+0 NT_187591.1 Homo sapiens chromosome 12 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR12_7_CTG2_1
+3219140990 56134 0
+0 NT_187594.1 Homo sapiens chromosome 13 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR13_1_CTG3
+3219197124 191684 0
+0 NT_187593.1 Homo sapiens chromosome 13 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR13_1_CTG2
+3219388808 180306 0
+0 NT_187597.1 Homo sapiens chromosome 13 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR13_1_CTG6
+3219569114 103832 0
+0 NT_187595.1 Homo sapiens chromosome 13 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR13_1_CTG4
+3219672946 169134 0
+0 NT_187592.1 Homo sapiens chromosome 13 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR13_1_CTG1
+3219842080 306913 0
+0 NT_187596.1 Homo sapiens chromosome 13 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR13_1_CTG5
+3220148993 37287 0
+0 NT_187598.1 Homo sapiens chromosome 14 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR14_1_CTG1
+3220186280 322166 0
+0 NT_187601.1 Homo sapiens chromosome 14 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR14_7_CTG1
+3220508446 1511111 0
+0 NT_187599.1 Homo sapiens chromosome 14 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR14_2_CTG1
+3222019557 180703 0
+0 NT_187600.1 Homo sapiens chromosome 14 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR14_3_CTG1
+3222200260 1351393 0
+0 NT_187602.1 Homo sapiens chromosome 15 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR15_1_CTG1
+3223551653 478999 0
+0 NT_187604.1 Homo sapiens chromosome 15 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR15_3_CTG3
+3224030652 263054 0
+0 NT_187603.1 Homo sapiens chromosome 15 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR15_1_CTG3
+3224293706 327382 0
+0 NW_003315943.1 Homo sapiens chromosome 15 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR15_1_CTG8
+3224621088 296527 0
+0 NT_187605.1 Homo sapiens chromosome 15 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR15_3_CTG8
+3224917615 244917 0
+0 NW_003315944.2 Homo sapiens chromosome 15 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR15_2_CTG8
+3225162532 388773 0
+0 NT_187606.1 Homo sapiens chromosome 15 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR15_5_CTG8
+3225551305 430880 0
+0 NT_187610.1 Homo sapiens chromosome 16 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR16_CTG2
+3225982185 134193 0
+0 NT_187609.1 Homo sapiens chromosome 16 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR16_4_CTG1
+3226116378 63982 0
+0 NT_187608.1 Homo sapiens chromosome 16 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR16_3_CTG1
+3226180360 232857 0
+0 NT_187607.1 Homo sapiens chromosome 16 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR16_1_CTG1
+3226413217 2659700 0
+0 NW_003315945.1 Homo sapiens chromosome 16 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR16_1_CTG3_1
+3229072917 192462 0
+0 NW_003315946.1 Homo sapiens chromosome 16 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR16_2_CTG3_1
+3229265379 89672 0
+0 NW_003315952.3 Homo sapiens chromosome 17 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR17_1_CTG1
+3229355051 375691 0
+0 NT_187613.1 Homo sapiens chromosome 17 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR17_2_CTG2
+3229730742 391357 0
+0 NT_187611.1 Homo sapiens chromosome 17 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR17_1_CTG2
+3230122099 196688 0
+0 NT_187614.1 Homo sapiens chromosome 17 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR17_7_CTG4
+3230318787 2877074 0
+0 NW_003871091.1 Homo sapiens chromosome 17 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR17_4_CTG4
+3233195861 278131 0
+0 NW_003871092.1 Homo sapiens chromosome 17 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR17_5_CTG4
+3233473992 70345 0
+0 NW_003315953.2 Homo sapiens chromosome 17 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR17_1_CTG4
+3233544337 133151 0
+0 NT_167251.2 Homo sapiens chromosome 17 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR17_1_CTG5
+3233677488 1821992 1
+0 NW_003315954.1 Homo sapiens chromosome 17 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR17_2_CTG4
+3235499480 223995 0
+0 NT_187615.1 Homo sapiens chromosome 17 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR17_8_CTG4
+3235723475 235827 0
+0 NT_187616.1 Homo sapiens chromosome 17 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR17_9_CTG4
+3235959302 108763 0
+0 NW_003315955.1 Homo sapiens chromosome 17 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR17_3_CTG4
+3236068065 90219 0
+0 NT_187612.1 Homo sapiens chromosome 17 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR17_1_CTG9
+3236158284 178921 0
+0 NT_187618.1 Homo sapiens chromosome 18 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR18_4_CTG1_1
+3236337205 111737 0
+0 NW_003315956.1 Homo sapiens chromosome 18 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR18_1_CTG1_1
+3236448942 289831 0
+0 NW_003315959.1 Homo sapiens chromosome 18 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR18_2_CTG1_1
+3236738773 164789 0
+0 NW_003315960.1 Homo sapiens chromosome 18 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR18_2_CTG2
+3236903562 198278 1
+0 NW_003315957.1 Homo sapiens chromosome 18 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR18_1_CTG2
+3237101840 104552 0
+0 NW_003315958.1 Homo sapiens chromosome 18 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR18_1_CTG2_1
+3237206392 167950 0
+0 NW_003315961.1 Homo sapiens chromosome 18 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR18_2_CTG2_1
+3237374342 159547 0
+0 NT_187617.1 Homo sapiens chromosome 18 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR18_3_CTG2_1
+3237533889 167999 0
+0 NT_187622.1 Homo sapiens chromosome 19 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR19_5_CTG2
+3237701888 61734 0
+0 NT_187621.1 Homo sapiens chromosome 19 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR19_4_CTG2
+3237763622 52969 0
+0 NW_003315962.1 Homo sapiens chromosome 19 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR19_1_CTG2
+3237816591 385657 0
+0 NW_003315964.2 Homo sapiens chromosome 19 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR19_2_CTG2
+3238202248 170222 0
+0 NW_003315965.1 Homo sapiens chromosome 19 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR19_3_CTG2
+3238372470 188024 0
+0 NW_003315963.1 Homo sapiens chromosome 19 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR19_1_CTG3_1
+3238560494 155864 0
+0 NT_187619.1 Homo sapiens chromosome 19 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR19_2_CTG3_1
+3238716358 43156 0
+0 NT_187620.1 Homo sapiens chromosome 19 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR19_3_CTG3_1
+3238759514 233762 0
+0 NW_003571054.1 Homo sapiens chromosome 19 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR19LRC_COX1_CTG3_1
+3238993276 987716 2
+0 NW_003315966.2 Homo sapiens chromosome 20 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR20_1_CTG1
+3239980992 128386 0
+0 NT_187623.1 Homo sapiens chromosome 20 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR20_1_CTG2
+3240109378 118774 0
+0 NT_187625.1 Homo sapiens chromosome 20 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR20_1_CTG4
+3240228152 58661 0
+0 NT_187624.1 Homo sapiens chromosome 20 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR20_1_CTG3
+3240286813 183433 0
+0 NW_003315967.2 Homo sapiens chromosome 21 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR21_1_CTG1_1
+3240470246 63917 0
+0 NT_187628.1 Homo sapiens chromosome 21 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR21_8_CTG1_1
+3240534163 166743 0
+0 NT_187627.1 Homo sapiens chromosome 21 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR21_6_CTG1_1
+3240700906 143900 0
+0 NW_003315968.2 Homo sapiens chromosome 21 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR21_2_CTG1_1
+3240844806 201197 0
+0 NW_003315969.2 Homo sapiens chromosome 21 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR21_3_CTG1_1
+3241046003 74653 0
+0 NW_003315970.2 Homo sapiens chromosome 21 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR21_4_CTG1_1
+3241120656 116689 0
+0 NT_187626.1 Homo sapiens chromosome 21 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR21_5_CTG2
+3241237345 82692 0
+0 NT_187629.1 Homo sapiens chromosome 22 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR22_1_CTG3
+3241320037 259914 0
+0 NT_187632.1 Homo sapiens chromosome 22 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR22_1_CTG6
+3241579951 186262 0
+0 NT_187633.1 Homo sapiens chromosome 22 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR22_1_CTG7
+3241766213 304135 0
+0 NT_187630.1 Homo sapiens chromosome 22 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR22_1_CTG4
+3242070348 263666 0
+0 NT_187631.1 Homo sapiens chromosome 22 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR22_1_CTG5
+3242334014 101331 0
+0 NW_003315972.2 Homo sapiens chromosome 22 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR22_1_CTG2
+3242435345 96924 0
+0 NW_003315971.2 Homo sapiens chromosome 22 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHR22_1_CTG1
+3242532269 162811 0
+0 NT_187634.1 Homo sapiens chromosome X genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHRX_1_CTG3
+3242695080 284869 0
+0 NT_187635.1 Homo sapiens chromosome X genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_1 HSCHRX_2_CTG12
+3242979949 144206 0
+0 NT_187646.1 Homo sapiens chromosome 1 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_2 HSCHR1_ALT2_1_CTG32_1
+3243124155 162212 0
+0 NT_187648.1 Homo sapiens chromosome 2 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_2 HSCHR2_2_CTG7
+3243286367 214158 0
+0 NT_187647.1 Homo sapiens chromosome 2 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_2 HSCHR2_2_CTG15
+3243500525 161218 0
+0 NT_187649.1 Homo sapiens chromosome 3 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_2 HSCHR3_3_CTG3
+3243661743 162896 0
+0 NT_187650.1 Homo sapiens chromosome 4 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_2 HSCHR4_6_CTG12
+3243824639 378547 0
+0 NT_187651.1 Homo sapiens chromosome 5 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_2 HSCHR5_1_CTG1_1
+3244203186 1144418 1
+0 NT_187652.1 Homo sapiens chromosome 5 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_2 HSCHR5_3_CTG5
+3245347604 130957 0
+0 NT_113891.3 Homo sapiens chromosome 6 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_2 HSCHR6_MHC_COX_CTG1
+3245478561 4795265 0
+0 NT_187653.1 Homo sapiens chromosome 7 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_2 HSCHR7_2_CTG1
+3250273826 190869 0
+0 NT_187655.1 Homo sapiens chromosome 8 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_2 HSCHR8_6_CTG1
+3250464695 136959 0
+0 NT_187654.1 Homo sapiens chromosome 8 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_2 HSCHR8_5_CTG1
+3250601654 318687 0
+0 NT_187656.1 Homo sapiens chromosome 11 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_2 HSCHR11_2_CTG1
+3250920341 106711 0
+0 NT_187657.1 Homo sapiens chromosome 11 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_2 HSCHR11_2_CTG1_1
+3251027052 214625 0
+0 NT_187658.1 Homo sapiens chromosome 12 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_2 HSCHR12_3_CTG2
+3251241677 572349 0
+0 NT_187659.1 Homo sapiens chromosome 15 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_2 HSCHR15_2_CTG3
+3251814026 196384 0
+0 NT_187660.1 Homo sapiens chromosome 15 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_2 HSCHR15_4_CTG8
+3252010410 5161414 4
+0 NT_187662.1 Homo sapiens chromosome 17 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_2 HSCHR17_2_CTG1
+3257171824 137721 0
+0 NT_187664.1 Homo sapiens chromosome 17 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_2 HSCHR17_3_CTG2
+3257309545 157099 0
+0 NT_187661.1 Homo sapiens chromosome 17 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_2 HSCHR17_10_CTG4
+3257466644 325800 0
+0 NW_003871093.1 Homo sapiens chromosome 17 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_2 HSCHR17_6_CTG4
+3257792444 88070 0
+0 NT_187663.1 Homo sapiens chromosome 17 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_2 HSCHR17_2_CTG5
+3257880514 1423190 0
+0 NT_187665.1 Homo sapiens chromosome 18 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_2 HSCHR18_ALT21_CTG2_1
+3259303704 174061 0
+0 NT_187666.1 Homo sapiens chromosome 18 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_2 HSCHR18_ALT2_CTG2_1
+3259477765 157710 0
+0 NW_003571055.2 Homo sapiens chromosome 19 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_2 HSCHR19LRC_COX2_CTG3_1
+3259635475 729520 2
+0 NW_004504305.1 Homo sapiens chromosome 22 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_2 HSCHR22_2_CTG1
+3260364995 74013 0
+0 NT_187667.1 Homo sapiens chromosome X genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_2 HSCHRX_2_CTG3
+3260439008 274009 0
+0 NT_187678.1 Homo sapiens chromosome 3 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_3 HSCHR3_4_CTG3
+3260713017 166540 0
+0 NT_187679.1 Homo sapiens chromosome 4 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_3 HSCHR4_7_CTG12
+3260879557 555799 0
+0 NT_167245.2 Homo sapiens chromosome 6 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_3 HSCHR6_MHC_DBB_CTG1
+3261435356 4604811 10
+0 NT_187680.1 Homo sapiens chromosome 8 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_3 HSCHR8_7_CTG1
+3266040167 229282 0
+0 NT_187681.1 Homo sapiens chromosome 11 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_3 HSCHR11_3_CTG1
+3266269449 218612 0
+0 NW_003571056.2 Homo sapiens chromosome 19 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_3 HSCHR19LRC_LRC_I_CTG3_1
+3266488061 1064304 3
+0 NT_187682.1 Homo sapiens chromosome 22 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_3 HSCHR22_3_CTG1
+3267552365 176103 0
+0 NT_187688.1 Homo sapiens chromosome 3 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_4 HSCHR3_5_CTG3
+3267728468 163458 0
+0 NT_167246.2 Homo sapiens chromosome 6 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_4 HSCHR6_MHC_MANN_CTG1
+3267891926 4677643 16
+0 NW_003571057.2 Homo sapiens chromosome 19 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_4 HSCHR19LRC_LRC_J_CTG3_1
+3272569569 1091841 2
+0 NT_187689.1 Homo sapiens chromosome 3 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_5 HSCHR3_6_CTG3
+3273661410 197351 0
+0 NT_167247.2 Homo sapiens chromosome 6 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_5 HSCHR6_MHC_MCF_CTG1
+3273858761 4827813 22
+0 NW_003571058.2 Homo sapiens chromosome 19 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_5 HSCHR19LRC_LRC_S_CTG3_1
+3278686574 1066390 2
+0 NT_187690.1 Homo sapiens chromosome 3 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_6 HSCHR3_7_CTG3
+3279752964 164170 0
+0 NT_167248.2 Homo sapiens chromosome 6 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_6 HSCHR6_MHC_QBL_CTG1
+3279917134 4606388 5
+0 NW_003571059.2 Homo sapiens chromosome 19 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_6 HSCHR19LRC_LRC_T_CTG3_1
+3284523522 1002683 2
+0 NT_187691.1 Homo sapiens chromosome 3 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_7 HSCHR3_8_CTG3
+3285526205 165607 0
+0 NT_167249.2 Homo sapiens chromosome 6 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_7 HSCHR6_MHC_SSTO_CTG1
+3285691812 4929269 17
+0 NW_003571060.1 Homo sapiens chromosome 19 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_7 HSCHR19LRC_PGF1_CTG3_1
+3290621081 987100 1
+0 NT_187692.1 Homo sapiens chromosome 6 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_8 HSCHR6_8_CTG1
+3291608181 76752 0
+0 NW_003571061.2 Homo sapiens chromosome 19 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_8 HSCHR19LRC_PGF2_CTG3_1
+3291684933 796479 3
+0 NT_187693.1 Homo sapiens chromosome 19 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_9 HSCHR19_4_CTG3_1
+3292481412 1066800 0
+0 NT_187636.1 Homo sapiens chromosome 19 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_10 HSCHR19KIR_FH15_B_HAP_CTG3_1
+3293548212 248807 0
+0 NT_187637.1 Homo sapiens chromosome 19 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_11 HSCHR19KIR_G085_A_HAP_CTG3_1
+3293797019 170399 0
+0 NT_187638.1 Homo sapiens chromosome 19 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_12 HSCHR19KIR_G085_BA1_HAP_CTG3_1
+3293967418 157053 0
+0 NT_187639.1 Homo sapiens chromosome 19 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_13 HSCHR19KIR_G248_A_HAP_CTG3_1
+3294124471 171027 0
+0 NT_187640.1 Homo sapiens chromosome 19 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_14 HSCHR19KIR_G248_BA2_HAP_CTG3_1
+3294295498 204239 0
+0 NT_187641.1 Homo sapiens chromosome 19 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_15 HSCHR19KIR_GRC212_AB_HAP_CTG3_1
+3294499737 209512 0
+0 NT_187642.1 Homo sapiens chromosome 19 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_16 HSCHR19KIR_GRC212_BA1_HAP_CTG3_1
+3294709249 155532 0
+0 NT_187643.1 Homo sapiens chromosome 19 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_17 HSCHR19KIR_LUCE_A_HAP_CTG3_1
+3294864781 170698 0
+0 NT_187644.1 Homo sapiens chromosome 19 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_18 HSCHR19KIR_LUCE_BDEL_HAP_CTG3_1
+3295035479 184499 0
+0 NT_187645.1 Homo sapiens chromosome 19 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_19 HSCHR19KIR_RSH_A_HAP_CTG3_1
+3295219978 170680 0
+0 NT_187668.1 Homo sapiens chromosome 19 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_20 HSCHR19KIR_RSH_BA2_HAP_CTG3_1
+3295390658 205194 0
+0 NT_187669.1 Homo sapiens chromosome 19 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_21 HSCHR19KIR_T7526_A_HAP_CTG3_1
+3295595852 170665 0
+0 NT_187670.1 Homo sapiens chromosome 19 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_22 HSCHR19KIR_T7526_BDEL_HAP_CTG3_1
+3295766517 184516 0
+0 NT_187671.1 Homo sapiens chromosome 19 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_23 HSCHR19KIR_ABC08_A1_HAP_CTG3_1
+3295951033 190932 0
+0 NT_187672.1 Homo sapiens chromosome 19 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_24 HSCHR19KIR_ABC08_AB_HAP_C_P_CTG3_1
+3296141965 123111 0
+0 NT_187673.1 Homo sapiens chromosome 19 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_25 HSCHR19KIR_ABC08_AB_HAP_T_P_CTG3_1
+3296265076 170701 0
+0 NT_187674.1 Homo sapiens chromosome 19 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_26 HSCHR19KIR_FH05_A_HAP_CTG3_1
+3296435777 198005 0
+0 NT_187675.1 Homo sapiens chromosome 19 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_27 HSCHR19KIR_FH05_B_HAP_CTG3_1
+3296633782 282224 0
+0 NT_187676.1 Homo sapiens chromosome 19 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_28 HSCHR19KIR_FH06_A_HAP_CTG3_1
+3296916006 187935 0
+0 NT_187677.1 Homo sapiens chromosome 19 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_29 HSCHR19KIR_FH06_BA1_HAP_CTG3_1
+3297103941 189352 0
+0 NT_187683.1 Homo sapiens chromosome 19 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_30 HSCHR19KIR_FH08_A_HAP_CTG3_1
+3297293293 186203 0
+0 NT_187684.1 Homo sapiens chromosome 19 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_31 HSCHR19KIR_FH08_BAX_HAP_CTG3_1
+3297479496 200773 0
+0 NT_187685.1 Homo sapiens chromosome 19 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_32 HSCHR19KIR_FH13_A_HAP_CTG3_1
+3297680269 170148 0
+0 NT_187686.1 Homo sapiens chromosome 19 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_33 HSCHR19KIR_FH13_BA2_HAP_CTG3_1
+3297850417 215732 0
+0 NT_187687.1 Homo sapiens chromosome 19 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_34 HSCHR19KIR_FH15_A_HAP_CTG3_1
+3298066149 170537 0
+0 NT_113949.2 Homo sapiens chromosome 19 genomic scaffold, GRCh38.p14 alternate locus group ALT_REF_LOCI_35 HSCHR19KIR_RP5_B_HAP_CTG3_1
+3298236686 177381 0
+0 NC_012920.1 Homo sapiens mitochondrion, complete genome
+3298414067 16569 1
