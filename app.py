@@ -51,7 +51,7 @@ def upload():
             db.insert_db(username,job_info)
             db_info=db.read_db(username)
             key=len(db_info)
-            asyncio.run(rp.run_mapping(username,key))    
+            asyncio.run(rp.run_mapping(username,key,job_info["jobname"]))    
             data = {'result': 'success', 'state': 'running'}
             return jsonify(data)
         data = {'result': 'err'}
