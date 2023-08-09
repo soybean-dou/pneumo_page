@@ -7,14 +7,14 @@ body {
 }
 
 #page_name {
-    color: rgb(63, 41, 56);
+    color: #663399;
     font-size: 40px;
     font-weight: 400;
     font-family: 'Kanit', sans-serif;;
 }
 
 .inner{
-    height : 80dvh;
+    min-height : 80dvh;
     padding-top: auto;
     padding-bottom: auto;
 }
@@ -29,6 +29,13 @@ body {
 .intitle-1{
     align-self : left;
     font-size: 30px;
+    font-weight: 400;
+    padding: 10px;
+}
+
+.intitle-2{
+    align-self : left;
+    font-size: 20px;
     font-weight: 400;
     padding: 10px;
 }
@@ -55,4 +62,12 @@ border-top: 5px dotted #663399;
 .hr-dashed {
 border : 0px;
 border-top: 5px dashed #663399;
+}
+
+.result_row {
+    cursor : pointer;
+}
+
+.mge_table{
+    height:50px;
 }

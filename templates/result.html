@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>PneumoFinder</title>
+        <title>Pneumoniae</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='node_modules/bootstrap/dist/css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
@@ -34,6 +34,7 @@
                 <thead>
                   <tr>
                     <th scope="col">#</th>
+                    <th scope="col">User Name</th>
                     <th scope="col">Job Name</th>
                     <th scope="col">Date</th>
                     <th scope="col">Input file</th>
@@ -43,8 +44,9 @@
                 </thead>
                 <tbody>
                   {% for row in rows %}
-                  <tr>
+                  <tr class="result_row">
                     <th scope="row">{{row["id"]}}</th>
+                    <td>{{row["username"]}}</td>
                     <td>{{row["jobname"]}}</td>
                     <td>{{row["date"]}}</td>
                     <td>{{row["input"]}}</td>
@@ -59,7 +61,8 @@
         </div>
 
         <script src="/static/js/common.js"></script>
-        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script src="/static/js/result.js"></script>
+        <script src="https://code.jquery.com/jquery-latest.js"></script>
         <script src="{{ url_for('static', filename='node_modules/bootstrap/dist/js/bootstrap.min.js') }}"></script>
     </body>
 </html>

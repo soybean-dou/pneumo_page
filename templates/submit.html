@@ -2,13 +2,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <title>PneumoFinder</title>
+      <title>Pneumoniae</title>
       <link rel="stylesheet" href="{{ url_for('static', filename='node_modules/bootstrap/dist/css/bootstrap.min.css') }}">
       <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
       <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   </head>
   <body>
     <div>
+      <div class="modal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Modal body text goes here.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <div class="container-fluid">
             <a class="navbar-brand" id="page_name" href="/">Pneumoniae</a>
@@ -56,6 +73,6 @@
     <script src="/static/js/common.js"></script>
     <script src="/static/js/submit.js"></script>
     <script src="{{ url_for('static', filename='node_modules/bootstrap/dist/js/bootstrap.min.js') }}"></script>
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
   </body>
 </html>

@@ -16,6 +16,8 @@ document.addEventListener("DOMContentLoaded", function() {
         for(var i=0; i<files.length;i++){
             formData.append("file", files[i]);
         }
+        
+        $("body").css("cursor","progress")
 
         $.ajax({
             type:"POST",
@@ -26,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
             success: function(rtn){
                 const message = rtn.result;
                 console.log("message: ", message)
+                $("body").css("cursor","auto")
                 location.href=("/result/"+username)
             },
                 err: function(err){

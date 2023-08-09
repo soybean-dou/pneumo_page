@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     
-    var username="tmp"
+    username=$("#username").text()
     $("#nav-result").attr("href","/result/"+username)
+    
 
 })

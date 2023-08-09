@@ -211,7 +211,7 @@ if __name__ == "__main__":
     parser.add_argument("Human_Ref_sequence", type = lambda x: (os.path.abspath(os.path.expanduser(x))))
     parser.add_argument("Custom_Ref_sequence", type = lambda x: (os.path.abspath(os.path.expanduser(x))))
     parser.add_argument("Output_Dir", type = lambda x: (os.path.abspath(os.path.expanduser(x))))
-    parser.add_argument("Job_Name", type = lambda x: (os.path.abspath(os.path.expanduser(x))))
+    parser.add_argument("Job_Name", type = str)
 
     args = parser.parse_args()
 
@@ -224,12 +224,13 @@ if __name__ == "__main__":
 #    AdapterseqRev = args.Reverse_Adapter_sequence
     Human_Ref_seq = args.Human_Ref_sequence
     Custom_Ref_seq = args.Custom_Ref_sequence
-    jobname=args.Job_Name
+    
     # Path space
 
     cpath = os.getcwd()
     result_dir = args.Output_Dir
-    workpath = os.path.join(result_dir, jobname)
+    jobname=args.Job_Name
+    workpath = os.path.join(result_dir,jobname,"workpath")
     working_time = time.ctime().replace(' ', '-').replace(':', '-')
     for directory in [result_dir, workpath]:
         if not os.path.isdir(directory):
