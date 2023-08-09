@@ -8,7 +8,7 @@ from pathlib import Path
 
 
 def make_db(db_name):
-    conn = sqlite3.connect(str("./user/userinfo.db"))
+    conn = sqlite3.connect(str("./user/userjob.db"))
     c = conn.cursor()
     c.execute('CREATE TABLE user_table(id INTEGER, username TEXT, jobname TEXT, input TEXT, type TEXT, state TEXT, date TEXT)')
     conn.commit()
@@ -16,7 +16,7 @@ def make_db(db_name):
 
 def insert_db(db_name,job_info):
     state="queue"
-    conn = sqlite3.connect(str("./user/userinfo.db"))
+    conn = sqlite3.connect(str("./user/userjob.db"))
     c = conn.cursor()
     c.execute("SELECT * FROM user_table")
     num=c.fetchall()
@@ -29,7 +29,7 @@ def insert_db(db_name,job_info):
     conn.close()
 
 def read_db(username):
-    conn = sqlite3.connect(str("./user/userinfo.db"))
+    conn = sqlite3.connect(str("./user/userjob.db"))
     conn.row_factory = sqlite3.Row
     c = conn.cursor()
     c.execute("SELECT * FROM user_table WHERE username=?",(username))
@@ -37,14 +37,14 @@ def read_db(username):
     return tb
 
 def update_db(username,key,state):
-    conn = sqlite3.connect(str("./user/userinfo.db"))
+    conn = sqlite3.connect(str("./user/userjob.db"))
     c = conn.cursor()
     c.execute("UPDATE user_table SET state = ? WHERE id = ?",(state,key))
     conn.commit()
     conn.close()
 
 def read_db_row(username,key):
-    conn = sqlite3.connect(str("./user/userinfo.db"))
+    conn = sqlite3.connect(str("./user/userjob.db"))
     conn.row_factory = sqlite3.Row
     c = conn.cursor()
     c.execute("SELECT * FROM user_table WHERE id == "+str(key))
