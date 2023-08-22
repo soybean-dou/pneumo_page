@@ -98,11 +98,21 @@ def index():
 
 @app.route('/about')
 def about():
-    return render_template('about.html')
+    if protected()!=False:
+        print("login")
+        return render_template('about.html',login=True,username=session["name"])
+    else:
+        print("logout")
+        return render_template('about.html',login=False)
 
 @app.route('/submit')
 def submit():
-    return render_template('submit.html')
+    if protected()!=False:
+        print("login")
+        return render_template('submit.html',login=True,username=session["name"])
+    else:
+        print("logout")
+        return render_template('submit.html',login=False)
 
 @app.route('/upload', methods=['GET','POST'])
 def upload():
