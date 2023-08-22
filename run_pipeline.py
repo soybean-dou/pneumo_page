@@ -110,7 +110,7 @@ def run_MLST(username,key,jobname):
         db.update_db(username,key,"fail")
         print("MLST error!")
 
-def run_kmerfinder(username,key,jobname):
+def run_Kraken2(username,key,jobname):
     path_name="./user/"+username+"/"+jobname
     db.update_db(username,key,"running")
 
