@@ -22,7 +22,6 @@ app = Flask(__name__)
 app.secret_key = "minory"  #it is necessary to set a password when dealing with OAuth 2.0
 os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"  #this is to set our environment to https because OAuth 2.0 only supports https environments
 
-CLIENT_ID="485946144939-10tks3hdo66mnrh5vtupjm4uskn361gi.apps.googleusercontent.com"
 flow = Flow.from_client_secrets_file(  
     client_secrets_file="client_secret.json",
     scopes=["https://www.googleapis.com/auth/userinfo.profile", "https://www.googleapis.com/auth/userinfo.email", "openid"],  
@@ -54,6 +53,7 @@ def callback():
         abort(500)  #state does not match!
 
     credentials = flow.credentials
+    CLIENT_ID = flow.client_config["client_id"]
     request_session = requests.session()
     cached_session = cachecontrol.CacheControl(request_session)
     token_request = google.auth.transport.requests.Request(session=cached_session)
@@ -64,11 +64,14 @@ def callback():
         audience=CLIENT_ID
     )
 
-    print(id_info)
+    id_info["google_id"]=id_info["email"].split("@")[0]
     session["user_info"]= id_info
+    session["google_id"]= id_info["google_id"]
     session["email"]=id_info.get("email")
-    session["google_id"] = id_info.get("sub")  #defing the results to show on the page
+    session["google_num"] = id_info.get("sub") 
     session["name"] = id_info.get("name")
+    print(id_info)
+    db.insert_user(id_info)
     return redirect("/")  #the final page where the authorized users will end up
 
 
@@ -82,7 +85,7 @@ def logout():
 def protected():
     user_info = session.get('user_info')
     if user_info:
-        return session["name"]
+        return user_info["google_id"]
     return False
 
 
@@ -91,7 +94,7 @@ def protected():
 def index():
     if protected()!=False:
         print("login")
-        return render_template('index.html',login=True,username=session["name"])
+        return render_template('index.html',login=True,user_id=session["google_id"])
     else:
         print("logout")
         return render_template('index.html',login=False)
@@ -100,7 +103,7 @@ def index():
 def about():
     if protected()!=False:
         print("login")
-        return render_template('about.html',login=True,username=session["name"])
+        return render_template('about.html',login=True,username=session["google_id"])
     else:
         print("logout")
         return render_template('about.html',login=False)
@@ -109,7 +112,7 @@ def about():
 def submit():
     if protected()!=False:
         print("login")
-        return render_template('submit.html',login=True,username=session["name"])
+        return render_template('submit.html',login=True,username=session["google_id"])
     else:
         print("logout")
         return render_template('submit.html',login=False)
@@ -120,9 +123,7 @@ def upload():
         user_id=session["google_id"]
         username=session["name"]
         jobname=request.form['jobname']
-        if not(os.path.exists("./user/"+user_id)):
-            os.system("mkdir ./user/"+user_id)
-            print("make ./user/"+user_id)
+        
 
         if not(os.path.exists("./user/"+user_id+"/"+jobname)):
             os.system("mkdir ./user/"+user_id+"/"+jobname)
@@ -157,9 +158,9 @@ def upload():
     data = {'result': 'err'}
     return jsonify(data)
 
-@app.route('/result/<username>')
-def result(username):
-    db_info=db.read_db(username)
+@app.route('/result/<user_id>')
+def result(user_id):
+    db_info=db.read_db(user_id)
     #print(db_info)
     return render_template('result.html',rows=db_info)
 
@@ -178,9 +179,8 @@ def detail(username,key):
 
 @app.route('/mypage')
 def mypage():
-    return render_template('mypage.html',username=session["name"],google_id=session["google_id"])
+    return render_template('mypage.html',user_id=session["google_id"],google_id=session["google_id"])
 
 if __name__ == '__main__':
     app.run(debug=True)
-
-
+    

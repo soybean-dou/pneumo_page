@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     
 
-    $("#submit-btn").click(function(){
+    $(".submit-btn").click(function(){
         var username="tmp"
         var jobname=$("#jobname").val();
         var wgstype = $('input[name=flexRadioDefault]:checked').val();

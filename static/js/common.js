@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     
-    username=$("#username").text()
-    $("#nav-result").attr("href","/result/"+username)
+    user_id=$("#user_id").text()
+    $("#nav-result").attr("href","/result/"+user_id)
     
 
 })
