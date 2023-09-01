@@ -18,6 +18,7 @@ import db
 import run_pipeline as rp
 
 app = Flask(__name__)
+app.debug = True
 
 app.secret_key = "minory"  #it is necessary to set a password when dealing with OAuth 2.0
 os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"  #this is to set our environment to https because OAuth 2.0 only supports https environments
@@ -117,46 +118,55 @@ def submit():
         print("logout")
         return render_template('submit.html',login=False)
 
-@app.route('/upload', methods=['GET','POST'])
+@app.route('/upload', methods=['POST'])
 def upload():
     if request.method == 'POST':
-        user_id=session["google_id"]
-        username=session["name"]
-        jobname=request.form['jobname']
+        user_info={
+            "user_id":session["google_id"],
+            "username":session["name"]
+            }
+        print(request.form)
+        jobname=request.form.get('jobname')
         
+        if not(os.path.exists("./user/"+user_info['user_id']+"/"+jobname)):
+            os.system("mkdir ./user/"+user_info['user_id']+"/"+jobname)
+            print("make ./user/"+user_info['user_id']+"/"+jobname)
 
-        if not(os.path.exists("./user/"+user_id+"/"+jobname)):
-            os.system("mkdir ./user/"+user_id+"/"+jobname)
-            print("make ./user/"+user_id+"/"+jobname)
-
-        files = request.files.getlist("file")
-        job_info={'username':username,
+        files =  request.files.getlist("file[]")
+        job_info={'username':user_info['user_id'],
                     "jobname":request.form['jobname'],
-                    "filename":"NULL",
-                    "wgstype":request.form['wgstype']}
+                    "filename":"NULL"
+                }
                 
         if files:
             print(files)
             for f in files:
-                f.save(os.path.join(("./user/"+username),jobname, secure_filename(f.filename)))
+                f.save(os.path.join(("./user/"+user_info['user_id']),jobname, secure_filename(f.filename)))
                 
                 if job_info['filename']=="NULL":
                     job_info['filename']=secure_filename(f.filename)
 
-            db.insert_db(username,job_info)
-            db_info=db.read_db(username)
+            db.insert_job(user_info,job_info)
+            db_info=db.read_db(user_info['user_id'])
             key=len(db_info)
 
-            process = multiprocessing.Process(target=rp.main, args=(username, key, job_info["jobname"]))
+            process = multiprocessing.Process(target=rp.main, args=(user_info['user_id'], key, job_info["jobname"]))
             process.start()
             
             data = {'result': 'success'} 
-            return jsonify(data)
+            return redirect(f"/result/{user_info['user_id']}")
             
         data = {'result': 'err'}
         return jsonify(data)
     data = {'result': 'err'}
     return jsonify(data)
+
+@app.route('/result/')
+def result_first():
+    if protected()!=False:
+        return redirect(f"/result/{session['google_id']}")
+    else:
+        return redirect("/") 
 
 @app.route('/result/<user_id>')
 def result(user_id):
@@ -165,8 +175,8 @@ def result(user_id):
     return render_template('result.html',rows=db_info)
 
 @app.route('/result/<username>/<key>')
-def detail(username,key):
-    db_info,cols=db.read_db_row(username,key)
+def detail(user_id,key):
+    db_info,cols=db.read_db_row(user_id,key)
     data_df = pd.DataFrame.from_records(data=db_info, columns=cols)
     print(data_df)
     jobname=str(data_df.at[0,"jobname"])

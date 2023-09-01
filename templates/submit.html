@@ -58,23 +58,13 @@
         <div class="row align-items-center" style="height: 80dvh;">
           <div class="col justify-content-center">
             <div class="intitle-1">Upload Sequence file</div>
-            <form action="/upload" method="post">
+            <form action="/upload" method="post" enctype="multipart/form-data">
               <div class="input-group mb-3">
                 <span class="input-group-text" id="basic-addon1">job name</span>
-                <input type="text" id=jobname class="form-control" placeholder="jobname" aria-label="jobname" aria-describedby="basic-addon1">
+                <input type="text" name="jobname" class="form-control" placeholder="jobname" aria-label="jobname" aria-describedby="basic-addon1">
               </div>
               <div class="mb-3">
-                <input  multiple="multiple" type="file" name="file[]" id="file" class="form-control">
-              </div>
-              <div class="radio-list mb-3">
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value='human'>
-                  <label class="form-check-label" for="flexRadioDefault1">Human WGS file</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value='pneumo'>
-                  <label class="form-check-label" for="flexRadioDefault2">Pneumoniae WGS file</label>
-                </div>
+                <input type="file" name="file[]" id="files" class="form-control" multiple>
               </div>
               <div class="mb-3">
                 <input type="submit" class="btn btn-outline-primary" id="submit-btn" value="submit"></input>
