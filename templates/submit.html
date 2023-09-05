@@ -67,7 +67,11 @@
                 <input type="file" name="file[]" id="files" class="form-control" multiple>
               </div>
               <div class="mb-3">
-                <input type="submit" class="btn btn-outline-primary" id="submit-btn" value="submit"></input>
+                <button type="submit" class="btn btn-outline-primary" id="submit-btn">
+                  <span class="spinner-border spinner-border-sm" id="spinner" style="display:none" role="status" aria-hidden="true"></span>
+                  <span id="btn-sub">Submit</span>
+                  <span id="btn-lod" style="display:none">Loding</span>
+                </button>
               </div>
             </form>
           </div>  
