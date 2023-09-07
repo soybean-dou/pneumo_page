@@ -13,6 +13,8 @@ import multiprocessing
 import pandas as pd
 import numpy as np
 import sqlite3
+import jsonpickle
+
 
 import db
 import run_pipeline as rp
@@ -116,13 +118,18 @@ def upload():
         
         db_info=db.read_db(user_info['user_key'])
         job_key=len(db_info)+1
-
-        if not(os.path.exists("./user/"+str(user_info['user_key'])+"/"+str(job_key))):
+        print(job_key)
+        print("./user/"+str(user_info['user_key'])+"/"+str(job_key))
+        if not os.path.exists("./user/"+str(user_info['user_key'])+"/"+str(job_key)):
             os.system("mkdir ./user/"+str(user_info['user_key'])+"/"+str(job_key))
             print("make ./user/"+str(user_info['user_key'])+"/"+str(job_key))
         else :
-            return False
+
+            
+            data = {'result': 'err'}
+            return jsonpickle.encode(data)
         
+        print("read files...")
         files =  request.files.getlist("file[]")
         job_info={'user_key':user_info['user_key'],
                     "jobname":jobname,
@@ -137,8 +144,8 @@ def upload():
                 f=files[i]
                 f.save(os.path.join(("./user/"+str(user_info['user_key'])),str(job_key), secure_filename(f.filename)))
                 
-                if job_info[f'file{i}']=="NULL":
-                    job_info[f'file{i}']=secure_filename(f.filename)
+                if job_info[f'file{str(i+1)}']=="NULL":
+                    job_info[f'file{str(i+1)}']=secure_filename(f.filename)
 
             db.insert_job(user_info,job_info)
             db_info=db.read_db(user_info['user_key'])
@@ -151,9 +158,9 @@ def upload():
             return redirect(f"/result/{str(user_info['user_key'])}")
             
         data = {'result': 'err'}
-        return jsonify(data)
+        return jsonpickle.encode(data)
     data = {'result': 'err'}
-    return jsonify(data)
+    return jsonpickle.encode(data)
 
 @app.route('/result/')
 def result_first():

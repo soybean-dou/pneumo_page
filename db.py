@@ -34,7 +34,7 @@ def insert_job(user_info,job_info):
     job_num=len(num)+1
     x=dt.datetime.now()
     date=x.strftime("%A %d. %B %Y %H:%M:%S")
-    c.executemany('INSERT INTO jobs VALUES (?,?, ?, ?, ?, ?,?,?)',
+    c.executemany('INSERT INTO job VALUES (?,?,?,?,?,?,?)',
                   [(user_info["user_key"],user_info["username"],job_num,job_info["jobname"],job_info["file1"],state,date)])
     conn.commit()
     conn.close()
@@ -47,10 +47,10 @@ def read_db(user_key):
     tb=c.fetchall()
     return tb
 
-def update_db(user_key,key,state):
+def update_db(user_key,job_key,state):
     conn = sqlite3.connect(str("pneumo_service.db"))
     c = conn.cursor()
-    c.execute("UPDATE job SET state = ? WHERE id = ?",(state,key))
+    c.execute("UPDATE job SET state = ? WHERE user_key = ? and job_num = ?",(state,user_key,job_key))
     conn.commit()
     conn.close()
 
@@ -58,7 +58,7 @@ def read_db_row(username,key):
     conn = sqlite3.connect(str("./user/userjob.db"))
     conn.row_factory = sqlite3.Row
     c = conn.cursor()
-    c.execute("SELECT * FROM jobs WHERE id == "+str(key))
+    c.execute("SELECT * FROM job WHERE id == "+str(key))
     tb=c.fetchall()
     cols = [column[0] for column in c.description]
     return tb, cols
