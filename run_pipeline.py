@@ -8,42 +8,54 @@ import db
 import subprocess
 import app
 
-def run_mapping(username,key,jobname):
-    path_name=os.path.join("./user/",username,jobname)
-    db.update_db(username,key,"running")
-    file_all=os.listdir(path_name)
-    file_list=[file for file in file_all if file.endswith(".fastq.gz")]
-    file_list.sort()
+# def run_mapping(user_key,job_key,jobname):
+#     path_name=os.path.join("./user/",user_key,job_key)
+#     db.update_db(user_key,job_key,"running")
+#     file_all=os.listdir(path_name)
+#     file_list=[file for file in file_all if file.endswith(".fastq.gz")]
+#     file_list.sort()
 
-    qc=30
-    trim=50
-    for i in range(0,len(file_list),2):
-        try:
-            db.update_db(username,key,"running")
-            command = ['non_adapt_pre-processing.py', path_name+"/"+file_list[i] , path_name+"/"+file_list[i+1], str(qc), str(trim),
-                       "./reference/GRCh38_latest_genomic.fna", "./reference/GCF_002076835.1_ASM207683v1_genomic.fna","./user/"+username, jobname]
-            subprocess.run(command, check=True)
+#     qc=30
+#     trim=50
+#     for i in range(0,len(file_list),2):
+#         try:
+#             db.update_db(user_key,job_key,"running")
+#             command = ['non_adapt_pre-processing.py', path_name+"/"+file_list[i] , path_name+"/"+file_list[i+1], str(qc), str(trim),
+#                        "./reference/GRCh38_latest_genomic.fna", "./reference/GCF_002076835.1_ASM207683v1_genomic.fna","./user/"+user_key, jobname]
+#             subprocess.run(command, check=True)
 
-        except:
-            db.update_db(username,key,"fail")
-            print("mapping error!")                
+#         except:
+#             db.update_db(user_key,user_key,"fail")
+#             print("mapping error!")                
     
 
-def run_spades(username,key,jobname):
-    path_name=os.path.join("./user/",username,jobname)
-    db.update_db(username,key,"running")
+def run_fastqc(user_key,job_info):
+    job_key=job_info["job_key"]
+    path_name=os.path.join("./user/",user_key,job_key)
+    try:
+        command = ["fastqc","-o",f"{path_name}/fastqc","-f fastq",
+                   f"{path_name}/{job_info['file1']}",f"{path_name}/{job_info['file2']}"]
+        subprocess.run(command, check=True)  
+        db.update_db(user_key,job_key,"running")
+    except:
+        db.update_db(user_key,job_key,"fail")
+        print("spades error!")
+
+def run_spades(user_key,job_key,jobname):
+    path_name=os.path.join("./user/",user_key,jobname)
+    db.update_db(user_key,job_key,"running")
 
     try:
         command = ["spades.py","-1",path_name+"/workpath/unmapped_R1.fastq","-2",path_name+"/workpath/unmapped_R2.fastq","-o",path_name+"/spades"]
         subprocess.run(command, check=True)  
     except:
-        db.update_db(username,key,"fail")
+        db.update_db(user_key,job_key,"fail")
         print("spades error!")
 
 
-def run_MGE(username,key,jobname):
-    path_name="./user/"+username+"/"+jobname
-    db.update_db(username,key,"running")
+def run_MGE(user_key,job_key,jobname):
+    path_name="./user/"+user_key+"/"+jobname
+    db.update_db(user_key,job_key,"running")
 
     if not(os.path.exists(path_name+"/mge")):
         os.mkdir(path_name+"/mge")
@@ -52,12 +64,12 @@ def run_MGE(username,key,jobname):
         subprocess.run(command, check=True)  
         os.system("mv mge*.* mge")
     except:
-        db.update_db(username,key,"fail")
+        db.update_db(user_key,job_key,"fail")
         print("MGE error!")
 
-def run_cgMLST(username,key,jobname):
-    path_name="./user/"+username+"/"+jobname
-    db.update_db(username,key,"running")
+def run_cgMLST(user_key,job_key,jobname):
+    path_name="./user/"+user_key+"/"+jobname
+    db.update_db(user_key,job_key,"running")
 
     if not(os.path.exists(path_name+"/cgMLST")):
         os.mkdir(path_name+"/cgMLST")
@@ -66,12 +78,12 @@ def run_cgMLST(username,key,jobname):
                    ,"-db","/home/iu98/pneumo_pipline/cgmlstfinder/cgmlstfind_db","-o",path_name+"/cgMLST"]
         subprocess.run(command, check=True)  
     except:
-        db.update_db(username,key,"fail")
+        db.update_db(user_key,job_key,"fail")
         print("cgMLST error!")
 
-def run_virulencefinder(username,key,jobname):
-    path_name="./user/"+username+"/"+jobname
-    db.update_db(username,key,"running")
+def run_virulencefinder(user_key,job_key,jobname):
+    path_name="./user/"+user_key+"/"+jobname
+    db.update_db(user_key,job_key,"running")
 
     if not(os.path.exists(path_name+"/virulence")):
         os.mkdir(path_name+"/virulence")
@@ -80,12 +92,12 @@ def run_virulencefinder(username,key,jobname):
                    ,"-p","/home/iu98/pneumo_pipline/virulencefinder/virulencefinder_db","-x","-o",path_name+"/virulence"]
         subprocess.run(command, check=True)  
     except:
-        db.update_db(username,key,"fail")
+        db.update_db(user_key,job_key,"fail")
         print("virulence error!")
 
-def run_resfinder(username,key,jobname):
-    path_name="./user/"+username+"/"+jobname
-    db.update_db(username,key,"running")
+def run_resfinder(user_key,job_key,jobname):
+    path_name="./user/"+user_key+"/"+jobname
+    db.update_db(user_key,job_key,"running")
 
     if not(os.path.exists(path_name+"/resfinder")):
         os.mkdir(path_name+"/resfinder")
@@ -93,12 +105,12 @@ def run_resfinder(username,key,jobname):
         command = ["python","-m","resfinder","-ifq",path_name]
         subprocess.run(command, check=True)  
     except:
-        db.update_db(username,key,"fail")
+        db.update_db(user_key,job_key,"fail")
         print("resfinder error!")
 
-def run_MLST(username,key,jobname):
-    path_name="./user/"+username+"/"+jobname
-    db.update_db(username,key,"running")
+def run_MLST(user_key,job_key,jobname):
+    path_name="./user/"+user_key+"/"+jobname
+    db.update_db(user_key,job_key,"running")
 
     if not(os.path.exists(path_name+"/mlst")):
         os.mkdir(path_name+"/mlst")
@@ -107,12 +119,12 @@ def run_MLST(username,key,jobname):
                    "-s","spneumoniae","-p","/home/iu98/pneumo_pipline/mlst/mlst_db","-x","-o",path_name+"/mlst"]
         subprocess.run(command, check=True)  
     except:
-        db.update_db(username,key,"fail")
+        db.update_db(user_key,job_key,"fail")
         print("MLST error!")
 
-def run_K(username,key,jobname):
-    path_name="./user/"+username+"/"+jobname
-    db.update_db(username,key,"running")
+def run_K(user_key,job_key,jobname):
+    path_name="./user/"+user_key+"/"+jobname
+    db.update_db(user_key,job_key,"running")
 
     if not(os.path.exists(path_name+"/kmerfinder")):
         os.mkdir(path_name+"/kmerfinder")
@@ -124,12 +136,12 @@ def run_K(username,key,jobname):
         subprocess.run(command, check=True)
           
     except:
-        db.update_db(username,key,"fail")
+        db.update_db(user_key,job_key,"fail")
         print("kmerfinder error!")
 
-def run_seroba(username,key,jobname):
-    path_name="./user/"+username+"/"+jobname
-    db.update_db(username,key,"running")
+def run_seroba(user_key,job_key,jobname):
+    path_name="./user/"+user_key+"/"+jobname
+    db.update_db(user_key,job_key,"running")
 
     if not(os.path.exists(path_name+"/seroba")):
         os.mkdir(path_name+"/seroba")
@@ -139,12 +151,12 @@ def run_seroba(username,key,jobname):
         subprocess.run(command, check=True) 
         os.system("mv seroba "+path_name) 
     except:
-        db.update_db(username,key,"fail")
+        db.update_db(user_key,job_key,"fail")
         print("seroba error!")
 
-def run_blast(username,key,jobname):
-    path_name="./user/"+username+"/"+jobname
-    db.update_db(username,key,"running")
+def run_blast(user_key,job_key,jobname):
+    path_name="./user/"+user_key+"/"+jobname
+    db.update_db(user_key,job_key,"running")
 
     if not(os.path.exists(path_name+"/blast")):
         os.mkdir(path_name+"/blast")
@@ -153,11 +165,11 @@ def run_blast(username,key,jobname):
                    ,"-outfmt",'6 qseqid sseqid scomnames length qstart qend sstart send evalue pident',"-out",path_name+"/blast/blast_result.txt"]
         subprocess.run(command, check=True)  
     except:
-        db.update_db(username,key,"fail")
+        db.update_db(user_key,job_key,"fail")
         print("blast error!")        
 
-def get_info(username,key,jobname):
-    path_name="./user/"+username+"/"+jobname
+def get_info(user_key,job_key,jobname):
+    path_name="./user/"+user_key+"/"+jobname
     path_name=str(path_name)
     seroba=pd.read_csv((path_name+"/seroba/pred.tsv"),sep="\t",header=None)
     seroba=seroba.at[0,1]
@@ -174,16 +186,15 @@ def get_info(username,key,jobname):
 
 
 
-def main(username,key,jobname):
-    run_mapping(username,key,jobname)
-    run_spades(username,key,jobname)
-    run_MGE(username,key,jobname)
-    run_cgMLST(username,key,jobname)
-    run_virulencefinder(username,key,jobname)
-    run_MLST(username,key,jobname)
-    #run_resfinder(username,key,jobname)
-    run_kmerfinder(username,key,jobname)
-    run_seroba(username,key,jobname)
-    run_blast(username,key,jobname)
-    db.update_db(username,key,"complete")
-    app.result(username)
+def main(user_key,job_info):
+    run_fastqc(user_key,job_info)
+    run_spades(user_key,job_key,jobname)
+    run_MGE(user_key,job_key,jobname)
+    run_cgMLST(user_key,job_key,jobname)
+    run_virulencefinder(user_key,job_key,jobname)
+    run_MLST(user_key,job_key,jobname)
+    #run_resfinder(user_key,job_key,jobname)
+    run_seroba(user_key,job_key,jobname)
+    run_blast(user_key,job_key,jobname)
+    db.update_db(user_key,job_key,"complete")
+    app.result(user_key)

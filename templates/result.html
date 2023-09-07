@@ -20,7 +20,7 @@
                       <a class="nav-link " href="/about">about</a>
                       <a class="nav-link" href="/submit">submit</a>
                       <a class="nav-link active" id="nav-result" href="#">result</a>
-                      <a class="nav-link" href="#">mypage</a>
+                      <a class="nav-link" href="/mypage">mypage</a>
                     </div>
                   </div>
                 </div>
@@ -46,11 +46,10 @@
                   {% for row in rows %}
                   <tr class="result_row">
                     <th scope="row">{{row["job_num"]}}</th>
-                    <td>{{row["google_id"]}}</td>
+                    <td>{{row["name"]}}</td>
                     <td>{{row["job_name"]}}</td>
                     <td>{{row["date"]}}</td>
                     <td>{{row["input"]}}</td>
-                    <td>{{row["type"]}}</td>
                     <td>{{row["state"]}}</td>
                   </tr>
                   {% endfor %}
