@@ -31,12 +31,36 @@ import app
 
 def run_fastqc(user_key,job_info):
     job_key=job_info["job_key"]
-    path_name=os.path.join("./user/",user_key,job_key)
+    path_name=os.path.join("./user/",str(user_key),str(job_key))
+    os.mkdir(path_name+"/fastqc")
     try:
-        command = ["fastqc","-o",f"{path_name}/fastqc","-f fastq",
-                   f"{path_name}/{job_info['file1']}",f"{path_name}/{job_info['file2']}"]
-        subprocess.run(command, check=True)  
         db.update_db(user_key,job_key,"running")
+        command = ["fastqc","-o",f"{path_name}/fastqc","-f","fastq",f"{path_name}/{job_info['file1']}",f"{path_name}/{job_info['file2']}"]
+        subprocess.run(command, check=True)  
+    except:
+        db.update_db(user_key,job_key,"fail")
+        print("fastqc error!")
+
+def run_trim(user_key,job_info):
+    job_key=job_info["job_key"]
+    path_name=os.path.join("./user/",str(user_key),str(job_key))
+    os.mkdir(path_name+"/fastqc")
+    try:
+        db.update_db(user_key,job_key,"running")
+        command = ["java","-jar","$trimmomatic","PE",f"{path_name}/{job_info['file1']}",f"{path_name}/{job_info['file2']}",
+                   "trim_R1.fastq.gz","trim_R1_unpaired.fastq.gz","trim_R2.fastq.gz","trim_R2_unpaired.fastq.gz"]
+        subprocess.run(command, check=True)  
+    except:
+        db.update_db(user_key,job_key,"fail")
+        print("fastqc error!")
+
+def run_spades(user_key,job_key,jobname):
+    path_name=os.path.join("./user/",user_key,jobname)
+    db.update_db(user_key,job_key,"running")
+
+    try:
+        command = ["spades.py","-1",path_name+"/workpath/unmapped_R1.fastq","-2",path_name+"/workpath/unmapped_R2.fastq","-o",path_name+"/spades"]
+        subprocess.run(command, check=True)  
     except:
         db.update_db(user_key,job_key,"fail")
         print("spades error!")
