@@ -88,14 +88,14 @@ def index():
         print("logout")
         return render_template('index.html',login=False)
 
-@app.route('/about')
+@app.route('/doc')
 def about():
     if protected()!=False:
         print("login")
-        return render_template('about.html',login=True,username=session["user_key"])
+        return render_template('doc.html',login=True,user_key=session["user_key"])
     else:
         print("logout")
-        return render_template('about.html',login=False)
+        return render_template('doc.html',login=False)
 
 @app.route('/submit')
 def submit():
@@ -125,7 +125,7 @@ def upload():
             print("make ./user/"+str(user_info['user_key'])+"/"+str(job_key))
         else :
 
-            
+
             data = {'result': 'err'}
             return jsonpickle.encode(data)
         
@@ -171,17 +171,20 @@ def result_first():
 
 @app.route('/result/<user_key>')
 def result(user_key):
-    db_info=db.read_db(user_key)
+    if protected()!=False:
+        db_info=db.read_db(user_key)
     #print(db_info)
-    return render_template('result.html',rows=db_info)
+        return render_template('result.html',rows=db_info, login=True,user_key=session["user_key"])
+    else:
+        return redirect("/") 
+    
 
 @app.route('/result/<user_key>/<job_key>')
 def detail(user_key,job_key):
     db_info,cols=db.read_db_row(user_key,job_key)
     data_df = pd.DataFrame.from_records(data=db_info, columns=cols)
     print(data_df)
-    jobname=str(data_df.at[0,"jobname"])
-    seroba, vir, mlst, mge, cgmlst, kmer, blast=rp.get_info(user_key,job_key,jobname)
+    seroba, vir, mlst, mge, cgmlst, kmer, blast=rp.get_info(user_key,job_key)
     mge=mge.drop(["contig","start","end"],axis=1)
     #if request.method == 'GET':
     #    rp.get_info(username,key,jobname)

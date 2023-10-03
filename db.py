@@ -54,11 +54,13 @@ def update_db(user_key,job_key,state):
     conn.commit()
     conn.close()
 
-def read_db_row(username,key):
-    conn = sqlite3.connect(str("./user/userjob.db"))
+def read_db_row(user_key,job_key):
+    conn = sqlite3.connect(str("pneumo_service.db"))
     conn.row_factory = sqlite3.Row
     c = conn.cursor()
-    c.execute("SELECT * FROM job WHERE id == "+str(key))
+    query=f"SELECT * FROM job WHERE user_key = {str(user_key)} and job_num = {str(job_key)}"
+    print(query)
+    c.execute(query)
     tb=c.fetchall()
     cols = [column[0] for column in c.description]
     return tb, cols
