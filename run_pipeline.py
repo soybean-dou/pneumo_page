@@ -12,9 +12,9 @@ def run_fastqc(path_name,file1,file2):
     command = ["fastqc","-o",f"{path_name}/fastqc","-f","fastq",f"{path_name}/{file1}",f"{path_name}/{file2}"]
     subprocess.run(command, check=True)  
 
-def is_trimming_need(path_name,file1,file2):
-    next
-    
+def read_qc(path_name,file1,file2):
+    return False
+
 def run_trim(path_name,file1,file2):
     env = os.environ.copy()
     trimmomatic=env["trimmomatic"]
@@ -29,34 +29,36 @@ def run_trim(path_name,file1,file2):
 def run_kraken2(path_name,file1,file2):
     if not(os.path.exists(path_name+"/kraken")):
         os.mkdir(path_name+"/kraken")
-    command = ["kraken2","--paired","--threads","8",f"{path_name}/{file1}",f"{path_name}/{file2}"]
+    command = f"kraken2 --paired --threads 8 --report {path_name}/kraken/result.kreport {path_name}/{file1} {path_name}/{file2} > {path_name}/kraken/kraken.txt"
+    subprocess.run(command, check=True, shell=True)
+    command = ["bracken","-d","$KRAKEN2_DEFAULT_DB","-i",f"{path_name}/kraken/result.kreport","-o",f"{path_name}/kraken/result.bracken","-r","100"]
     subprocess.run(command, check=True)  
 
         
 def run_spades(path_name,file1,file2):
-    command = ["spades.py","-1",f"{path_name}+/{file1}","-2",f"{path_name}+/{file2}","-o",path_name+"/spades"]
+    command = ["spades.py","-1",f"{path_name}/{file1}","-2",f"{path_name}/{file2}","-o",path_name+"/spades"]
     subprocess.run(command, check=True)  
 
 def run_MGE(path_name):
     if not(os.path.exists(path_name+"/mge")):
         os.mkdir(path_name+"/mge")
-    command = ["mobileElementFinder.py","find","-c",path_name+"/spades/scaffolds.fasta",path_name+"/mge/"]
+    command = ["mobileElementFinder.py","find","-c",path_name+"/spades/contigs.fasta",path_name+"/mge/"]
     subprocess.run(command, check=True)  
-    os.system("mv mge*.* mge")
+    os.system(f"mv {path_name}/mge*.* {path_name}/mge")
 
 
 def run_cgMLST(path_name):
     if not(os.path.exists(path_name+"/cgMLST")):
         os.mkdir(path_name+"/cgMLST")
-    command = ["cgMLST.py","-i",path_name+"/spades/scaffolds.fasta","-s","spneumoniae"
-                ,"-db","/home/iu98/pneumo_pipline/cgmlstfinder/cgmlstfind_db","-o",path_name+"/cgMLST"]
+    command = ["cgMLST.py","-i",path_name+"/spades/contigs.fasta","-s","spneumoniae"
+                ,"-db","/home/iu98/pneumo_pipline/cgmlstfinder/cgmlstfinder_db","-o",path_name+"/cgMLST"]
     subprocess.run(command, check=True)  
 
 
 def run_virulencefinder(path_name):
     if not(os.path.exists(path_name+"/virulence")):
         os.mkdir(path_name+"/virulence")
-    command = ["virulencefinder.py","-i",path_name+"/spades/scaffolds.fasta","-d","s.pneumoniae"
+    command = ["virulencefinder.py","-i",path_name+"/spades/contigs.fasta","-d","s.pneumoniae"
                 ,"-p","/home/iu98/pneumo_pipline/virulencefinder/virulencefinder_db","-x","-o",path_name+"/virulence"]
     subprocess.run(command, check=True)  
 
@@ -64,14 +66,14 @@ def run_virulencefinder(path_name):
 def run_abricate(path_name):
     if not(os.path.exists(path_name+"/AMR")):
         os.mkdir(path_name+"/AMR")
-    command = ["abricate",f"{path_name}/spades/scaffolds.fasta",">",f"{path_name}/AMR/abricate_result.tsv"]
+    command = ["abricate",f"{path_name}/spades/contigs.fasta",">",f"{path_name}/AMR/abricate_result.tsv"]
     subprocess.run(command, check=True)  
 
 
 def run_MLST(path_name,file1,file2):
     if not(os.path.exists(path_name+"/mlst")):
         os.mkdir(path_name+"/mlst")
-    command = ["mlst.py","-i",path_name+"/workpath/unmapped_R1.fastq",path_name+"/workpath/unmapped_R2.fastq",
+    command = ["mlst.py","-i",path_name+"/"+file1,path_name+"/"+file2,
                 "-s","spneumoniae","-p","/home/iu98/pneumo_pipline/mlst/mlst_db","-x","-o",path_name+"/mlst"]
     subprocess.run(command, check=True)  
 
@@ -90,7 +92,7 @@ def run_seroba(path_name,file1,file2):
 def run_blast(path_name):
     if not(os.path.exists(path_name+"/blast")):
         os.mkdir(path_name+"/blast")
-    command = ["blastn","-query",path_name+"/spades/scaffolds.fasta","-db","nt"
+    command = ["blastn","-query",path_name+"/spades/contigs.fasta","-db","nt"
                 ,"-outfmt",'6 qseqid sseqid scomnames length qstart qend sstart send evalue pident',"-out",path_name+"/blast/blast_result.txt"]
     subprocess.run(command, check=True)  
        
@@ -110,8 +112,7 @@ def get_info(user_key,job_key):
     return seroba, vir, mlst, mge, cgmlst, kmer, blast
 
     
-def read_qc():
-    next
+
 
 
 def run_with_web(user_key,job_info):
@@ -124,7 +125,6 @@ def run_with_web(user_key,job_info):
 
         db.update_db(user_key,job_key,"running")
         run_pipeline(path_name,file1,file2)
-        app.result(user_key)
     except:
         db.update_db(user_key,job_key,"fail")
 
