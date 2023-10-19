@@ -1,7 +1,7 @@
 import os
 import pathlib
 import requests
-from flask import Flask, redirect, request, url_for, jsonify, render_template, abort, session
+from flask import Flask, redirect, request, url_for, jsonify, render_template, abort, session, send_file
 from flask_bootstrap import Bootstrap
 from werkzeug.utils import secure_filename
 from google.oauth2 import id_token
@@ -151,9 +151,9 @@ def upload():
             db_info=db.read_db(user_info['user_key'])
             job_key=len(db_info)
 
-            process = multiprocessing.Process(target=rp.main, args=(user_info['user_key'], job_info))
+            process = multiprocessing.Process(target=run_with_web, args=(user_info['user_key'], job_info))
             process.start()
-            
+
             data = {'result': 'success'} 
             return redirect(f"/result/{str(user_info['user_key'])}")
             
@@ -171,29 +171,66 @@ def result_first():
 
 @app.route('/result/<user_key>')
 def result(user_key):
+    os.chdir("/home/iu98/pneumo_page")
     if protected()!=False:
         db_info=db.read_db(user_key)
     #print(db_info)
-        return render_template('result.html',rows=db_info, login=True,user_key=session["user_key"])
+        return render_template('result.html',rows=db_info, login=True,user_id=user_key)
     else:
         return redirect("/") 
     
 
 @app.route('/result/<user_key>/<job_key>')
 def detail(user_key,job_key):
+    os.chdir("/home/iu98/pneumo_page")
     db_info,cols=db.read_db_row(user_key,job_key)
     data_df = pd.DataFrame.from_records(data=db_info, columns=cols)
-    print(data_df)
-    seroba, vir, mlst, mge, cgmlst, kmer, blast=rp.get_info(user_key,job_key)
+    files=data_df["input"][0].split("|")
+    sero_txt, seroba, vir, mlst, mge, cgmlst, kraken, plasmid, amr, quast, prokka, poppunk=rp.get_info(user_key,job_key)
     mge=mge.drop(["contig","start","end"],axis=1)
+    pl_key1=[]
+    pl_key2=[]
+    pl_pd=[]
+    for key1 in plasmid.keys():
+        for key2 in plasmid[key1].keys():
+            if plasmid[key1][key2] != "No hit found":
+                pl_key1.append(key1)
+                pl_key2.append(key2)
+                pl_pd.append(pd.DataFrame(plasmid[key1][key2]))
     #if request.method == 'GET':
     #    rp.get_info(username,key,jobname)
     return render_template('detail.html',
-                           key=job_key, rows=db_info, seroba=seroba, vir=vir, mlst=mlst, mge=mge, cgmlst=cgmlst, kmer=kmer, blast=blast)
+                           key=job_key, user_id=user_key, files=files, rows=db_info, sero_txt=sero_txt, seroba=seroba, vir=vir, mlst=mlst, mge=mge, cgmlst=cgmlst, kraken=kraken,
+                           pl_key1=pl_key1, pl_key2=pl_key2, pl_pd=pl_pd, amr=amr, quast=quast, prokka=prokka, poppunk=poppunk)
+
+@app.route('/result/<user_key>/<job_key>/fastqc/<file_name>/download')
+def fastqc_download(user_key,job_key,file_name):
+    os.chdir("/home/iu98/pneumo_page")
+    file_name=file_name.split(".")[0]+"_fastqc.html"
+    path=os.path.join("./user",user_key,str(job_key),"fastqc",file_name)
+    return send_file(path, as_attachment=True)
+    
 
 @app.route('/mypage')
 def mypage():
     return render_template('mypage.html',username=session["name"],email=session["email"])
+
+
+def run_with_web(user_key,job_info):
+    job_key=job_info["job_key"]
+    try:
+        path_name=os.path.join("./user/",str(user_key),str(job_key))
+        file1=job_info["file1"]
+        file2=job_info["file2"]
+
+        db.update_db(user_key,job_key,"running")
+        rp.run_pipeline(path_name,file1,file2)
+    except:
+        os.chdir("/home/iu98/pneumo_page")
+        db.update_db(user_key,job_key,"fail")
+    else:
+        os.chdir("/home/iu98/pneumo_page")
+        db.update_db(user_key,job_key,"complete")
 
 if __name__ == '__main__':
     app.run(debug=True)

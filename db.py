@@ -35,7 +35,7 @@ def insert_job(user_info,job_info):
     x=dt.datetime.now()
     date=x.strftime("%A %d. %B %Y %H:%M:%S")
     c.executemany('INSERT INTO job VALUES (?,?,?,?,?,?,?)',
-                  [(user_info["user_key"],user_info["username"],job_num,job_info["jobname"],job_info["file1"],state,date)])
+                  [(user_info["user_key"],user_info["username"],job_num,job_info["jobname"],str(job_info["file1"]+"|"+job_info["file2"]),state,date)])
     conn.commit()
     conn.close()
 
@@ -58,7 +58,7 @@ def read_db_row(user_key,job_key):
     conn = sqlite3.connect(str("pneumo_service.db"))
     conn.row_factory = sqlite3.Row
     c = conn.cursor()
-    query=f"SELECT * FROM job WHERE user_key = {str(user_key)} and job_num = {str(job_key)}"
+    query=f"SELECT * FROM job WHERE user_key = '{str(user_key)}' and job_num = {int(job_key)}"
     print(query)
     c.execute(query)
     tb=c.fetchall()

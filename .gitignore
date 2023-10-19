@@ -6,3 +6,4 @@ node_modules/
 *.json
 reference/
 pneumo_service.db
+*.ipynb
