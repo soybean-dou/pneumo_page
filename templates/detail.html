@@ -17,10 +17,12 @@
                   </button>
                   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                      <a class="nav-link " href="/doc">document</a>
+                      <a class="nav-link " href="/doc">documentation</a>
+                      {% if login == True %}
                       <a class="nav-link" href="/submit">submit</a>
                       <a class="nav-link active" id="nav-result" href="#">result</a>
                       <a class="nav-link" href="/mypage">mypage</a>
+                      {% endif %}
                     </div>
                   </div>
                   <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
@@ -64,7 +66,7 @@
                     {% endfor %}
                 </tbody>
                 </table>
-                <div class="mb-3 intitle-2">QC</div>
+                <div class="mb-3 intitle-2">Qulity Control<small class="text-muted"> with FastQC</small></div>
                   {% for file in files %}
                   <button class="btn btn-primary fastqc_download" type="button">{{file}}</button>
                   {% endfor %}
@@ -289,10 +291,17 @@
             
           </div>
         </div>
+         <footer class="text-center text-lg-start bg-light text-muted">
+          <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2023 Copyright:
+            <a class="text-reset fw-bold" href="https://lab.minholee.net/">Minho Lee LAB</a> @Dongguk univ.
+          </div>
+        </footer>
+      </div>
 
-        <script src="/static/js/common.js"></script>
-        <script src="/static/js/detail.js"></script>
-        <script src="https://code.jquery.com/jquery-latest.js"></script>
-        <script src="{{ url_for('static', filename='node_modules/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+      <script src="/static/js/common.js"></script>
+      <script src="/static/js/detail.js"></script>
+      <script src="https://code.jquery.com/jquery-latest.js"></script>
+      <script src="{{ url_for('static', filename='node_modules/bootstrap/dist/js/bootstrap.min.js') }}"></script>
     </body>
 </html>

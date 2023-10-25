@@ -182,6 +182,9 @@ def result(user_key):
 
 @app.route('/result/<user_key>/<job_key>')
 def detail(user_key,job_key):
+    if protected()!=False:
+        is_logined=True
+    print(is_logined)
     os.chdir("/home/iu98/pneumo_page")
     db_info,cols=db.read_db_row(user_key,job_key)
     data_df = pd.DataFrame.from_records(data=db_info, columns=cols)
@@ -199,7 +202,7 @@ def detail(user_key,job_key):
                 pl_pd.append(pd.DataFrame(plasmid[key1][key2]))
     #if request.method == 'GET':
     #    rp.get_info(username,key,jobname)
-    return render_template('detail.html',
+    return render_template('detail.html', login=is_logined,
                            key=job_key, user_id=user_key, files=files, rows=db_info, sero_txt=sero_txt, seroba=seroba, vir=vir, mlst=mlst, mge=mge, cgmlst=cgmlst, kraken=kraken,
                            pl_key1=pl_key1, pl_key2=pl_key2, pl_pd=pl_pd, amr=amr, quast=quast, prokka=prokka, poppunk=poppunk)
 
@@ -213,7 +216,9 @@ def fastqc_download(user_key,job_key,file_name):
 
 @app.route('/mypage')
 def mypage():
-    return render_template('mypage.html',username=session["name"],email=session["email"])
+    os.chdir("/home/iu98/pneumo_page")
+    date=db.read_user_db(session['user_key'])
+    return render_template('mypage.html',username=session["name"],email=session["email"],join_date=date["date"])
 
 
 def run_with_web(user_key,job_info):

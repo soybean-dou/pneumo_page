@@ -17,10 +17,12 @@
                   </button>
                   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                      <a class="nav-link " href="/doc">document</a>
-                      <a class="nav-link" href="/submit">submit</a>
-                      <a class="nav-link" id="nav-result" href="#">result</a>
-                      <a class="nav-link" href="/mypage">mypage</a>
+                      <a class="nav-link " href="/doc">documentation</a>
+                      {% if login == True %}
+                        <a class="nav-link" href="/submit">submit</a>
+                        <a class="nav-link" id="nav-result" href="#">result</a>
+                        <a class="nav-link" href="/mypage">mypage</a>
+                        {% endif %}
                     </div>
                   </div>
                   <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
@@ -37,6 +39,25 @@
                   </div>
                 </div>
             </nav>
+            <div class="container inner">
+              <div class="row align-items-center" style="height: 90dvh;">
+                <img class="blurry-background"src="/static/images/cdc-QEU-QgIOJKA-unsplash.png">
+                <div>
+                  <h1 class="title" style="font-weight: bold;">Welcome to Pneumoniae!</h1>
+                  <hr></hr>
+                  <h6><b>Pneumoniae</b> is a web service that analyzes Whole Genome Sequence data about <i>S.pneumoniae.</i></h6>
+                  <h6>After logging in, click submit to upload your WGS data to the web server.</h6>
+                  <h6>You can get a variety of information about S.pneumoniae.</h6>
+                </div>
+              </div>  
+            </div>
+            
+            <footer class="text-center text-lg-start bg-light text-muted">
+              <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+                © 2023 Copyright:
+                <a class="text-reset fw-bold" href="https://lab.minholee.net/">Minho Lee LAB</a> @Dongguk univ.
+              </div>
+            </footer>
         </div>
         
         <script src="/static/js/common.js"></script>

@@ -71,3 +71,16 @@ border-top: 5px dashed #663399;
 .mge_table{
     height:50px;
 }
+
+#user_info{
+    font-size:larger;
+}
+
+.blurry-background {
+    width: 700px; 
+    position: absolute; 
+    background-position: right center; 
+    z-index: -1; 
+    margin-left: 40%;
+    opacity: 50%;
+}

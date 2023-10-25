@@ -64,3 +64,11 @@ def read_db_row(user_key,job_key):
     tb=c.fetchall()
     cols = [column[0] for column in c.description]
     return tb, cols
+
+def read_user_db(user_key):
+    conn = sqlite3.connect(str("pneumo_service.db"))
+    conn.row_factory = sqlite3.Row
+    c = conn.cursor()
+    c.execute(f"SELECT date FROM user WHERE user_key ='{user_key}'")
+    tb=c.fetchone()
+    return tb

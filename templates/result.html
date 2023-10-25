@@ -17,10 +17,12 @@
                   </button>
                   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                      <a class="nav-link " href="/doc">document</a>
+                      <a class="nav-link " href="/doc">documentation</a>
+                      {% if login == True %}
                       <a class="nav-link" href="/submit">submit</a>
                       <a class="nav-link active" id="nav-result" href="#">result</a>
                       <a class="nav-link" href="/mypage">mypage</a>
+                      {% endif %}
                     </div>
                   </div>
                   <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
@@ -38,7 +40,7 @@
             </nav>
         </div>
         <div class="container inner">
-          <div class="row align-items-center" style="height: 80dvh;">
+          <div class="row align-items-center" style="height: 90dvh;">
             <div class="col justify-content-center">
               <div class="intitle-1">Job List</div>
               <table class="table">
@@ -67,6 +69,13 @@
               </table>
             </div>
           </div>
+        </div>
+        <footer class="text-center text-lg-start bg-light text-muted">
+          <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2023 Copyright:
+            <a class="text-reset fw-bold" href="https://lab.minholee.net/">Minho Lee LAB</a> @Dongguk univ.
+          </div>
+        </footer>
         </div>
 
         <script src="/static/js/common.js"></script>
