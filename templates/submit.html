@@ -17,11 +17,11 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav">
-                <a class="nav-link" href="/doc">documentation</a>
+                <a class="nav-link" href="/doc">DOCUMENTATION</a>
                 {% if login == True %}
-                <a class="nav-link active" aria-current="page" href="/submit">submit</a>
-                <a class="nav-link" id="nav-result" href="/#">result</a>
-                <a class="nav-link" href="/mypage">mypage</a>
+                <a class="nav-link active" aria-current="page" href="/submit">SUBMIT</a>
+                <a class="nav-link" id="nav-result" href="/#">RESULT</a>
+                <a class="nav-link" href="/mypage">MYPAGE</a>
                 {% endif %}
               </div>
             </div>
@@ -43,6 +43,20 @@
         <div class="row align-items-center" style="height: 90dvh;">
           <div class="col justify-content-center">
             <div class="intitle-1">Upload Sequence file</div>
+            <div class="job-type">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Single Job submit
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault2">
+                  Multiple job submit
+                </label>
+              </div>
+            </div>
             <form action="/upload"  id='upload_form' method="post" enctype="multipart/form-data">
               <div class="input-group mb-3">
                 <span class="input-group-text" id="basic-addon1">job name</span>

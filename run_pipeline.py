@@ -152,15 +152,20 @@ def run_blast():
 
 def get_info(user_key,job_key):
     path_name="./user/"+user_key+"/"+job_key
+    print(path_name)
     path_name=str(path_name)
     os.chdir(path_name)
-    with open("./seroba/detailed_serogroup_info.txt","r") as f:
-        sero_txt=[]
-        for i in range(0,3):
-            line=f.readline().rstrip("\n")
-            line=line.replace("\t"," ")
-            sero_txt.append(line)
-    seroba=pd.read_csv(("./seroba/detailed_serogroup_info.txt"),sep="\t",skiprows=[0,1,2])
+    sero_txt=[]
+    if os.path.exists("./seroba/detailed_serogroup_info.txt"):
+        with open("./seroba/detailed_serogroup_info.txt","r") as f:
+            for i in range(0,3):
+                line=f.readline().rstrip("\n")
+                line=line.replace("\t"," ")
+                sero_txt.append(line)
+        seroba=pd.read_csv(("./seroba/detailed_serogroup_info.txt"),sep="\t",skiprows=[0,1,2])
+    else :
+        sero_txt.append(open("./seroba/pred.tsv").read().split("\t")[1])
+        seroba=None
     vir=pd.read_csv(("./virulence/results_tab.tsv"),sep="\t")
     mlst=pd.read_csv(("./mlst/results_tab.tsv"),sep="\t")
     mge=pd.read_csv(("./mge/mge.csv"),skiprows=[0,1,2,3,4])

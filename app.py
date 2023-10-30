@@ -33,6 +33,14 @@ flow = Flow.from_client_secrets_file(
 
 @app.route("/login")  #the page where the user can login
 def login():
+    if protected():
+        is_logined=True
+    else:
+        is_logined=False 
+    return render_template('login.html',login=is_logined)
+
+@app.route("/login/google")  #the page where the user can login
+def login_with_google():
     authorization_url, state = flow.authorization_url()  #asking the flow class for the authorization (login) url
     session["state"] = state
     return redirect(authorization_url)
