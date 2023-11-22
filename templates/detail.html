@@ -90,16 +90,16 @@
                 </div>
                 <hr></hr>
                 <div class="mb-3 intitle-2">Serotype
-                  {% if seroba!=None %}
+                  {% if sero_bool!=False %}
                   <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#sero">▼</button>
                   {% endif %}
                 </div>
                 <div>
                   {% for i in sero_txt %}
-                    <div> - {{ i }}</div>
+                    <div> {{ i }}</div>
                   {% endfor %}
                 </div>
-                {% if seroba!=None %}
+                {% if sero_bool!=False %}
                 <div class="table-responsive collapse" id="sero">
                   <table class="table table-striped">
                     <tr>
@@ -120,6 +120,7 @@
                 <hr></hr>
                 <div class="mb-3 intitle-2">Gene annotation
                   <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#gene_annot">▼</button>
+                  <button class="btn btn-primary gene_anot_download" type="button">download</button>
                 </div>
                 <div id="gene_annot" class="collapse">
                   <table class="table table-striped" >
@@ -144,9 +145,8 @@
                 <div class="collapse" id="mlst">
                 <table class="table table-striped">
                       <tr>
-                          {% for col in mlst.columns %}
-                          <th scope="col">{{ col }}</th>
-                          {% endfor %}
+                          <th rowspan="2" scope="col">MLST</th>
+                          <th colspan="7" scope="col">profile</th>
                       </tr>
                       {% for index, row in mlst.iterrows() %}
                       <tr>

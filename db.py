@@ -39,7 +39,7 @@ def insert_job(user_info,job_info):
     conn.commit()
     conn.close()
 
-def read_db(user_key):
+def read_user_job(user_key):
     conn = sqlite3.connect(str("pneumo_service.db"))
     conn.row_factory = sqlite3.Row
     c = conn.cursor()
@@ -72,3 +72,15 @@ def read_user_db(user_key):
     c.execute(f"SELECT date FROM user WHERE user_key ='{user_key}'")
     tb=c.fetchone()
     return tb
+
+def is_joined(user_key):
+    print(os.curdir)
+    conn = sqlite3.connect(str("pneumo_service.db"))
+    conn.row_factory = sqlite3.Row
+    c = conn.cursor()
+    c.execute(f"SELECT * FROM user WHERE user_key ='{user_key}'")
+    tb=c.fetchone()
+    if tb==None:
+        return False
+    else:
+        return True

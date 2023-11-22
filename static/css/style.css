@@ -64,7 +64,7 @@ border-top: 5px dashed #663399;
 }
 
 .result_row {
-    cursor : pointer;
+    
 }
 
 .mge_table{
@@ -95,4 +95,10 @@ border-top: 5px dashed #663399;
 
 .job-type{
     padding: 1%
+}
+
+.explain_area{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    color : gray;
 }

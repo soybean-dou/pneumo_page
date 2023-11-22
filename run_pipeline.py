@@ -122,9 +122,8 @@ def run_abricate():
 def run_MLST(file1,file2):
     if not(os.path.exists("./mlst")):
         os.mkdir("./mlst")
-    command = ["mlst.py","-i","./"+file1,"./"+file2,
-                "-s","spneumoniae","-p","/home/iu98/pneumo_pipline/mlst/mlst_db","-x","-o","./mlst"]
-    subprocess.run(command, check=True)  
+    command = "mlst -csv -nopath --scheme spneumoniae ./spades/scaffolds.fasta > ./mlst/mlst.csv"
+    subprocess.run(command, check=True, shell=True)
 
 def run_plasmidfinder(file1,file2):
     if not(os.path.exists("./plasmid")):
@@ -163,17 +162,26 @@ def get_info(user_key,job_key):
                 line=line.replace("\t"," ")
                 sero_txt.append(line)
         seroba=pd.read_csv(("./seroba/detailed_serogroup_info.txt"),sep="\t",skiprows=[0,1,2])
+        sero_bool=True
     else :
         sero_txt.append(open("./seroba/pred.tsv").read().split("\t")[1])
-        seroba=None
+        sero_bool=False
+        seroba=False
     vir=pd.read_csv(("./virulence/results_tab.tsv"),sep="\t")
-    mlst=pd.read_csv(("./mlst/results_tab.tsv"),sep="\t")
+    mlst=pd.read_csv("./mlst/mlst.csv",header=None)
+    mlst.loc[1]=None
+    mlst.iloc[1,2]=mlst.iloc[0,2]
+    for i in range(3,len(mlst.columns)):
+        print(mlst.iloc[0,i])
+        mlst.iloc[1,i]=str(mlst.iloc[0,i]).split("(")[1].rstrip(")")
+        mlst.iloc[0,i]=str(mlst.iloc[0,i]).split("(")[0]
+    mlst=mlst.iloc[:,2:len(mlst.columns)]
     mge=pd.read_csv(("./mge/mge.csv"),skiprows=[0,1,2,3,4])
-    cgmlst=pd.read_csv(("./cgMLST/spneumoniae_results.txt"),sep="\t")
-    kraken=pd.read_csv(("./kraken/result.bracken"),sep="\t")[0:5]
-    amr=pd.read_csv(("./AMR/abricate_result.tsv"),sep="\t")
+    cgmlst=pd.read_csv(("./cgMLST/spneumoniae_summary.txt"),sep="\t")
+    kraken=pd.read_csv(("./kraken/result.bracken"),sep="\t",keep_default_na=False)[0:5]
+    amr=pd.read_csv(("./AMR/abricate_result.tsv"),sep="\t",keep_default_na=False)
     quast=os.path.abspath("./quast/report.html")
-    prokka=pd.read_csv(("./prokka/prokka.tsv"),sep="\t")
+    prokka=pd.read_csv(("./prokka/prokka.tsv"),sep="\t",keep_default_na=False)[0:20]
     poppunk=pd.read_csv(("./poppunk/poppunk_clusters.csv"))
     with open("./plasmid/result.json") as j:
         data=j.read()
@@ -181,7 +189,7 @@ def get_info(user_key,job_key):
         plasmid=plasmid["plasmidfinder"]["results"]
     #blast=pd.read_excel(("./blast/blast_result_summary.xlsx"))
     #blast.columns = ['contig', 'top1', 'top2', 'top3', 'top4', 'top5']
-    return sero_txt, seroba, vir, mlst, mge, cgmlst, kraken, plasmid, amr, quast, prokka, poppunk
+    return sero_bool, sero_txt, seroba, vir, mlst, mge, cgmlst, kraken, plasmid, amr, quast, prokka, poppunk
 
     
 def run_pipeline(path_name,file1,file2):

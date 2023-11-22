@@ -11,7 +11,7 @@
     <div>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <div class="container-fluid">
-            <a class="navbar-brand" id="page_name" href="/">Pneumoniae</a>
+            <a class="navbar-brand" id="page_name" href="/">PneusPage</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -44,35 +44,64 @@
           <div class="col justify-content-center">
             <div class="intitle-1">Upload Sequence file</div>
             <div class="job-type">
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input job-type-radio" type="radio" name="flexRadioDefault" id="single-job" checked>
                 <label class="form-check-label" for="flexRadioDefault1">
                   Single Job submit
                 </label>
               </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input job-type-radio" type="radio" name="flexRadioDefault" id="multi-job">
                 <label class="form-check-label" for="flexRadioDefault2">
                   Multiple job submit
                 </label>
               </div>
             </div>
-            <form action="/upload"  id='upload_form' method="post" enctype="multipart/form-data">
-              <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1">job name</span>
-                <input type="text" id='jobname' name="jobname" class="form-control" placeholder="jobname" aria-label="jobname" aria-describedby="basic-addon1">
+            <div id="single-upload">
+              <div class="explain_area">
+                <div>You can get result by uploading job name and fastq file(paired-end).</div>
+                <div>You can check the results with a simple example file here. (<a href="/submit/forward/download">forward</a>, <a href="/submit/reverse/download">reverse</a>) Try it yourself.</div>
               </div>
-              <div class="mb-3">
-                <input type="file" name="file[]" id="files" class="form-control" multiple>
+              <form action="/upload"  id='upload_form' method="post" enctype="multipart/form-data">
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">job name</span>
+                  <input type="text" id='jobname' name="jobname" class="form-control" placeholder="jobname" aria-label="jobname" aria-describedby="basic-addon1">
+                </div>
+                <div class="mb-3">
+                  <input type="file" name="file[]" id="files" class="form-control" accept=".fastq,.fq,.gz" multiple>
+                </div>
+                <div class="mb-3">
+                  <button type="submit" class="btn btn-outline-primary" id="submit-btn">
+                    <span class="spinner-border spinner-border-sm" id="spinner" style="display:none" role="status" aria-hidden="true"></span>
+                    <span id="btn-sub">Submit</span>
+                    <span id="btn-lod" style="display:none">Loding</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div id="multiple-upload" style="display: none;">
+              <div class="explain_area">
+                <div>You can submit multiple jobs by uploading a configuration table file.</div>
+                <div><a href="/submit/tsv/download">Here</a> is an example file.</div>
               </div>
-              <div class="mb-3">
-                <button type="submit" class="btn btn-outline-primary" id="submit-btn">
-                  <span class="spinner-border spinner-border-sm" id="spinner" style="display:none" role="status" aria-hidden="true"></span>
-                  <span id="btn-sub">Submit</span>
-                  <span id="btn-lod" style="display:none">Loding</span>
-                </button>
-              </div>
-            </form>
+              <form action="/uploadMulti"  id='upload_multi_form' method="post" enctype="multipart/form-data">
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">tab file</span>
+                  <input type="file" name="file" id="tsvfile" class="form-control">
+                </div>
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon2">fastq file</span>
+                  <input type="file" name="file[]" id="rawfiles" class="form-control" multiple>
+                </div>
+                <div class="mb-3">
+                  <button type="submit" class="btn btn-outline-primary" id="submit-btn">
+                    <span class="spinner-border spinner-border-sm" id="spinner-m" style="display:none" role="status" aria-hidden="true"></span>
+                    <span id="btn-sub-m">Submit</span>
+                    <span id="btn-lod-m" style="display:none">Loding</span>
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>  
         </div>
       </div>

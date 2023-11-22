@@ -7,3 +7,4 @@ node_modules/
 reference/
 pneumo_service.db
 *.ipynb
+sample/
