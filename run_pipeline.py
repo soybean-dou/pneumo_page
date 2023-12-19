@@ -115,7 +115,7 @@ def run_virulencefinder():
 def run_abricate():
     if not(os.path.exists("./AMR")):
         os.mkdir("./AMR")
-    command = "abricate ./spades/contigs.fasta > ./AMR/abricate_result.tsv"
+    command = "abricate --db card ./spades/scaffolds.fasta > ./AMR/abricate_result.tsv"
     subprocess.run(command, check=True, shell=True)  
 
 
@@ -128,7 +128,9 @@ def run_MLST(file1,file2):
 def run_plasmidfinder(file1,file2):
     if not(os.path.exists("./plasmid")):
         os.mkdir("./plasmid")
-    command = f"plasmidfinder.py -i ./{file1} ./{file2} -p /home/iu98/toolkit/plasmidfinder_db -o ./plasmid > ./plasmid/result.json"
+    #command = f"plasmidfinder.py -i ./{file1} ./{file2} -p /home/iu98/toolkit/plasmidfinder_db -o ./plasmid > ./plasmid/result.json"
+    command = f"abricate --csv --nopath --quiet --db plasmidfinder spades/scaffolds.fasta > plasmid/plasmid.csv"
+    
     subprocess.run(command, check=True, shell=True) 
 
 def run_seroba(file1,file2):
@@ -167,7 +169,7 @@ def get_info(user_key,job_key):
         sero_txt.append(open("./seroba/pred.tsv").read().split("\t")[1])
         sero_bool=False
         seroba=False
-    vir=pd.read_csv(("./virulence/results_tab.tsv"),sep="\t")
+    vir=pd.read_csv(("./virulence/results_tab.tsv"),sep="\t",keep_default_na=False)
     mlst=pd.read_csv("./mlst/mlst.csv",header=None)
     mlst.loc[1]=None
     mlst.iloc[1,2]=mlst.iloc[0,2]
@@ -182,11 +184,12 @@ def get_info(user_key,job_key):
     amr=pd.read_csv(("./AMR/abricate_result.tsv"),sep="\t",keep_default_na=False)
     quast=os.path.abspath("./quast/report.html")
     prokka=pd.read_csv(("./prokka/prokka.tsv"),sep="\t",keep_default_na=False)[0:20]
-    poppunk=pd.read_csv(("./poppunk/poppunk_clusters.csv"))
-    with open("./plasmid/result.json") as j:
-        data=j.read()
-        plasmid=ast.literal_eval(data)
-        plasmid=plasmid["plasmidfinder"]["results"]
+    poppunk=pd.read_csv(("./poppunk/poppunk_clusters.csv"),keep_default_na=False)
+    plasmid=pd.read_csv(("./plasmid/plasmid.csv"),keep_default_na=False)
+    #with open("./plasmid/result.json") as j:
+    #    data=j.read()
+    #    plasmid=ast.literal_eval(data)
+    #    plasmid=plasmid["plasmidfinder"]["results"]
     #blast=pd.read_excel(("./blast/blast_result_summary.xlsx"))
     #blast.columns = ['contig', 'top1', 'top2', 'top3', 'top4', 'top5']
     return sero_bool, sero_txt, seroba, vir, mlst, mge, cgmlst, kraken, plasmid, amr, quast, prokka, poppunk

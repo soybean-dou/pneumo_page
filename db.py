@@ -7,6 +7,7 @@ import sys
 from pathlib import Path
 
 def insert_user(user_info):
+    os.chdir("/home/iu98/pneumo_page")
     conn = sqlite3.connect(str("pneumo_service.db"))
     c = conn.cursor()
     query=f"SELECT user_key FROM user WHERE user_key = '{user_info['user_key']}'"
@@ -27,6 +28,7 @@ def insert_user(user_info):
 
 def insert_job(user_info,job_info):
     state="queue"
+    os.chdir("/home/iu98/pneumo_page")
     conn = sqlite3.connect(str("pneumo_service.db"))
     c = conn.cursor()
     c.execute(f"SELECT * FROM job WHERE user_key='{user_info['user_key']}'")
@@ -40,6 +42,7 @@ def insert_job(user_info,job_info):
     conn.close()
 
 def read_user_job(user_key):
+    os.chdir("/home/iu98/pneumo_page")
     conn = sqlite3.connect(str("pneumo_service.db"))
     conn.row_factory = sqlite3.Row
     c = conn.cursor()
@@ -48,6 +51,7 @@ def read_user_job(user_key):
     return tb
 
 def update_db(user_key,job_key,state):
+    os.chdir("/home/iu98/pneumo_page")
     conn = sqlite3.connect(str("pneumo_service.db"))
     c = conn.cursor()
     c.execute("UPDATE job SET state = ? WHERE user_key = ? and job_num = ?",(state,user_key,job_key))
@@ -55,6 +59,7 @@ def update_db(user_key,job_key,state):
     conn.close()
 
 def read_db_row(user_key,job_key):
+    os.chdir("/home/iu98/pneumo_page")
     conn = sqlite3.connect(str("pneumo_service.db"))
     conn.row_factory = sqlite3.Row
     c = conn.cursor()
@@ -66,6 +71,7 @@ def read_db_row(user_key,job_key):
     return tb, cols
 
 def read_user_db(user_key):
+    os.chdir("/home/iu98/pneumo_page")
     conn = sqlite3.connect(str("pneumo_service.db"))
     conn.row_factory = sqlite3.Row
     c = conn.cursor()
@@ -74,7 +80,7 @@ def read_user_db(user_key):
     return tb
 
 def is_joined(user_key):
-    print(os.curdir)
+    os.chdir("/home/iu98/pneumo_page")
     conn = sqlite3.connect(str("pneumo_service.db"))
     conn.row_factory = sqlite3.Row
     c = conn.cursor()

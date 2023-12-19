@@ -102,3 +102,7 @@ border-top: 5px dashed #663399;
     padding-bottom: 2%;
     color : gray;
 }
+
+#doc_submit{
+    border:1px;
+}

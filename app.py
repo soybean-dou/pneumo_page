@@ -28,7 +28,7 @@ os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"  #this is to set our environment
 flow = Flow.from_client_secrets_file(  
     client_secrets_file="client_secret.json",
     scopes=["https://www.googleapis.com/auth/userinfo.profile", "https://www.googleapis.com/auth/userinfo.email", "openid"],  
-    redirect_uri="https://lysine.minholee.net:25000/callback"
+    redirect_uri="https://pneuspage.minholee.net/callback"
 )
 
 @app.route("/login")  #the page where the user can login
@@ -125,7 +125,7 @@ def upload():
         print(request.form)
         jobname=request.form.get('jobname')
         
-        db_info=db.read_db(user_info['user_key'])
+        db_info=db.read_user_db(user_info['user_key'])
         job_key=len(db_info)+1
         print(job_key)
 
@@ -156,7 +156,7 @@ def upload():
                     job_info[f'file{str(i+1)}']=secure_filename(f.filename)
 
             db.insert_job(user_info,job_info)
-            db_info=db.read_db(user_info['user_key'])
+            db_info=db.read_user_db(user_info['user_key'])
             job_key=len(db_info)
 
             process = multiprocessing.Process(target=run_with_web, args=(user_info['user_key'], job_info))
@@ -208,7 +208,7 @@ def upload_multi():
             return jsonpickle.encode(data)
 
         process=[]        
-        db_info=db.read_db(user_info['user_key'])
+        db_info=db.read_user_db(user_info['user_key'])
         job_key=len(db_info)
         for i in range(len(file_list["jobs"])):
             job_key+=1
@@ -250,7 +250,7 @@ def upload_multi():
             
         return redirect(f"/result/{str(user_info['user_key'])}")
     data = {'result': 'err'}
-    return jsonpickle.encode(data)
+    return redirect(f"/submit")
 
 
 @app.route('/result/')
@@ -282,26 +282,38 @@ def detail(user_key,job_key):
     files=data_df["input"][0].split("|")
     sero_bool, sero_txt, seroba, vir, mlst, mge, cgmlst, kraken, plasmid, amr, quast, prokka, poppunk=rp.get_info(user_key,job_key)
     mge=mge.drop(["contig","start","end"],axis=1)
-    pl_key1=[]
-    pl_key2=[]
-    pl_pd=[]
-    for key1 in plasmid.keys():
-        for key2 in plasmid[key1].keys():
-            if plasmid[key1][key2] != "No hit found":
-                pl_key1.append(key1)
-                pl_key2.append(key2)
-                pl_pd.append(pd.DataFrame(plasmid[key1][key2]))
+    #pl_key1=[]
+    #pl_key2=[]
+    #pl_pd=[]
+    #for key1 in plasmid.keys():
+    #    for key2 in plasmid[key1].keys():
+    #        if plasmid[key1][key2] != "No hit found":
+    #            pl_key1.append(key1)
+    #            pl_key2.append(key2)
+    #            pl_pd.append(pd.DataFrame(plasmid[key1][key2]))
     #if request.method == 'GET':
     #    rp.get_info(username,key,jobname)
     return render_template('detail.html', login=is_logined,
                            key=job_key, user_id=user_key, files=files, rows=db_info, sero_txt=sero_txt, seroba=seroba, vir=vir, mlst=mlst, mge=mge, cgmlst=cgmlst, kraken=kraken,
-                           pl_key1=pl_key1, pl_key2=pl_key2, pl_pd=pl_pd, amr=amr, quast=quast, prokka=prokka, poppunk=poppunk, sero_bool=sero_bool)
+                           plasmid=plasmid, amr=amr, quast=quast, prokka=prokka, poppunk=poppunk, sero_bool=sero_bool)
 
 @app.route('/result/<user_key>/<job_key>/fastqc/<file_name>/download')
 def fastqc_download(user_key,job_key,file_name):
     os.chdir("/home/iu98/pneumo_page")
     file_name=file_name.split(".")[0]+"_fastqc.html"
     path=os.path.join("./user",user_key,str(job_key),"fastqc",file_name)
+    return send_file(path, as_attachment=True)
+
+@app.route('/result/<user_key>/<job_key>/assembled_fasta/download')
+def assembled_fasta_download(user_key,job_key):
+    os.chdir("/home/iu98/pneumo_page")
+    path=os.path.join("./user",user_key,str(job_key),"spades","scaffolds.fasta")
+    return send_file(path, as_attachment=True)
+
+@app.route('/result/<user_key>/<job_key>/gene_anot/download')
+def gene_annot_download(user_key,job_key):
+    os.chdir("/home/iu98/pneumo_page")
+    path=os.path.join("./user",user_key,str(job_key),"prokka","prokka.tsv")
     return send_file(path, as_attachment=True)
 
 @app.route('/submit/tsv/download')
