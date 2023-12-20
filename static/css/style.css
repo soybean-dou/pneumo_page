@@ -13,9 +13,9 @@ body {
 }
 
 .inner{
-    min-height : 80dvh;
-    padding-top: auto;
-    padding-bottom: auto;
+    height : 81dvh;
+    padding-top: 5dvh;
+    padding-bottom: 5dvh;
 }
 
 .wrapper {
@@ -48,6 +48,10 @@ body {
     margin-left: 30px;
 }
 
+hr{
+    border-top : 1px solid rgba(0,0,0,0.5);
+}
+
 .hr-solid {
 border : 0px;
 border-top: 3px solid #663399;
@@ -61,10 +65,6 @@ border-top: 5px dotted #663399;
 .hr-dashed {
 border : 0px;
 border-top: 5px dashed #663399;
-}
-
-.result_row {
-    
 }
 
 .mge_table{
@@ -105,4 +105,8 @@ border-top: 5px dashed #663399;
 
 #doc_submit{
     border:1px;
+}
+
+.bg-lg-purple{
+    background-color: #f1edfae7;
 }

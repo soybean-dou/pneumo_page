@@ -4,14 +4,16 @@
     <head>
         <title>PneusPage</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='node_modules/bootstrap/dist/css/bootstrap.min.css') }}">
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     </head>
     <body>
         <div>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-expand-lg navbar-light bg-lg-purple border">
                 <div class="container-fluid">
-                  <a class="navbar-brand" id="page_name" href="/">PneusPage</a>
+                  <a class="navbar-brand" id="page_name" href="/">
+                    <img src="../static/images/logo.svg" style="width: 100px;">
+                  </a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
@@ -39,30 +41,32 @@
                 </div>
             </nav>
         </div>
-        <div class="container inner">
-          <div class="row align-items-center" style="height: 90dvh;">
+        <div class="container inner overflow-auto">
+          <div class="row align-items-center" >
             <div class="col justify-content-center">
               <div class="intitle-1">Job List</div>
               <table class="table">
                 <thead>
                   <tr>
                     <th scope="col">#</th>
-                    <th scope="col">User Name</th>
+                    <!--<th scope="col">User Name</th>-->
                     <th scope="col">Job Name</th>
                     <th scope="col">Date</th>
                     <th scope="col">Input file</th>
+                    <th scope="col">Species</th>
                     <th scope="col">Status</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {% for row in rows %}
+                  {% for index, row in rows.iterrows() %}
                   <tr class="result_row">
-                    <th scope="row">{{row["job_num"]}}</th>
-                    <td>{{row["name"]}}</td>
+                    <th scope="row">{{row["job_id"]}}</th>
+                    <!--<td>{{row["name"]}}</td>-->
                     <td>{{row["job_name"]}}</td>
                     <td>{{row["date"]}}</td>
-                    <td>{{row["input"]}}</td>
-                    <td>{{row["state"]}}</td>
+                    <td>{{row["input_file"]}}</td>
+                    <td>{{row["species"]}}</td>
+                    <td>{{row["states"]}}</td>
                   </tr>
                   {% endfor %}
                 </tbody>

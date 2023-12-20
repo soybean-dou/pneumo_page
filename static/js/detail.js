@@ -15,5 +15,14 @@ document.addEventListener("DOMContentLoaded", function() {
         file_name=$(this).text()
         location.href=("/result/"+username+"/"+$(".result_row").children('th').text()+"/assembled_fasta/download")
     })
+
+    $(".toggle").click(function(){
+        if($(this).text()=="▼"){
+            $(this).text($(this).text().replace("▼","▲"));
+        }else if($(this).text()=="▲"){
+            $(this).text($(this).text().replace("▲","▼"));
+        }
+        
+    })
     
 })

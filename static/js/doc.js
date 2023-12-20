@@ -1,12 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
     
-    user_id=$("#user_id").text()
-    $("#nav-result").attr("href","/result/"+user_id)
-    
     $('.nav-link').click(function (e) {
         var href = $(this).attr("href");
         var targetTop = $(href).offset().top-100;
-        $("#detail_data").stop().animate({ scrollTop : targetTop }, 300);
+        $("#doc_area").stop().animate({ scrollTop : targetTop }, 300);
         e.preventDefault();
      });
 
@@ -19,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
               $(".nav-link.active").removeClass("active");
               var currentPageIndex = $(this).index();
               $(".nav-link").eq(currentPageIndex).addClass("active");
-              $("#detail_data").attr("data-current-page-index", currentPageIndex);
+              $("#doc_area").attr("data-current-page-index", currentPageIndex);
               return false;
            }
         });

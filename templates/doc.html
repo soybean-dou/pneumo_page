@@ -4,14 +4,16 @@
     <head>
         <title>PneusPage</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='node_modules/bootstrap/dist/css/bootstrap.min.css') }}">
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     </head>
     <body>
       <div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-lg-purple border">
             <div class="container-fluid">
-              <a class="navbar-brand" id="page_name" href="/">PneusPage</a>
+              <a class="navbar-brand" id="page_name" href="/">
+                <img src="../static/images/logo.svg" style="width: 100px;">
+              </a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -39,14 +41,37 @@
               </div>
             </div>
         </nav>
-        <div class="container inner">
-          <div class="row align-items-center" style="height: 90dvh;">
-            <h3>Submit Page</h3>
-            <img src="../static/images/doc_submit.png" id="doc_submit">
-            <h3>Result Page</h3>
-            <img src="../static/images/doc_submit.png" id="doc_submit">
-            <h3>Details Page</h3>
-            <img src="../static/images/doc_submit.png" id="doc_submit">
+        <div class="row flex-grow-sm-1 flex-grow-0">
+          <div class="col-2">
+            <nav id="navbar-doc" class="h-100 flex-column align-items-stretch pe-4 border-end bg-light justify-content-center">
+              <nav class="nav nav-pills flex-column text-center">
+                <a class="nav-link text-center" href="#whatis">What is "PneusPage"</a>
+                <a class="nav-link text-center" href="#submit_area">Submit Page</a>
+                <a class="nav-link text-center" href="#result_area">Result Page</a>
+                <a class="nav-link text-center" href="#detail_area">Detail Page</a>
+            </nav>
+          </div>
+          <div class="container inner col-8 overflow-auto" id="doc_area">
+            <div data-bs-spy="scroll" data-bs-target="#navbar-doc" data-bs-smooth-scroll="true" class="row align-items-center" tabindex="0">
+              <div class="row align-items-center">
+                <div id="whatis" class="section">
+                  <h3>What is "PneusPage"?</h3>
+                  <img src="../static/images/doc_submit.png" id="doc_submit">
+                </div>
+                <div id="submit_area" class="section">
+                  <h3>Submit Page</h3>
+                  <img src="../static/images/doc_submit.png" id="doc_submit">
+                </div>
+                <div id="result_area" class="section">
+                  <h3>Result Page</h3>
+                  <img src="../static/images/doc_submit.png" id="doc_submit">
+                </div>
+                <div id="detail_area" class="section">
+                  <h3>Details Page</h3>
+                  <img src="../static/images/doc_submit.png" id="doc_submit">
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <footer class="text-center text-lg-start bg-light text-muted">
@@ -58,6 +83,7 @@
       </div>
         
       <script src="/static/js/common.js"></script>
+      <script src="/static/js/doc.js"></script>
       <script src="https://code.jquery.com/jquery-latest.js"></script>
       <script src="{{ url_for('static', filename='node_modules/bootstrap/dist/js/bootstrap.min.js') }}"></script>
     </body>

@@ -265,8 +265,12 @@ def result(user_key):
     os.chdir("/home/iu98/pneumo_page")
     if protected()!=False:
         db_info=db.read_user_job(user_key)
+        db_df=pd.DataFrame.from_records(data = db_info,columns=["user_id","user_name","job_id","job_name","input_file","states","date"])
+        db_df["species"]=""
+        for i in range(0,len(db_df)):
+            db_df.loc[i,"species"]=rp.get_species(user_key,str(i+1))
     #print(db_info)
-        return render_template('result.html',rows=db_info, login=True,user_id=user_key)
+        return render_template('result.html',rows=db_df, login=True,user_id=user_key)
     else:
         return redirect("/") 
     
@@ -280,7 +284,11 @@ def detail(user_key,job_key):
     db_info,cols=db.read_db_row(user_key,job_key)
     data_df = pd.DataFrame.from_records(data=db_info, columns=cols)
     files=data_df["input"][0].split("|")
-    sero_bool, sero_txt, seroba, vir, mlst, mge, cgmlst, kraken, plasmid, amr, quast, prokka, poppunk=rp.get_info(user_key,job_key)
+    species=rp.get_species(user_key,job_key)
+    if species!="Streptococcus pneumoniae":
+        return render_template('detail.html', login=is_logined, species=species, key=job_key, user_id=user_key, files=files, rows=db_info)
+    
+    species, sero_bool, sero_txt, seroba, vir, mlst_info, mlst_val, mge, cgmlst, kraken, plasmid, amr, quast, prokka, poppunk=rp.get_info(user_key,job_key)
     mge=mge.drop(["contig","start","end"],axis=1)
     #pl_key1=[]
     #pl_key2=[]
@@ -294,7 +302,8 @@ def detail(user_key,job_key):
     #if request.method == 'GET':
     #    rp.get_info(username,key,jobname)
     return render_template('detail.html', login=is_logined,
-                           key=job_key, user_id=user_key, files=files, rows=db_info, sero_txt=sero_txt, seroba=seroba, vir=vir, mlst=mlst, mge=mge, cgmlst=cgmlst, kraken=kraken,
+                           key=job_key, user_id=user_key, files=files, rows=db_info, sero_txt=sero_txt, seroba=seroba, vir=vir, mlst_info=mlst_info, mlst_val=mlst_val, 
+                           mge=mge, cgmlst=cgmlst, kraken=kraken,
                            plasmid=plasmid, amr=amr, quast=quast, prokka=prokka, poppunk=poppunk, sero_bool=sero_bool)
 
 @app.route('/result/<user_key>/<job_key>/fastqc/<file_name>/download')

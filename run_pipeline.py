@@ -149,13 +149,31 @@ def run_blast():
     command = ["blastn","-query","./spades/contigs.fasta","-db","nt"
                 ,"-outfmt",'6 qseqid sseqid scomnames length qstart qend sstart send evalue pident',"-out","./blast/blast_result.txt"]
     subprocess.run(command, check=True)  
-       
 
-def get_info(user_key,job_key):
+def get_species(user_key,job_key):
+    os.chdir("/home/iu98/pneumo_page")
     path_name="./user/"+user_key+"/"+job_key
     print(path_name)
     path_name=str(path_name)
     os.chdir(path_name)
+    try:
+        kraken=pd.read_csv(("./kraken/result.bracken"),sep="\t",keep_default_na=False)[0:5]
+        species=kraken.iloc[0,0]
+        return species
+    except:
+        return None
+
+def get_info(user_key,job_key):
+    os.chdir("/home/iu98/pneumo_page")
+    path_name="./user/"+user_key+"/"+job_key
+    print(path_name)
+    path_name=str(path_name)
+    os.chdir(path_name)
+    kraken=pd.read_csv(("./kraken/result.bracken"),sep="\t",keep_default_na=False)[0:5]
+    species=kraken.iloc[0,0]
+    if species!="Streptococcus pneumoniae":
+        return species
+    
     sero_txt=[]
     if os.path.exists("./seroba/detailed_serogroup_info.txt"):
         with open("./seroba/detailed_serogroup_info.txt","r") as f:
@@ -169,7 +187,9 @@ def get_info(user_key,job_key):
         sero_txt.append(open("./seroba/pred.tsv").read().split("\t")[1])
         sero_bool=False
         seroba=False
+    
     vir=pd.read_csv(("./virulence/results_tab.tsv"),sep="\t",keep_default_na=False)
+    
     mlst=pd.read_csv("./mlst/mlst.csv",header=None)
     mlst.loc[1]=None
     mlst.iloc[1,2]=mlst.iloc[0,2]
@@ -178,8 +198,17 @@ def get_info(user_key,job_key):
         mlst.iloc[1,i]=str(mlst.iloc[0,i]).split("(")[1].rstrip(")")
         mlst.iloc[0,i]=str(mlst.iloc[0,i]).split("(")[0]
     mlst=mlst.iloc[:,2:len(mlst.columns)]
+    mlst_info=mlst.iloc[0,1:len(mlst.columns)].to_list()
+    mlst_val=mlst.iloc[1,0:len(mlst.columns)].to_list()
+    
     mge=pd.read_csv(("./mge/mge.csv"),skiprows=[0,1,2,3,4])
+
     cgmlst=pd.read_csv(("./cgMLST/spneumoniae_summary.txt"),sep="\t")
+    cgmlst.iloc[:,1:len(cgmlst.columns)]
+    cgmlst=cgmlst[['cgST',"Total_number_of_loci","Number_of_called_alleles","%_Called_alleles","Allele_matches_in_cgST","%_Allele_matches"]]
+    for col in cgmlst.columns:
+        cgmlst.rename(columns={col:col.replace("_"," ")},inplace=True)
+    
     kraken=pd.read_csv(("./kraken/result.bracken"),sep="\t",keep_default_na=False)[0:5]
     amr=pd.read_csv(("./AMR/abricate_result.tsv"),sep="\t",keep_default_na=False)
     quast=os.path.abspath("./quast/report.html")
@@ -192,7 +221,7 @@ def get_info(user_key,job_key):
     #    plasmid=plasmid["plasmidfinder"]["results"]
     #blast=pd.read_excel(("./blast/blast_result_summary.xlsx"))
     #blast.columns = ['contig', 'top1', 'top2', 'top3', 'top4', 'top5']
-    return sero_bool, sero_txt, seroba, vir, mlst, mge, cgmlst, kraken, plasmid, amr, quast, prokka, poppunk
+    return species, sero_bool, sero_txt, seroba, vir, mlst_info, mlst_val, mge, cgmlst, kraken, plasmid, amr, quast, prokka, poppunk
 
     
 def run_pipeline(path_name,file1,file2):
@@ -204,6 +233,9 @@ def run_pipeline(path_name,file1,file2):
     #    file1=file1.split(".")+"_trim.fastq.gz"
     #    file2=file2.split(".")+"_trim.fastq.gz"
     run_kraken2(file1,file2)
+    kraken=pd.read_csv(("./kraken/result.bracken"),sep="\t",keep_default_na=False)[0:1]
+    if kraken["name"]!="Streptococcus pneumoniae":
+        return True
     run_spades(file1,file2)
     run_quast()
     run_prokka()
