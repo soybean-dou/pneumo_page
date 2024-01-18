@@ -3,6 +3,7 @@
 <html>
   <head>
       <title>PneusPage</title>
+      <link rel="icon" href="../static/images/favicon.svg">
       <link rel="stylesheet" href="{{ url_for('static', filename='node_modules/bootstrap/dist/css/bootstrap.min.css') }}">
       <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
       <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
@@ -41,9 +42,9 @@
             </div>
           </div>
       </nav>
-      <div class="container inner overflow-auto">
-        <div class="row align-items-center">
-          <div class="col justify-content-center">
+      <div class="container">
+        <div class="center-align">
+          <div class="submit_area">
             <div class="intitle-1">Upload Sequence file</div>
             <div class="job-type">
               <div class="form-check form-check-inline">
@@ -104,7 +105,7 @@
                 </div>
               </form>
             </div>
-          </div>  
+          </div> 
         </div>
       </div>
       <footer class="text-center text-lg-start bg-light text-muted">

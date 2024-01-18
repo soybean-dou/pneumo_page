@@ -8,16 +8,18 @@ from google.oauth2 import id_token
 from google_auth_oauthlib.flow import Flow
 from pip._vendor import cachecontrol
 import google.auth.transport.requests
+import sys
 
 import multiprocessing
 import pandas as pd
 import numpy as np
 import sqlite3
 import jsonpickle
-
-
+import logging
 import db
 import run_pipeline as rp
+
+logging.basicConfig(filename="logs/pneuspage.log",level=logging.DEBUG)
 
 app = Flask(__name__)
 app.debug = True
@@ -118,6 +120,7 @@ def submit():
 @app.route('/upload', methods=['POST'])
 def upload():
     if request.method == 'POST':
+        os.chdir("/home/iu98/pneumo_page")
         user_info={
             "user_key":session["user_key"],
             "username":session["name"]
@@ -125,9 +128,9 @@ def upload():
         print(request.form)
         jobname=request.form.get('jobname')
         
-        db_info=db.read_user_db(user_info['user_key'])
+        db_info=db.read_user_job(user_info['user_key'])
         job_key=len(db_info)+1
-        print(job_key)
+        print("job key :",job_key)
 
         print("./user/"+str(user_info['user_key'])+"/"+str(job_key))
         if not os.path.exists("./user/"+str(user_info['user_key'])+"/"+str(job_key)):
@@ -156,8 +159,7 @@ def upload():
                     job_info[f'file{str(i+1)}']=secure_filename(f.filename)
 
             db.insert_job(user_info,job_info)
-            db_info=db.read_user_db(user_info['user_key'])
-            job_key=len(db_info)
+            print("job key :",job_info["job_key"])
 
             process = multiprocessing.Process(target=run_with_web, args=(user_info['user_key'], job_info))
             process.start()
@@ -173,6 +175,7 @@ def upload():
 @app.route('/uploadMulti', methods=['POST'])
 def upload_multi():
     if request.method == 'POST':
+        os.chdir("/home/iu98/pneumo_page")
         user_info={
             "user_key":session["user_key"],
             "username":session["name"]
@@ -180,7 +183,6 @@ def upload_multi():
         
         if not os.path.exists("./user/"+str(user_info['user_key'])+"/multi"):
             os.system("mkdir ./user/"+str(user_info['user_key'])+"/multi")
-
             print("make ./user/"+str(user_info['user_key'])+"/multi")
 
         tsv =  request.files["file"]
@@ -208,11 +210,11 @@ def upload_multi():
             return jsonpickle.encode(data)
 
         process=[]        
-        db_info=db.read_user_db(user_info['user_key'])
+        db_info=db.read_user_job(user_info['user_key'])
         job_key=len(db_info)
         for i in range(len(file_list["jobs"])):
             job_key+=1
-            print(job_key)
+            print("job key :",job_key)
             job_info={'user_key':user_info['user_key'],
                     "jobname":file_list.iloc[i,0],
                     "job_key":job_key,
@@ -235,8 +237,9 @@ def upload_multi():
             f=raws[idx]
             f.save(os.path.join(("./user/"+str(user_info['user_key'])),str(job_key), secure_filename(f.filename)))
             
-            if job_info[f'file{str(i+1)}']=="NULL":
-                job_info[f'file{str(i+1)}']=secure_filename(f.filename)
+            for j in range(2):
+                if job_info[f'file{str(j+1)}']=="NULL":
+                    job_info[f'file{str(j+1)}']=secure_filename(f.filename)
 
             db.insert_job(user_info,job_info)
 
@@ -288,7 +291,7 @@ def detail(user_key,job_key):
     if species!="Streptococcus pneumoniae":
         return render_template('detail.html', login=is_logined, species=species, key=job_key, user_id=user_key, files=files, rows=db_info)
     
-    species, sero_bool, sero_txt, seroba, vir, mlst_info, mlst_val, mge, cgmlst, kraken, plasmid, amr, quast, prokka, poppunk=rp.get_info(user_key,job_key)
+    species, sero_bool, sero_txt, seroba, vir, mlst_info, mlst_val, mge, cgmlst, kraken, plasmid, amr, quast, prokka, poppunk, pbp_category, pbp_agent=rp.get_info(user_key,job_key)
     mge=mge.drop(["contig","start","end"],axis=1)
     #pl_key1=[]
     #pl_key2=[]
@@ -304,7 +307,7 @@ def detail(user_key,job_key):
     return render_template('detail.html', login=is_logined,
                            key=job_key, user_id=user_key, files=files, rows=db_info, sero_txt=sero_txt, seroba=seroba, vir=vir, mlst_info=mlst_info, mlst_val=mlst_val, 
                            mge=mge, cgmlst=cgmlst, kraken=kraken,
-                           plasmid=plasmid, amr=amr, quast=quast, prokka=prokka, poppunk=poppunk, sero_bool=sero_bool)
+                           plasmid=plasmid, amr=amr, quast=quast, prokka=prokka, poppunk=poppunk, sero_bool=sero_bool, pbp_category=pbp_category, pbp_agent=pbp_agent)
 
 @app.route('/result/<user_key>/<job_key>/fastqc/<file_name>/download')
 def fastqc_download(user_key,job_key,file_name):
@@ -349,6 +352,7 @@ def mypage():
 
 
 def run_with_web(user_key,job_info):
+    os.chdir("/home/iu98/pneumo_page")
     job_key=job_info["job_key"]
     try:
         path_name=os.path.join("./user/",str(user_key),str(job_key))
@@ -357,7 +361,8 @@ def run_with_web(user_key,job_info):
 
         db.update_db(user_key,job_key,"running")
         rp.run_pipeline(path_name,file1,file2)
-    except:
+    except Exception as e:
+        print(e)
         os.chdir("/home/iu98/pneumo_page")
         db.update_db(user_key,job_key,"fail")
     else:
@@ -381,5 +386,6 @@ def run_slurm(user_key,job_info):
         db.update_db(user_key,job_key,"complete")
 
 if __name__ == '__main__':
+    sys.stdout = open('log.txt','a')
     app.run(debug=True)
     

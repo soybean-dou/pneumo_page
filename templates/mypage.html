@@ -3,6 +3,7 @@
 <html>
     <head>
         <title>PneusPage</title>
+        <link rel="icon" href="../static/images/favicon.svg">
         <link rel="stylesheet" href="{{ url_for('static', filename='node_modules/bootstrap/dist/css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
@@ -39,13 +40,15 @@
                   </div>
                 </div>
             </nav>
-            <div class="container inner">
-              <div class="row align-items-center" style="height: 90dvh; display: grid; grid-template-columns: auto auto;">
-                <img src="/static/images/profile.svg" style="width:300;height:300px;" alt="profile">
-                <div style="display: inline-block" id="user_info">
-                  <div id="user_name">NAME : {{ username }}</div>
-                  <div id="email">E-Mail : {{ email }}</div>
-                  <div id="join_date">JOIN DATE : {{ join_date }}</div>
+            <div class="container">
+              <div class="center-align">
+                <div>
+                  <img src="/static/images/profile.svg" style="width:300;height:300px;" alt="profile">
+                  <div style="display: inline-block" id="user_info">
+                    <div id="user_name">NAME : {{ username }}</div>
+                    <div id="email">E-Mail : {{ email }}</div>
+                    <div id="join_date">JOIN DATE : {{ join_date }}</div>
+                  </div>
                 </div>
               </div>  
             </div>

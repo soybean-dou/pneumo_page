@@ -3,6 +3,7 @@
 <html>
     <head>
         <title>PneusPage</title>
+        <link rel="icon" href="../static/images/favicon.svg">
         <link rel="stylesheet" href="{{ url_for('static', filename='node_modules/bootstrap/dist/css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
@@ -42,8 +43,8 @@
             </div>
         </nav>
         <div class="row flex-grow-sm-1 flex-grow-0">
-          <div class="col-2">
-            <nav id="navbar-doc" class="h-100 flex-column align-items-stretch pe-4 border-end bg-light justify-content-center">
+          <div class="col-2 justify-content-center">
+            <nav id="navbar-doc" class="h-100 flex-column align-items-stretch border-end bg-light justify-content-center">
               <nav class="nav nav-pills flex-column text-center">
                 <a class="nav-link text-center" href="#whatis">What is "PneusPage"</a>
                 <a class="nav-link text-center" href="#submit_area">Submit Page</a>
@@ -51,24 +52,46 @@
                 <a class="nav-link text-center" href="#detail_area">Detail Page</a>
             </nav>
           </div>
-          <div class="container inner col-8 overflow-auto" id="doc_area">
+          <div class="container inner col-10 overflow-auto" id="doc_area">
             <div data-bs-spy="scroll" data-bs-target="#navbar-doc" data-bs-smooth-scroll="true" class="row align-items-center" tabindex="0">
               <div class="row align-items-center">
                 <div id="whatis" class="section">
-                  <h3>What is "PneusPage"?</h3>
-                  <img src="../static/images/doc_submit.png" id="doc_submit">
+                  <h2>What is "PneusPage"?</h2>
+                  <img src="../static/images/logo.svg" style="width: 500px; padding-bottom: 30px;"  >
+                  <p class="explain_area">
+                    PneusPage : <strong>PNEU</strong>oniae <strong>S</strong>equence-based <strong>P</strong>athogenic <strong>A</strong>nalysis using <strong>GE</strong>nome
+                    <br>After logging in, click submit to upload your WGS data to the web server.
+                    <br>You can get a variety of information about <em>S.pneumoniae</em>.  
+                  </p>
                 </div>
+                <hr>
                 <div id="submit_area" class="section">
-                  <h3>Submit Page</h3>
-                  <img src="../static/images/doc_submit.png" id="doc_submit">
+                  <h2>Submit Page</h2>
+                  <p></p>
+                  <p class="explain_area">The submit page allows you to upload WGS data for analysis.<br>Both single and multi-tasking are possible.</p>
+                  <h4>Single task</h4>
+                  <img src="../static/images/doc_submit.png" class="doc_img">
+                  <p class="explain_area">For single work, you must enter the job name and upload the paired-end fastq file.
+                    <br>Supported format include fastq, fq, and fq.gz.
+                    <br>Fill in everything, click submit, and your work will be registered on the server
+                  </p>
+                  <h4>Multi task</h4>
+                  <img src="../static/images/doc_submit_multi.png" class="doc_img">
+                  <p class="explain_area">When performing multiple tasks, you must attach a file in tabular format containing the job name and pair-end fastq file.
+                    <br>The table file is structured as follows:</p>
+                  <p style="margin-left: 20px; margin-bottom: 0px;">job_name | forward_read   |   reverse_read</p>
+                  <img src="../static/images/tabular_example.png" class="doc_img" style="margin-top: 0px;">
+                  <p class="explain_area">After entering the table file, select and attach all fastq files listed in the table.<br>PneusPage recognizes this and executes each job.</p>  
                 </div>
+                <hr>
                 <div id="result_area" class="section">
                   <h3>Result Page</h3>
-                  <img src="../static/images/doc_submit.png" id="doc_submit">
+                  <img src="../static/images/doc_result.png" class="doc_img">
                 </div>
+                <hr>
                 <div id="detail_area" class="section">
                   <h3>Details Page</h3>
-                  <img src="../static/images/doc_submit.png" id="doc_submit">
+                  <img src="../static/images/doc_detail.png" class="doc_img" style="width: 1200px;">
                 </div>
               </div>
             </div>

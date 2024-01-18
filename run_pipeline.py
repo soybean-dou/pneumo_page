@@ -119,19 +119,41 @@ def run_abricate():
     subprocess.run(command, check=True, shell=True)  
 
 
-def run_MLST(file1,file2):
+def run_MLST():
     if not(os.path.exists("./mlst")):
         os.mkdir("./mlst")
     command = "mlst -csv -nopath --scheme spneumoniae ./spades/scaffolds.fasta > ./mlst/mlst.csv"
     subprocess.run(command, check=True, shell=True)
 
-def run_plasmidfinder(file1,file2):
+def run_plasmidfinder():
     if not(os.path.exists("./plasmid")):
         os.mkdir("./plasmid")
     #command = f"plasmidfinder.py -i ./{file1} ./{file2} -p /home/iu98/toolkit/plasmidfinder_db -o ./plasmid > ./plasmid/result.json"
     command = f"abricate --csv --nopath --quiet --db plasmidfinder spades/scaffolds.fasta > plasmid/plasmid.csv"
     
     subprocess.run(command, check=True, shell=True) 
+
+def run_pbpfinder(path_name):
+    job_path=os.path.abspath(path_name)
+    os.chdir("/home/iu98/pneumo_pipline/pbp_connectagen")
+    command = ["cnpbp.sh","-s",f"{job_path}/spades/scaffolds.fasta","-n","pbp","-o",f"{job_path}/pbptyping"]
+    subprocess.run(command, check=True) 
+    os.chdir(job_path)
+    with open("./pbptyping/pbp_final_result.tsv") as f:
+        for line in f:
+            if(line.startswith(">PBP_Category")):
+                f1=open("./pbptyping/pbp_Category.txt","w")
+                f1.write(line.lstrip(">"))
+            elif(line.startswith(">Agent")):
+                f1.close()
+                f2=open(f"./pbptyping/pbp_agent.txt","w")
+                f2.write(line.lstrip(">"))
+                break
+            else:
+                f1.write(line)
+        for line in f:
+            f2.write(line)
+        f2.close()
 
 def run_seroba(file1,file2):
     os.system(f"mv ./{file1} ./read_1.fq.gz")
@@ -169,7 +191,7 @@ def get_info(user_key,job_key):
     print(path_name)
     path_name=str(path_name)
     os.chdir(path_name)
-    kraken=pd.read_csv(("./kraken/result.bracken"),sep="\t",keep_default_na=False)[0:5]
+    kraken=pd.read_csv(("./kraken/result.bracken"),sep="\t",keep_default_na=False)[0:5].applymap(str)
     species=kraken.iloc[0,0]
     if species!="Streptococcus pneumoniae":
         return species
@@ -188,9 +210,9 @@ def get_info(user_key,job_key):
         sero_bool=False
         seroba=False
     
-    vir=pd.read_csv(("./virulence/results_tab.tsv"),sep="\t",keep_default_na=False)
+    vir=pd.read_csv(("./virulence/results_tab.tsv"),sep="\t",keep_default_na=False).applymap(str)
     
-    mlst=pd.read_csv("./mlst/mlst.csv",header=None)
+    mlst=pd.read_csv("./mlst/mlst.csv",header=None).applymap(str)
     mlst.loc[1]=None
     mlst.iloc[1,2]=mlst.iloc[0,2]
     for i in range(3,len(mlst.columns)):
@@ -201,27 +223,35 @@ def get_info(user_key,job_key):
     mlst_info=mlst.iloc[0,1:len(mlst.columns)].to_list()
     mlst_val=mlst.iloc[1,0:len(mlst.columns)].to_list()
     
-    mge=pd.read_csv(("./mge/mge.csv"),skiprows=[0,1,2,3,4])
+    mge=pd.read_csv(("./mge/mge.csv"),skiprows=[0,1,2,3,4]).applymap(str)
 
-    cgmlst=pd.read_csv(("./cgMLST/spneumoniae_summary.txt"),sep="\t")
+    cgmlst=pd.read_csv(("./cgMLST/spneumoniae_summary.txt"),sep="\t").applymap(str)
     cgmlst.iloc[:,1:len(cgmlst.columns)]
     cgmlst=cgmlst[['cgST',"Total_number_of_loci","Number_of_called_alleles","%_Called_alleles","Allele_matches_in_cgST","%_Allele_matches"]]
     for col in cgmlst.columns:
         cgmlst.rename(columns={col:col.replace("_"," ")},inplace=True)
     
-    kraken=pd.read_csv(("./kraken/result.bracken"),sep="\t",keep_default_na=False)[0:5]
-    amr=pd.read_csv(("./AMR/abricate_result.tsv"),sep="\t",keep_default_na=False)
-    quast=os.path.abspath("./quast/report.html")
-    prokka=pd.read_csv(("./prokka/prokka.tsv"),sep="\t",keep_default_na=False)[0:20]
-    poppunk=pd.read_csv(("./poppunk/poppunk_clusters.csv"),keep_default_na=False)
-    plasmid=pd.read_csv(("./plasmid/plasmid.csv"),keep_default_na=False)
+    kraken=pd.read_csv(("./kraken/result.bracken"),sep="\t",keep_default_na=False)[0:5].applymap(str)
+    amr=pd.read_csv(("./AMR/abricate_result.tsv"),sep="\t",keep_default_na=False).applymap(str)
+    amr=amr.loc[:,["SEQUENCE","START","END","STRAND","GENE","%COVERAGE","%IDENTITY","RESISTANCE"]]
+    quast=pd.read_csv(("./quast/transposed_report.tsv"),sep="\t",keep_default_na=False).applymap(str)
+    quast=quast.loc[:,["# contigs","Largest contig","Total length","GC (%)","N50","N90"]]
+    prokka=pd.read_csv(("./prokka/prokka.tsv"),sep="\t",keep_default_na=False)[0:20].applymap(str)
+    poppunk=pd.read_csv(("./poppunk/poppunk_external_clusters.csv"),keep_default_na=False,names=["sample","The Global Pneumococcal Sequencing Project Cluster"],header=0).applymap(str)
+    poppunk=poppunk.loc[:,["The Global Pneumococcal Sequencing Project Cluster"]]
+    plasmid=pd.read_csv(("./plasmid/plasmid.csv"),keep_default_na=False).applymap(str)
+    plasmid=plasmid.loc[:,["SEQUENCE","START","END","STRAND","GENE","%COVERAGE","%IDENTITY","PRODUCT"]]
+    
+    pbp_category=pd.read_csv("./pbptyping/pbp_Category.txt",sep="\t")
+    pbp_agent=pd.read_csv("./pbptyping/pbp_agent.txt",sep="\t")
+
     #with open("./plasmid/result.json") as j:
     #    data=j.read()
     #    plasmid=ast.literal_eval(data)
     #    plasmid=plasmid["plasmidfinder"]["results"]
     #blast=pd.read_excel(("./blast/blast_result_summary.xlsx"))
     #blast.columns = ['contig', 'top1', 'top2', 'top3', 'top4', 'top5']
-    return species, sero_bool, sero_txt, seroba, vir, mlst_info, mlst_val, mge, cgmlst, kraken, plasmid, amr, quast, prokka, poppunk
+    return species, sero_bool, sero_txt, seroba, vir, mlst_info, mlst_val, mge, cgmlst, kraken, plasmid, amr, quast, prokka, poppunk, pbp_category, pbp_agent
 
     
 def run_pipeline(path_name,file1,file2):
@@ -234,8 +264,9 @@ def run_pipeline(path_name,file1,file2):
     #    file2=file2.split(".")+"_trim.fastq.gz"
     run_kraken2(file1,file2)
     kraken=pd.read_csv(("./kraken/result.bracken"),sep="\t",keep_default_na=False)[0:1]
-    if kraken["name"]!="Streptococcus pneumoniae":
-        return True
+    #if kraken["name"]!="Streptococcus pneumoniae":
+    #    return True
+    #else:
     run_spades(file1,file2)
     run_quast()
     run_prokka()
@@ -247,10 +278,15 @@ def run_pipeline(path_name,file1,file2):
     run_MLST(file1,file2)
     run_plasmidfinder(file1,file2)
     run_seroba(file1,file2)
+    run_pbpfinder(path_name)
+    os.chdir("/home/iu98/pneumo_page")
+    print("All Done!")
     return True
 
 if __name__ == '__main__':
     path=sys.argv[1]
     file1=sys.argv[2]
     file2=sys.argv[3]
+    print("Run S.pneumoniae analysis...")
     run_pipeline(path,file1,file2)
+    print("All Done!")

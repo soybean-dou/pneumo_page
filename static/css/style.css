@@ -13,9 +13,20 @@ body {
 }
 
 .inner{
-    height : 81dvh;
-    padding-top: 5dvh;
-    padding-bottom: 5dvh;
+    height: 82dvh;
+    padding: 5dvh;
+}
+
+.center-align{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 82dvh;
+}
+
+.submit_area{
+    
+    width: 80dvw;
 }
 
 .wrapper {
@@ -67,6 +78,18 @@ border : 0px;
 border-top: 5px dashed #663399;
 }
 
+.form-check-input:checked{
+    background-color: #663399;
+    border-color: #663399;
+}
+
+.nav-link {
+    color: #363636;
+}
+
+.nav-link:hover {
+    color: #663399;
+}
 .mge_table{
     height:50px;
 }
@@ -109,4 +132,20 @@ border-top: 5px dashed #663399;
 
 .bg-lg-purple{
     background-color: #f1edfae7;
+}
+
+.doc_img{
+    border:1px solid #000000;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.explain_area{
+    margin-left: 20px;
+    color: #383838;
+}
+
+table{
+    text-align: center;
 }

@@ -3,6 +3,7 @@
 <html>
     <head>
         <title>PneusPage</title>
+        <link rel="icon" href="../static/images/favicon.svg">
         <link rel="stylesheet" href="{{ url_for('static', filename='node_modules/bootstrap/dist/css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
@@ -44,20 +45,22 @@
         </div>
         <div class="row flex-grow-sm-1 flex-grow-0">
           <div class="col-2">
-            <nav id="navbar-detail" class="h-100 flex-column align-items-stretch pe-4 border-end bg-light justify-content-center">
+            <nav id="navbar-detail" class="h-100 flex-column align-items-stretch border-end bg-light justify-content-center">
               <nav class="nav nav-pills flex-column text-center">
                 <a class="nav-link text-center" href="#QC">Qulity Control</a>
                 <a class="nav-link text-center" href="#assem_scaffold">Assembled Scaffold</a>
+                <a class="nav-link text-center" href="#genome_qc_area">Genome QC</a>
                 <a class="nav-link text-center" href="#species">Species prediction</a>
                 <a class="nav-link text-center" href="#serotype">Serotype</a>
                 <a class="nav-link text-center" href="#gene_annot_area">Gene annotation</a>
                 <a class="nav-link text-center" href="#mlst_area">MLST</a>
                 <a class="nav-link text-center" href="#cgmlst_area">cgMLST</a>
-                <a class="nav-link text-center" href="#gpsc_area">GPSP</a>
+                <a class="nav-link text-center" href="#gpsc_area">GPSC</a>
                 <a class="nav-link text-center" href="#amr_area">AMR detection</a>
                 <a class="nav-link text-center" href="#vf_area">Virulence Factor</a>
                 <a class="nav-link text-center" href="#MGE_area">Mobile Gene Element</a>
                 <a class="nav-link text-center" href="#plasmid_area">Plasmid Type</a>
+                <a class="nav-link text-center" href="#pbp_area">PBP Typing</a>
               </nav>
             </nav>
           </div>
@@ -92,6 +95,28 @@
                     {% for file in files %}
                     <button class="btn btn-primary fastqc_download" type="button">{{file}}</button>
                     {% endfor %}
+                </div>
+                <hr></hr>
+                <div id="genome_qc_area" class="section">
+                  <div class="mb-3 intitle-2">Assembled Genome QC
+                    <button class="btn toggle" type="button" data-bs-toggle="collapse" data-bs-target="#quast">▲</button>
+                  </div>
+                  <div id="quast" class="collapse show">
+                    <table class="table table-striped" >
+                        <tr>
+                            {% for col in quast.columns %}
+                            <th scope="col">{{ col }}</th>
+                            {% endfor %}
+                        </tr>
+                        {% for index, row in quast.iterrows() %}
+                        <tr>
+                            {% for col in quast.columns %}
+                            <td>{{ row[col] }}</td>
+                            {% endfor %}
+                        </tr>
+                        {% endfor %}
+                    </table>
+                  </div>
                 </div>
                 <hr></hr>
                 <div id="assem_scaffold" class="section">
@@ -176,10 +201,10 @@
                 <hr></hr>
                 <div id="mlst_area" class="section">
                   <div class="mb-3 intitle-2">MLST
-                    <button class="btn toggle" type="button" data-bs-toggle="collapse" data-bs-target="#mlst">▼</button>
+                    <button class="btn toggle" type="button" data-bs-toggle="collapse" data-bs-target="#mlst">▲</button>
                   </div>
                   <div class="collapse show" id="mlst">
-                  <table class="table table-striped">
+                  <table class="table table-bordered">
                         <tr>
                             <th rowspan="2" scope="col">MLST</th>
                             <th colspan="7" scope="col">profile</th>
@@ -200,7 +225,7 @@
                 <div id="cgmlst_area" class="section">
                   <hr></hr>
                   <div class="mb-3 intitle-2">cgMLST
-                    <button class="btn toggle" type="button" data-bs-toggle="collapse" data-bs-target="#cgmlst">▼</button>
+                    <button class="btn toggle" type="button" data-bs-toggle="collapse" data-bs-target="#cgmlst">▲</button>
                   </div>
                   <div id="cgmlst" class="collapse show">
                     <table class="table table-striped">
@@ -222,7 +247,7 @@
                 <hr></hr>
                 <div id="gpsc_area" class="section">
                   <div class="mb-3 intitle-2">The Global Pneumococcal Sequencing Project Cluster
-                    <button class="btn toggle" type="button" data-bs-toggle="collapse" data-bs-target="#gpsc">▼</button>
+                    <button class="btn toggle" type="button" data-bs-toggle="collapse" data-bs-target="#gpsc">▲</button>
                   </div>
                   <div class="table-responsive collapse show" id="gpsc">
                     <table class="table table-striped">
@@ -325,6 +350,51 @@
                       {% for index, row in plasmid.iterrows() %}
                       <tr class="mge_table">
                           {% for col in plasmid.columns %}
+                          <td>{{ row[col] }}</td>
+                          {% endfor %}
+                      </tr>
+                      {% endfor %}
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <hr></hr>
+                <div id="pbp_area" class="section">
+                  <div class="mb-3 intitle-2">PBP Typing
+                    <button class="btn toggle" type="button" data-bs-toggle="collapse" data-bs-target="#pbp">▼</button>
+                  </div>
+                  <div id="pbp" class="collapse">
+                    <div class="table-responsive">
+                      <table class="table">
+                        <thead class="thead-light">
+                          <tr>
+                              {% for col in pbp_category.columns %}
+                              <th scope="col">{{ col }}</th>
+                              {% endfor %}
+                          </tr>
+                        </thead>
+                      {% for index, row in pbp_category.iterrows() %}
+                      <tr>
+                          {% for col in pbp_category.columns %}
+                          <td>{{ row[col] }}</td>
+                          {% endfor %}
+                      </tr>
+                      {% endfor %}
+                      </table>
+                    </div>
+                    <p></p>
+                    <div class="table-responsive">
+                      <table class="table">
+                        <thead class="thead-light">
+                          <tr>
+                              {% for col in pbp_agent.columns %}
+                              <th scope="col">{{ col }}</th>
+                              {% endfor %}
+                          </tr>
+                        </thead>
+                      {% for index, row in pbp_agent.iterrows() %}
+                      <tr>
+                          {% for col in pbp_agent.columns %}
                           <td>{{ row[col] }}</td>
                           {% endfor %}
                       </tr>
