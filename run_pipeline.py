@@ -72,13 +72,13 @@ def run_spades(file1,file2):
     subprocess.run(command, check=True)  
 
 def run_quast():
-    command = ["quast.py",f"./spades/contigs.fasta","-r","/home/iu98/pneumo_page/reference/GCF_002076835.1_ASM207683v1_genomic.fna",
+    command = ["quast.py",f"./spades/scaffolds.fasta","-m","100","-r","/home/iu98/pneumo_page/reference/GCF_002076835.1_ASM207683v1_genomic.fna",
                "-g","/home/iu98/pneumo_page/reference/s.pneumoniae.gtf","-t","4",
                "-o",f"./quast"]
     subprocess.run(command, check=True)  
 
 def run_prokka():
-    command = ["prokka","-o","prokka","--prefix","prokka","./spades/contigs.fasta"]
+    command = ["prokka","-o","prokka","--force","--prefix","prokka","./spades/scaffolds.fasta"]
     subprocess.run(command, check=True)  
 
 def run_MGE():
@@ -86,19 +86,19 @@ def run_MGE():
         os.system("rm -r /tmp/mge_finder")
     if not(os.path.exists("./mge")):
         os.mkdir("./mge")
-    command = ["mefinder","find","-c","./spades/contigs.fasta","./mge/mge"]
+    command = ["mefinder","find","-c","./spades/scaffolds.fasta","--temp-dir","./mge/tmp","./mge/mge" ]
     subprocess.run(command, check=True)  
 
 def run_cgMLST():
     if not(os.path.exists("./cgMLST")):
         os.mkdir("./cgMLST")
-    command = ["cgMLST.py","-i","./spades/contigs.fasta","-s","spneumoniae"
+    command = ["cgMLST.py","-i","./spades/scaffolds.fasta","-s","spneumoniae"
                 ,"-db","/home/iu98/pneumo_pipline/cgmlstfinder/cgmlstfinder_db","-o","./cgMLST"]
     subprocess.run(command, check=True)  
 
 def run_poppunk():
     with open("path.txt","w") as f:
-        f.write("S1\t./spades/contigs.fasta\n")
+        f.write("S1\t./spades/scaffolds.fasta\n")
         f.close()
     command = ["poppunk_assign","--db","/home/iu98/toolkit/GPS_v6/GPS_v6","--distance","/home/iu98/toolkit/GPS_v6/GPS_v6.dists","--query","path.txt",
                "--output","poppunk","--external-clustering","/home/iu98/toolkit/GPS_v6/GPS_v6_external_clusters.csv","--threads","8"]
@@ -107,7 +107,7 @@ def run_poppunk():
 def run_virulencefinder():
     if not(os.path.exists("./virulence")):
         os.mkdir("./virulence")
-    command = ["virulencefinder.py","-i","./spades/contigs.fasta","-d","s.pneumoniae"
+    command = ["virulencefinder.py","-i","./spades/scaffolds.fasta","-d","s.pneumoniae"
                 ,"-p","/home/iu98/pneumo_pipline/virulencefinder/virulencefinder_db","-x","-o","./virulence"]
     subprocess.run(command, check=True)  
 
@@ -133,8 +133,9 @@ def run_plasmidfinder():
     
     subprocess.run(command, check=True, shell=True) 
 
-def run_pbpfinder(path_name):
-    job_path=os.path.abspath(path_name)
+def run_pbpfinder():
+    job_path=os.path.abspath(os.curdir)
+    print(job_path)
     os.chdir("/home/iu98/pneumo_pipline/pbp_connectagen")
     command = ["cnpbp.sh","-s",f"{job_path}/spades/scaffolds.fasta","-n","pbp","-o",f"{job_path}/pbptyping"]
     subprocess.run(command, check=True) 
@@ -156,26 +157,26 @@ def run_pbpfinder(path_name):
         f2.close()
 
 def run_seroba(file1,file2):
-    os.system(f"mv ./{file1} ./read_1.fq.gz")
-    os.system(f"mv ./{file2} ./read_2.fq.gz")
-    command = ["seroba","runSerotyping","/home/iu98/pneumo_pipline/seroba/database",
-                "./read_1.fq.gz","./read_2.fq.gz","seroba"]
+    print(os.path.abspath(os.path.curdir))
+    #os.system(f"mv ./{file1} ./read_1.fq.gz")
+    #os.system(f"mv ./{file2} ./read_2.fq.gz")
+    command = ["seroba","runSerotyping", f"./{file1}",f"./{file2}","seroba"]
     subprocess.run(command, check=True) 
-    os.system(f"mv ./read_1.fq.gz ./{file1}")
-    os.system(f"mv ./read_2.fq.gz ./{file2}")
+    #os.system(f"mv ./read_1.fq.gz ./{file1}")
+    #os.system(f"mv ./read_2.fq.gz ./{file2}")
     
 
 def run_blast():
     if not(os.path.exists("./blast")):
         os.mkdir("./blast")
-    command = ["blastn","-query","./spades/contigs.fasta","-db","nt"
+    command = ["blastn","-query","./spades/scaffolds.fasta","-db","nt"
                 ,"-outfmt",'6 qseqid sseqid scomnames length qstart qend sstart send evalue pident',"-out","./blast/blast_result.txt"]
     subprocess.run(command, check=True)  
 
 def get_species(user_key,job_key):
     os.chdir("/home/iu98/pneumo_page")
     path_name="./user/"+user_key+"/"+job_key
-    print(path_name)
+    #print(path_name)
     path_name=str(path_name)
     os.chdir(path_name)
     try:
@@ -193,8 +194,12 @@ def get_info(user_key,job_key):
     os.chdir(path_name)
     kraken=pd.read_csv(("./kraken/result.bracken"),sep="\t",keep_default_na=False)[0:5].applymap(str)
     species=kraken.iloc[0,0]
+    
+    quast=pd.read_csv(("./quast/transposed_report.tsv"),sep="\t",keep_default_na=False).applymap(str)
+    quast=quast.loc[:,["# contigs","Largest contig","Total length","GC (%)","N50","N90"]]
+
     if species!="Streptococcus pneumoniae":
-        return species
+        return kraken, quast
     
     sero_txt=[]
     if os.path.exists("./seroba/detailed_serogroup_info.txt"):
@@ -251,11 +256,13 @@ def get_info(user_key,job_key):
     #    plasmid=plasmid["plasmidfinder"]["results"]
     #blast=pd.read_excel(("./blast/blast_result_summary.xlsx"))
     #blast.columns = ['contig', 'top1', 'top2', 'top3', 'top4', 'top5']
-    return species, sero_bool, sero_txt, seroba, vir, mlst_info, mlst_val, mge, cgmlst, kraken, plasmid, amr, quast, prokka, poppunk, pbp_category, pbp_agent
+    return species, quast, sero_bool, sero_txt, seroba, vir, mlst_info, mlst_val, mge, cgmlst, kraken, plasmid, amr, prokka, poppunk, pbp_category, pbp_agent
 
     
-def run_pipeline(path_name,file1,file2):
+def run_pipeline(path_name,file1,file2,home_path="/home/iu98/pneumo_page"):
     os.chdir(path_name)
+    print(path_name)
+    os.system("ls -l | grep ^d | awk '{print $NF}' | xargs rm -rf\n")
     run_fastqc(file1,file2)
     #flag=read_qc(file1,file2)
     #if flag:
@@ -264,29 +271,58 @@ def run_pipeline(path_name,file1,file2):
     #    file2=file2.split(".")+"_trim.fastq.gz"
     run_kraken2(file1,file2)
     kraken=pd.read_csv(("./kraken/result.bracken"),sep="\t",keep_default_na=False)[0:1]
-    #if kraken["name"]!="Streptococcus pneumoniae":
-    #    return True
+    if kraken.loc[0,"name"]!="Streptococcus pneumoniae":
+        run_spades(file1,file2)
+        run_quast()
+        return False
     #else:
     run_spades(file1,file2)
     run_quast()
+    run_seroba(file1,file2)
     run_prokka()
     run_poppunk()
     run_MGE()
     run_cgMLST()
+    run_MLST()
     run_virulencefinder()
     run_abricate()
-    run_MLST(file1,file2)
-    run_plasmidfinder(file1,file2)
-    run_seroba(file1,file2)
-    run_pbpfinder(path_name)
-    os.chdir("/home/iu98/pneumo_page")
+    run_plasmidfinder()
+    run_pbpfinder()
     print("All Done!")
+    os.chdir(home_path)
     return True
 
+def run_with_web(user_key,job_info):
+    os.chdir("/home/iu98/pneumo_page")
+    job_key=job_info["job_key"]
+    try:
+        path_name=os.path.join("./user/",str(user_key),str(job_key))
+        file1=job_info["file1"]
+        file2=job_info["file2"]
+
+        db.update_db(user_key,job_key,"running")
+        result=run_pipeline(path_name,file1,file2)
+        if not result:
+            os.chdir("/home/iu98/pneumo_page")
+            db.update_db(user_key,job_key,"fail")    
+    except Exception as e:
+        print(e)
+        os.chdir("/home/iu98/pneumo_page")
+        db.update_db(user_key,job_key,"fail")
+    else:
+        os.chdir("/home/iu98/pneumo_page")
+        db.update_db(user_key,job_key,"complete")
+
+
 if __name__ == '__main__':
-    path=sys.argv[1]
-    file1=sys.argv[2]
-    file2=sys.argv[3]
+    user_key=sys.argv[1]
+    job_key=sys.argv[2]
+    file1=sys.argv[3]
+    file2=sys.argv[4]
+    job_info={}
+    job_info["job_key"]=job_key
+    job_info["file1"]=file1
+    job_info["file2"]=file2
     print("Run S.pneumoniae analysis...")
-    run_pipeline(path,file1,file2)
+    run_with_web(user_key,job_info)
     print("All Done!")

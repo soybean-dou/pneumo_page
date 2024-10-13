@@ -21,7 +21,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 82dvh;
+    min-height: 82dvh;
 }
 
 .submit_area{

@@ -31,9 +31,12 @@ def insert_job(user_info,job_info):
     os.chdir("/home/iu98/pneumo_page")
     conn = sqlite3.connect(str("pneumo_service.db"))
     c = conn.cursor()
-    c.execute(f"SELECT * FROM job WHERE user_key='{user_info['user_key']}'")
+    c.execute(f"SELECT job_num FROM job WHERE user_key='{user_info['user_key']}' ORDER BY job_num DESC LIMIT 1")
     num=c.fetchall()
-    job_num=len(num)+1
+    if num==[]:
+        job_num=1
+    else:
+        job_num=num[0][0]+1
     x=dt.datetime.now()
     date=x.strftime("%A %d. %B %Y %H:%M:%S")
     c.executemany('INSERT INTO job VALUES (?,?,?,?,?,?,?)',
@@ -49,6 +52,19 @@ def read_user_job(user_key):
     c.execute(f"SELECT * FROM job WHERE user_key ='{user_key}'")
     tb=c.fetchall()
     return tb
+
+def read_job_num(user_key):
+    os.chdir("/home/iu98/pneumo_page")
+    conn = sqlite3.connect(str("pneumo_service.db"))
+    conn.row_factory = sqlite3.Row
+    c = conn.cursor()
+    c.execute(f"SELECT job_num FROM job WHERE user_key='{user_key}' ORDER BY job_num DESC LIMIT 1")
+    num=c.fetchall()
+    if num==[]:
+        job_num=1
+    else:
+        job_num=num[0][0]+1
+    return job_num
 
 def update_db(user_key,job_key,state):
     os.chdir("/home/iu98/pneumo_page")
@@ -90,3 +106,11 @@ def is_joined(user_key):
         return False
     else:
         return True
+    
+def delete_user_job(user_key,job_key):
+    os.chdir("/home/iu98/pneumo_page")
+    conn = sqlite3.connect(str("pneumo_service.db"))
+    conn.row_factory = sqlite3.Row
+    c = conn.cursor()
+    c.execute(f"DELETE FROM job WHERE user_key ='{user_key}' AND job_num = {job_key}")
+    conn.commit()

@@ -1,5 +1,6 @@
 <!-- templates/index.html -->
 <!DOCTYPE html>
+
 <html>
     <head>
         <title>PneusPage</title>
@@ -51,6 +52,7 @@
                 <a class="nav-link text-center" href="#assem_scaffold">Assembled Scaffold</a>
                 <a class="nav-link text-center" href="#genome_qc_area">Genome QC</a>
                 <a class="nav-link text-center" href="#species">Species prediction</a>
+                {% if species=="Streptococcus pneumoniae" %}
                 <a class="nav-link text-center" href="#serotype">Serotype</a>
                 <a class="nav-link text-center" href="#gene_annot_area">Gene annotation</a>
                 <a class="nav-link text-center" href="#mlst_area">MLST</a>
@@ -61,6 +63,7 @@
                 <a class="nav-link text-center" href="#MGE_area">Mobile Gene Element</a>
                 <a class="nav-link text-center" href="#plasmid_area">Plasmid Type</a>
                 <a class="nav-link text-center" href="#pbp_area">PBP Typing</a>
+                {% endif %}
               </nav>
             </nav>
           </div>
@@ -101,6 +104,7 @@
                   <div class="mb-3 intitle-2">Assembled Genome QC
                     <button class="btn toggle" type="button" data-bs-toggle="collapse" data-bs-target="#quast">▲</button>
                   </div>
+                  
                   <div id="quast" class="collapse show">
                     <table class="table table-striped" >
                         <tr>
@@ -144,6 +148,7 @@
                       </table>
                   </div>
                 </div>
+                {% if species=="Streptococcus pneumoniae" %}
                 <hr></hr>
                 <div id="serotype" class="section">
                   <div class="mb-3 intitle-2">Serotype
@@ -403,6 +408,7 @@
                     </div>
                   </div>
                 </div>
+                {% endif %}
               </div>
             </div>
           </div>

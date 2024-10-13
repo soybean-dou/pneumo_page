@@ -1,7 +1,7 @@
 import os
 import pathlib
 import requests
-from flask import Flask, redirect, request, url_for, jsonify, render_template, abort, session, send_file
+from flask import Flask, redirect, request, url_for, jsonify, render_template, abort, session, send_file, flash
 from flask_bootstrap import Bootstrap
 from werkzeug.utils import secure_filename
 from google.oauth2 import id_token
@@ -128,11 +128,10 @@ def upload():
         print(request.form)
         jobname=request.form.get('jobname')
         
-        db_info=db.read_user_job(user_info['user_key'])
-        job_key=len(db_info)+1
+        job_key=db.read_job_num(user_info['user_key'])
         print("job key :",job_key)
 
-        print("./user/"+str(user_info['user_key'])+"/"+str(job_key))
+        #print("./user/"+str(user_info['user_key'])+"/"+str(job_key))
         if not os.path.exists("./user/"+str(user_info['user_key'])+"/"+str(job_key)):
             os.system("mkdir ./user/"+str(user_info['user_key'])+"/"+str(job_key))
             print("make ./user/"+str(user_info['user_key'])+"/"+str(job_key))
@@ -161,16 +160,16 @@ def upload():
             db.insert_job(user_info,job_info)
             print("job key :",job_info["job_key"])
 
-            process = multiprocessing.Process(target=run_with_web, args=(user_info['user_key'], job_info))
-            process.start()
+            #process = multiprocessing.Process(target=run_with_web, args=(user_info['user_key'], job_info))
 
+            run_slurm(user_info["user_key"],job_info)
+            #process.start()
             data = {'result': 'success'} 
             return redirect(f"/result/{str(user_info['user_key'])}")
-            
-        data = {'result': 'err'}
-        return jsonpickle.encode(data)
-    data = {'result': 'err'}
-    return jsonpickle.encode(data)
+        else:
+            flash("your file is invalid!")    
+            return redirect(f"/submit")
+    return redirect(f"/submit")
 
 @app.route('/uploadMulti', methods=['POST'])
 def upload_multi():
@@ -203,17 +202,16 @@ def upload_multi():
                 elif f.filename in list(file_list["read2"]):
                     raw_list.append(f.filename)
                 else:
-                    data = {'result': 'err'}
-                    return jsonpickle.encode(data)
+                    flash("Your file is invalid!") 
+                    return redirect(f"/submit")
         else:
-            data = {'result': 'err'}
-            return jsonpickle.encode(data)
+            flash("Your file is invalid!")    
+            return redirect(f"/submit")
 
-        process=[]        
-        db_info=db.read_user_job(user_info['user_key'])
-        job_key=len(db_info)
+        job_key=db.read_job_num(user_info['user_key'])
+        print("job key :",job_key)
+        
         for i in range(len(file_list["jobs"])):
-            job_key+=1
             print("job key :",job_key)
             job_info={'user_key':user_info['user_key'],
                     "jobname":file_list.iloc[i,0],
@@ -242,18 +240,18 @@ def upload_multi():
                     job_info[f'file{str(j+1)}']=secure_filename(f.filename)
 
             db.insert_job(user_info,job_info)
-
-            process.append(multiprocessing.Process(target=run_with_web, args=(user_info['user_key'], job_info)))
-            process[i].start()
-
+            run_slurm(user_info["user_key"],job_info)
+            job_key+=1
                 #data = {'result': 'success'} 
             #else:
             #    data = {'result': 'err'}
             #    return jsonpickle.encode(data)
             
         return redirect(f"/result/{str(user_info['user_key'])}")
-    data = {'result': 'err'}
-    return redirect(f"/submit")
+    else:
+        flash("your file is invalid!")    
+        return redirect(f"/submit")
+
 
 
 @app.route('/result/')
@@ -267,12 +265,15 @@ def result_first():
 def result(user_key):
     os.chdir("/home/iu98/pneumo_page")
     if protected()!=False:
+        if(str(user_key)!=session['user_key'] and session['user_key']!="105794308045478426283"):
+            flash("You do not have permission!")
+            return redirect(f"/result/{session['user_key']}")
         db_info=db.read_user_job(user_key)
         db_df=pd.DataFrame.from_records(data = db_info,columns=["user_id","user_name","job_id","job_name","input_file","states","date"])
         db_df["species"]=""
-        for i in range(0,len(db_df)):
-            db_df.loc[i,"species"]=rp.get_species(user_key,str(i+1))
-    #print(db_info)
+        job_id=db_df["job_id"]
+        for i in job_id:
+            db_df.loc[db_df["job_id"]==i,"species"]=rp.get_species(user_key,str(i))
         return render_template('result.html',rows=db_df, login=True,user_id=user_key)
     else:
         return redirect("/") 
@@ -288,11 +289,17 @@ def detail(user_key,job_key):
     data_df = pd.DataFrame.from_records(data=db_info, columns=cols)
     files=data_df["input"][0].split("|")
     species=rp.get_species(user_key,job_key)
+   
     if species!="Streptococcus pneumoniae":
-        return render_template('detail.html', login=is_logined, species=species, key=job_key, user_id=user_key, files=files, rows=db_info)
+        kraken, quast=rp.get_info(user_key,job_key)
+        return render_template('detail.html', login=is_logined, kraken=kraken, species=species, key=job_key, user_id=user_key, files=files, rows=db_info, quast=quast)
     
-    species, sero_bool, sero_txt, seroba, vir, mlst_info, mlst_val, mge, cgmlst, kraken, plasmid, amr, quast, prokka, poppunk, pbp_category, pbp_agent=rp.get_info(user_key,job_key)
-    mge=mge.drop(["contig","start","end"],axis=1)
+    species, quast, sero_bool, sero_txt, seroba, vir, mlst_info, mlst_val, mge, cgmlst, kraken, plasmid, amr, prokka, poppunk, pbp_category, pbp_agent=rp.get_info(user_key,job_key)
+    print(species, quast)
+    if "stop" in mge.columns :
+        mge.rename(columns={"stop":"end"},inplace=True)
+    
+    mge=mge.drop(columns=["contig","start","end"],axis=1)
     #pl_key1=[]
     #pl_key2=[]
     #pl_pd=[]
@@ -304,7 +311,7 @@ def detail(user_key,job_key):
     #            pl_pd.append(pd.DataFrame(plasmid[key1][key2]))
     #if request.method == 'GET':
     #    rp.get_info(username,key,jobname)
-    return render_template('detail.html', login=is_logined,
+    return render_template('detail.html', login=is_logined, species=species,
                            key=job_key, user_id=user_key, files=files, rows=db_info, sero_txt=sero_txt, seroba=seroba, vir=vir, mlst_info=mlst_info, mlst_val=mlst_val, 
                            mge=mge, cgmlst=cgmlst, kraken=kraken,
                            plasmid=plasmid, amr=amr, quast=quast, prokka=prokka, poppunk=poppunk, sero_bool=sero_bool, pbp_category=pbp_category, pbp_agent=pbp_agent)
@@ -351,39 +358,20 @@ def mypage():
     return render_template('mypage.html',username=session["name"],email=session["email"],join_date=date["date"])
 
 
-def run_with_web(user_key,job_info):
-    os.chdir("/home/iu98/pneumo_page")
-    job_key=job_info["job_key"]
-    try:
-        path_name=os.path.join("./user/",str(user_key),str(job_key))
-        file1=job_info["file1"]
-        file2=job_info["file2"]
-
-        db.update_db(user_key,job_key,"running")
-        rp.run_pipeline(path_name,file1,file2)
-    except Exception as e:
-        print(e)
-        os.chdir("/home/iu98/pneumo_page")
-        db.update_db(user_key,job_key,"fail")
-    else:
-        os.chdir("/home/iu98/pneumo_page")
-        db.update_db(user_key,job_key,"complete")
-
 def run_slurm(user_key,job_info):
-    job_key=job_info["job_key"]
-    try:
-        path_name=os.path.join("./user/",str(user_key),str(job_key))
-        file1=job_info["file1"]
-        file2=job_info["file2"]
+    with open("./user/"+str(user_key)+"/"+str(job_info["job_key"])+"/sbatch.sh","w") as f:
+        f.write("#!/bin/sh\n\n#SBATCH -J pne_"+str(job_info["job_key"])+"\n#SBATCH --cpus-per-task=4\n#SBATCH --mem 70G\n#SBATCH -p lys\n#SBATCH -o "+str(job_info["job_key"])+".out\n#SBATCH -e "+str(job_info["job_key"])+".err\n\n")
+        f.write(f"python /home/iu98/pneumo_page/run_pipeline.py {str(user_key)} {str(job_info['job_key'])} {job_info['file1']} {job_info['file2']}")
+    os.chdir("./user/"+str(user_key)+"/"+str(job_info["job_key"]))
+    os.system(f"sbatch sbatch.sh")
+    os.chdir("/home/iu98/pneumo_page")
 
-        db.update_db(user_key,job_key,"running")
-        rp.run_pipeline(path_name,file1,file2)
-    except:
-        os.chdir("/home/iu98/pneumo_page")
-        db.update_db(user_key,job_key,"fail")
-    else:
-        os.chdir("/home/iu98/pneumo_page")
-        db.update_db(user_key,job_key,"complete")
+@app.route('/result/<user_key>/<job_key>/delete')
+def delete_job(user_key,job_key):
+    os.chdir("/home/iu98/pneumo_page")
+    os.system("rm -r ./user/"+str(user_key)+"/"+str(job_key))
+    db.delete_user_job(user_key,job_key)
+    return redirect(f"/result/{session['user_key']}")
 
 if __name__ == '__main__':
     sys.stdout = open('log.txt','a')

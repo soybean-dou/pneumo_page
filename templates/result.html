@@ -1,5 +1,14 @@
 <!-- templates/index.html -->
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <script>
+      alert("{{messages[-1]}}")
+    </script>
+  {% endif%}
+{% endwith %}
+
 <!DOCTYPE html>
+<meta http-equiv="refresh" content="30">
 <html>
     <head>
         <title>PneusPage</title>
@@ -56,6 +65,7 @@
                     <th scope="col">Input file</th>
                     <th scope="col">Species</th>
                     <th scope="col">Status</th>
+                    <th scope="col">Delete</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -68,6 +78,7 @@
                     <td>{{row["input_file"]}}</td>
                     <td>{{row["species"]}}</td>
                     <td>{{row["states"]}}</td>
+                    <td><button type="button" class="btn-danger btn del_job">delete</button></td>
                   </tr>
                   {% endfor %}
                 </tbody>

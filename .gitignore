@@ -8,3 +8,4 @@ reference/
 pneumo_service.db
 *.ipynb
 sample/
+logs/
