@@ -9,3 +9,4 @@ pneumo_service.db
 *.ipynb
 sample/
 logs/
+logs/pneuspage.log
